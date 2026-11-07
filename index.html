@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2027 Year Guide · 丁未</title>
+<meta name="description" content="A simple, free guide to the 2027 Fire Goat year, by Chinese zodiac. Culture and reflection only.">
+<meta name="theme-color" content="#b8282f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="2027 Guide">
+<style>
+:root{
+  --ink:#1d2430; --muted:#5d6878; --line:#e3e8ef; --seal:#b8282f;
+  --good-bg:#e3f4e8; --good-bd:#b9e1c5; --good-tx:#17653a;
+  --steady-bg:#edf1f6; --steady-bd:#d3dce8; --steady-tx:#3d4b5f;
+  --care-bg:#fde8ea; --care-bd:#f4c3c8; --care-tx:#9b2d37;
+  --bad-bg:#f8cdd2; --bad-bd:#eba0a8; --bad-tx:#7e1f28;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:#fff; color:var(--ink);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+.wrap{max-width:680px; margin:0 auto; padding:0 16px 40px}
+.cjk{font-family:"Noto Serif CJK SC","Songti SC",STSong,SimSun,serif}
+
+/* top bar */
+.top{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; padding:14px 0 10px}
+.brand{display:flex; align-items:center; gap:12px}
+.brand h1{margin:0; font-size:1.15rem; line-height:1.2}
+.brand p{margin:0; font-size:.82rem; color:var(--muted)}
+.tools{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+select,input[type=date]{
+  font:inherit; font-size:1rem; color:var(--ink); background:#fff;
+  border:1.5px solid #cfd7e2; border-radius:10px; padding:10px 12px; min-height:44px;
+}
+select:focus-visible,input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8fb4e8; outline-offset:2px}
+.btn{
+  font:inherit; font-size:.9rem; font-weight:600; min-height:44px; padding:8px 14px; border-radius:10px;
+  border:1.5px solid #cfd7e2; background:#fff; color:var(--ink); cursor:pointer;
+}
+.btn:hover{background:#f6f8fb}
+.btn.primary{background:var(--seal); border-color:var(--seal); color:#fff}
+
+/* seal */
+.seal{
+  display:inline-flex; align-items:center; justify-content:center; flex:none;
+  width:76px; height:76px; border-radius:12px; background:var(--seal); color:#fff;
+  font-size:2.6rem; font-weight:700; transform:rotate(-3deg); box-shadow:0 0 0 3px #fff, 0 0 0 4.5px var(--seal);
+}
+.seal.sm{width:42px; height:42px; font-size:1rem; border-radius:8px; transform:none; box-shadow:none; letter-spacing:-1px}
+
+/* cards */
+.card{border:1.5px solid var(--line); border-radius:16px; padding:18px; margin-top:16px; background:#fff}
+.lead{margin:0 0 14px; font-size:1.02rem}
+label.lbl{display:block; font-weight:700; margin-bottom:6px}
+#year{width:100%; font-size:1.1rem; font-weight:600}
+.note{font-size:.84rem; color:var(--muted); margin:8px 0 0}
+
+/* tones */
+.tone-good{background:var(--good-bg); border-color:var(--good-bd); color:var(--good-tx)}
+.tone-steady{background:var(--steady-bg); border-color:var(--steady-bd); color:var(--steady-tx)}
+.tone-care{background:var(--care-bg); border-color:var(--care-bd); color:var(--care-tx)}
+.tone-bad{background:var(--bad-bg); border-color:var(--bad-bd); color:var(--bad-tx)}
+
+/* result */
+.res-head{display:flex; gap:16px; align-items:center}
+.res-head h2{margin:0; font-size:1.35rem; line-height:1.25}
+.res-head p{margin:2px 0 0; color:var(--muted); font-size:.9rem}
+.badge{display:inline-block; margin:16px 0 8px; padding:6px 12px; border-radius:999px; font-weight:700; font-size:.92rem; border:1.5px solid}
+.sum{margin:0 0 12px}
+.dw{display:grid; gap:10px}
+@media(min-width:560px){.dw{grid-template-columns:1fr 1fr}}
+.dw div{border:1.5px solid var(--line); border-radius:12px; padding:10px 12px; font-size:.95rem}
+.dw strong{display:block; font-size:.85rem; color:var(--muted); margin-bottom:2px}
+.months-sum{margin-top:14px; display:grid; gap:8px; font-size:.95rem}
+.months-sum .row{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
+.pill{padding:3px 10px; border-radius:999px; font-size:.85rem; font-weight:700; border:1.5px solid}
+
+/* ribbon */
+h3{margin:0 0 4px; font-size:1.05rem}
+.ribbon{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:12px}
+@media(min-width:560px){.ribbon{grid-template-columns:repeat(6,1fr)}}
+.tile{
+  font:inherit; cursor:pointer; text-align:center; border:1.5px solid; border-radius:12px;
+  padding:8px 4px; min-height:78px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+}
+.tile .mo{font-weight:700; font-size:.92rem}
+.tile .an{font-size:1.35rem; line-height:1.1}
+.tile .sy{font-size:.85rem; font-weight:700}
+.tile[aria-pressed=true]{outline:3px solid var(--ink); outline-offset:1px}
+.detail{margin-top:12px; padding:12px 14px; border-radius:12px; border:1.5px solid}
+.detail b{display:block}
+.detail small{display:block; opacity:.85}
+
+/* accordions */
+details.card>summary{cursor:pointer; list-style:none; font-weight:700; font-size:1.05rem; display:flex; justify-content:space-between; align-items:center; gap:12px}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary::after{content:"＋"; font-weight:700; color:var(--seal); font-size:1.2rem}
+details.card[open]>summary::after{content:"－"}
+details.card>summary small{display:block; font-weight:400; color:var(--muted); font-size:.85rem}
+.field{margin-top:16px}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{font:inherit; font-size:.95rem; font-weight:600; min-height:44px; padding:8px 16px; border-radius:999px; border:1.5px solid #cfd7e2; background:#fff; cursor:pointer}
+.chip[aria-pressed=true]{background:#1d2430; color:#fff; border-color:#1d2430}
+.extras{margin-top:18px; border-top:1.5px solid var(--line); padding-top:14px; display:grid; gap:10px}
+.tip{border:1.5px solid var(--line); border-radius:12px; padding:10px 12px; font-size:.95rem}
+.tip strong{display:block}
+.dirs{display:grid; gap:8px}
+.dirrow{display:flex; justify-content:space-between; gap:10px; border:1.5px solid; border-radius:12px; padding:10px 12px; align-items:center}
+.dirrow .what{font-size:.82rem; opacity:.9}
+.dirrow .dn{font-weight:800; font-size:1.05rem; white-space:nowrap}
+
+/* map */
+.compass{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:14px}
+.cell{
+  font:inherit; cursor:pointer; border:1.5px solid; border-radius:12px; min-height:92px; padding:6px 4px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px; position:relative; text-align:center;
+}
+.cell .dr{font-size:.78rem; font-weight:700; opacity:.85}
+.cell .st{font-size:1.7rem; font-weight:800; line-height:1.1}
+.cell .sn{font-size:.72rem; line-height:1.2}
+.cell .mk{position:absolute; top:4px; right:7px; font-size:.95rem; font-weight:800}
+.cell[aria-pressed=true]{outline:3px solid var(--ink); outline-offset:1px}
+
+/* support + care */
+.qrs{display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-top:14px}
+.qr{text-align:center; width:168px}
+.qr img,.qr .ph{width:168px; height:168px; border-radius:12px; border:1.5px solid var(--line); object-fit:contain; background:#fff}
+.qr .ph{display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:.85rem; border-style:dashed; padding:10px}
+.qr figcaption{margin-top:6px; font-weight:700; font-size:.92rem}
+.support{text-align:center}
+.care ul{margin:8px 0 0; padding-left:20px; display:grid; gap:8px; font-size:.9rem; color:#39434f}
+footer{margin-top:22px; text-align:center; color:var(--muted); font-size:.8rem}
+
+dialog{border:1.5px solid var(--line); border-radius:16px; max-width:min(92vw,420px); padding:20px}
+dialog::backdrop{background:rgba(29,36,48,.35)}
+dialog p{margin:8px 0}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:no-preference){ .seal{transition:transform .2s} .res-head .seal{animation:stamp .35s ease-out} }
+@keyframes stamp{from{transform:rotate(-3deg) scale(1.25);opacity:0}to{transform:rotate(-3deg) scale(1);opacity:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <span class="seal sm cjk" aria-hidden="true">丁未</span>
+      <div>
+        <h1 data-i18n="title">2027 Year Guide</h1>
+        <p data-i18n="subtitle"></p>
+      </div>
+    </div>
+    <div class="tools">
+      <select id="lang" aria-label="Language"></select>
+      <button id="installBtn" class="btn" type="button" data-i18n="install"></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Step 1: the only required input -->
+    <section class="card">
+      <p class="lead" data-i18n="intro"></p>
+      <label class="lbl" for="year" data-i18n="year_label"></label>
+      <select id="year"></select>
+      <p class="note" data-i18n="year_note"></p>
+    </section>
+
+    <!-- Simple read -->
+    <section id="result" aria-live="polite"></section>
+
+    <section id="ribbonSec" class="card" hidden>
+      <h3 data-i18n="ribbon_title"></h3>
+      <p class="note" style="margin-top:0" data-i18n="ribbon_note"></p>
+      <div id="ribbon" class="ribbon"></div>
+      <div id="monthDetail" class="detail" aria-live="polite"></div>
+    </section>
+
+    <!-- Optional layer 1 -->
+    <details id="more" class="card">
+      <summary><span><span data-i18n="more_title"></span><small data-i18n="more_sub"></small></span></summary>
+
+      <div class="field">
+        <label class="lbl" for="dob" data-i18n="dob_label"></label>
+        <input type="date" id="dob" min="1930-01-01" max="2026-12-31">
+        <p class="note" id="dobNote"></p>
+      </div>
+
+      <div class="field">
+        <span class="lbl" data-i18n="gender_label"></span>
+        <div class="chips" id="genderChips">
+          <button type="button" class="chip" data-g="male" aria-pressed="false" data-i18n="g_male"></button>
+          <button type="button" class="chip" data-g="female" aria-pressed="false" data-i18n="g_female"></button>
+        </div>
+        <p class="note" data-i18n="gender_note"></p>
+      </div>
+
+      <div class="field">
+        <span class="lbl" data-i18n="focus_label"></span>
+        <div class="chips" id="focusChips">
+          <button type="button" class="chip" data-f="career" aria-pressed="false" data-i18n="f_career"></button>
+          <button type="button" class="chip" data-f="money" aria-pressed="false" data-i18n="f_money"></button>
+          <button type="button" class="chip" data-f="love" aria-pressed="false" data-i18n="f_love"></button>
+          <button type="button" class="chip" data-f="health" aria-pressed="false" data-i18n="f_health"></button>
+          <button type="button" class="chip" data-f="family" aria-pressed="false" data-i18n="f_family"></button>
+        </div>
+      </div>
+
+      <div class="extras" id="extras" aria-live="polite"></div>
+    </details>
+
+    <!-- Optional layer 2 -->
+    <details id="mapSec" class="card">
+      <summary><span><span data-i18n="map_title"></span><small data-i18n="map_sub"></small></span></summary>
+      <div class="compass" id="compass"></div>
+      <div id="starDetail" class="detail tone-steady" style="margin-top:12px"></div>
+      <p class="note" id="mapLegend"></p>
+      <p class="note" data-i18n="map_water"></p>
+    </details>
+
+    <section class="card support">
+      <h3 data-i18n="support_title"></h3>
+      <p class="note" style="margin-top:0" data-i18n="support_sub"></p>
+      <div class="qrs">
+        <figure class="qr" style="margin:0">
+          <img src="reka-qr.png" alt="Reka QR" data-ph="reka">
+          <figcaption data-i18n="qr_reka"></figcaption>
+        </figure>
+        <figure class="qr" style="margin:0">
+          <img src="wise-qr.png" alt="Wise QR" data-ph="wise">
+          <figcaption data-i18n="qr_wise"></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card care">
+      <h3 data-i18n="care_title"></h3>
+      <ul>
+        <li data-i18n="c1"></li>
+        <li data-i18n="c2"></li>
+        <li data-i18n="c3"></li>
+        <li data-i18n="c4"></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer data-i18n="footer"></footer>
+</div>
+
+<dialog id="installDlg">
+  <h3 data-i18n="install_title"></h3>
+  <p data-i18n="install_ios"></p>
+  <p data-i18n="install_android"></p>
+  <button class="btn primary" id="installClose" type="button" data-i18n="close"></button>
+</dialog>
+
+<script>
+/* ============================================================
+   LANGUAGE PACKS
+   To add a language (e.g. Bahasa Indonesia "id", Tamil "ta"):
+   copy the whole "en" block, rename the key, translate the values,
+   and fill animals / ds / locale. It appears in the menu automatically.
+   ============================================================ */
+const I18N = {
+en:{
+  langName:"English", locale:"en-GB",
+  animals:["Rat","Ox","Tiger","Rabbit","Dragon","Snake","Horse","Goat","Monkey","Rooster","Dog","Pig"],
+  ds:{N:"N",NE:"NE",E:"E",SE:"SE",S:"S",SW:"SW",W:"W",NW:"NW",C:"Centre"},
+  dirs:{N:"North",NE:"North-east",E:"East",SE:"South-east",S:"South",SW:"South-west",W:"West",NW:"North-west"},
+  title:"2027 Year Guide", subtitle:"Year of the Fire Goat · 丁未",
+  install:"Add to home screen", install_title:"Add to your home screen",
+  install_ios:"iPhone or iPad: tap the Share button, then “Add to Home Screen”.",
+  install_android:"Android: open the browser menu (⋮), then “Add to Home screen” or “Install app”.",
+  close:"Close",
+  intro:"Choose your birth year to see your 2027 in plain words. Want a sharper reading? Add more details below. It’s optional.",
+  year_label:"Your birth year", year_ph:"Choose year",
+  year_note:"The Chinese year begins around 4 Feb. Born in January or early February? Add your exact birth date under More details.",
+  empty:"Pick your birth year above and your 2027 appears here.",
+  you_are:"Your zodiac animal: {animal}", cn_year:"Chinese year {y}",
+  do_label:"Do", watch_label:"Watch out",
+  tone_good:"Supportive", tone_steady:"Steady", tone_care:"Take care", tone_bad:"Clash",
+  r_ben_t:"Your own year (Ben Ming Nian)", r_ben_s:"Goat people meet their own sign in 2027. Tradition sees this as a year to be careful and steady, not a bad year.", r_ben_d:"Wear something red, keep up health check-ups and plan big moves carefully.", r_ben_w:"Don’t rush big decisions or take on too much.",
+  r_clash_t:"Clash with the year", r_clash_s:"Ox sits opposite Goat, so 2027 brings change and some friction. It can also push you to renew things.", r_clash_d:"Plan changes on purpose: a move, a new role, a fresh start.", r_clash_w:"Avoid risky travel plans, arguments and rushed big decisions.",
+  r_punish_t:"Punishment (hidden friction)", r_punish_s:"Dog and Goat form a “punishment”: small disputes and stress can build up quietly.", r_punish_d:"Put agreements in writing and keep your paperwork in order.", r_punish_w:"Avoid legal disputes, gossip and bottling up stress.",
+  r_harm_t:"Harm (people friction)", r_harm_s:"Rat and Goat form a “harm”: misunderstandings and cooling friendships are more likely.", r_harm_d:"Communicate clearly and check that others understood.", r_harm_w:"Don’t trust rumours or lend money casually.",
+  r_six_t:"Six Harmonies (strong ally)", r_six_s:"Horse and Goat are a classic pair. 2027 brings support, good partners and smoother deals.", r_six_d:"Say yes to partnerships and family plans.", r_six_w:"Don’t over-promise just because things feel easy.",
+  r_three_t:"Three Harmonies (good flow)", r_three_s:"Rabbit, Goat and Pig form one friendly trio. 2027 flows better for you than for most.", r_three_d:"Start projects and widen your network.", r_three_w:"Don’t coast. Good luck still needs effort.",
+  r_none_t:"Neutral (steady year)", r_none_s:"Your sign has no special tie to the Goat. 2027 is what you make of it, and the monthly rhythm below does most of the guiding.", r_none_d:"Plan around your best months.", r_none_w:"Avoid big commitments in the careful months.",
+  best_months:"Best months for you", care_months:"Go carefully in",
+  ribbon_title:"Your 12 months",
+  ribbon_note:"Chinese months start on solar terms (around the 4th to 8th), not on the 1st. Tap a month for details. Dates are approximate (±1 day).",
+  month_of:"{animal} month",
+  rl_ben:"Same sign", rl_clash:"Clash", rl_punish:"Punishment", rl_harm:"Harm", rl_six:"Six Harmonies", rl_three:"Three Harmonies", rl_mixed:"Mixed", rl_none:"Neutral",
+  m_ben:"Your own sign’s month. Keep it steady.",
+  m_clash:"Opposes your sign. Expect friction or sudden change; delay big moves.",
+  m_punish:"Pressure builds quietly. Keep paperwork and promises clean.",
+  m_harm:"Misunderstandings come easily. Say things clearly and kindly.",
+  m_six:"A strong ally month. Good for deals, partners and family.",
+  m_three:"A flowing month. Good for starting things and meeting people.",
+  m_mixed:"Mixed signals: helpful and tense at once. Move steadily.",
+  m_none:"A neutral month. Do the steady work.",
+  more_title:"More details (optional)", more_sub:"For a sharper reading: exact birth date, personal directions and what matters to you.",
+  dob_label:"Exact birth date",
+  dob_early:"Born before Li Chun, so your Chinese year is {y} ({animal}).", dob_ok:"Your Chinese year is {y} ({animal}).",
+  gender_label:"Gender (for your personal directions)", g_male:"Male", g_female:"Female",
+  gender_note:"The traditional Kua formula uses male or female.",
+  focus_label:"What matters most to you?",
+  f_career:"Career", f_money:"Money", f_love:"Love", f_health:"Health", f_family:"Family",
+  focus_title:"For what matters to you in 2027",
+  need_year:"Choose your birth year first.",
+  f_career_good:"Good backing from others. Take visible work and ask for what you want in your best months.",
+  f_career_steady:"Steady progress. Build skills and get the details right.",
+  f_career_care:"Avoid big job moves and office politics. Keep records tidy and let others take the spotlight.",
+  f_money_good:"Favourable for deals and partnerships. Still keep an emergency fund.",
+  f_money_steady:"Steady flow. Review your spending and don’t chase quick wins.",
+  f_money_care:"Protect what you have. Avoid big risks, read contracts twice and keep extra cash.",
+  f_love_good:"A warm year for relationships. A good time to meet people or deepen a bond.",
+  f_love_steady:"A calm year. Small, regular time together beats grand gestures.",
+  f_love_care:"Mind your words, especially in the tense months. Listen first, decide later.",
+  f_health_good:"Energy holds up well. Keep your routine and regular check-ups.",
+  f_health_steady:"Steady. Sleep and water matter more than any remedy.",
+  f_health_care:"Slow down and rest more. Keep up regular check-ups and avoid overwork. If something worries you, see a doctor.",
+  f_family_good:"Home feels warmer. Plan a family trip or gathering in a good month.",
+  f_family_steady:"Quiet and stable. Keep the simple routines that hold the home together.",
+  f_family_care:"Small frictions can grow. Choose patience; one calm talk beats five arguments.",
+  kua_title:"Your best directions", kua_sub:"Your Kua number is {n}.",
+  d_sheng:"Wealth and success", d_sheng_h:"Face this way at your desk.",
+  d_tian:"Health and helpful people", d_tian_h:"Point your bed head this way.",
+  d_yan:"Relationships and long life", d_yan_h:"Good for the bedroom or family room.",
+  d_jue:"Avoid", d_jue_h:"Avoid for your desk and bed head.",
+  map_title:"2027 home and office map", map_sub:"Tap a direction to see its 2027 star.",
+  map_tap:"Tap a direction above. North is at the top. Measure from the centre of your home or room with a phone compass.",
+  map_legend:"★ your good directions · ✕ avoid for you (shown after you add year and gender)",
+  map_water:"Water feature or fish tank? Common advice for 2027 is to favour the south-east, south or north-west, and keep water away from the north and west.",
+  s1_n:"White 1 · Helpful people", s1_t:"Good for work areas and meeting spots. Helpful people and steady progress come easier here.",
+  s2_n:"Black 2 · Illness", s2_t:"Keep it calm and quiet. Avoid heavy renovation, and avoid sleeping here if you can. A metal item (like a soft-sounding brass bell) is the traditional remedy.",
+  s3_n:"Jade 3 · Arguments", s3_t:"Watch for quarrels and legal fuss. Keep the area tidy and avoid loud confrontations here.",
+  s4_n:"Green 4 · Study and romance", s4_t:"Good for study, creative work and relationships. A fine place for a desk or study corner.",
+  s5_n:"Yellow 5 · Misfortune", s5_t:"The most cautious spot of 2027. Avoid digging, renovation and noise here. Keep it quiet; metal items are the traditional remedy.",
+  s6_n:"White 6 · Authority", s6_t:"Supports leadership, discipline and good decisions. Good for a home office.",
+  s7_n:"Red 7 · Quarrels and theft", s7_t:"Lock up well and keep valuables safe. Avoid sharp words and gossip in this area.",
+  s8_n:"White 8 · Wealth", s8_t:"A good spot for money matters. Keep it bright, clean and lived-in (a desk or the family area).",
+  s9_n:"Purple 9 · Celebration", s9_t:"Brings happy news and future gains. Good for gatherings, but keep the energy calm, not overheated.",
+  support_title:"Support this free guide", support_sub:"It’s free to use. If it helped you, a small thank-you is always appreciated.",
+  qr_reka:"Reka", qr_wise:"Wise (from overseas)", qr_soon:"QR coming soon",
+  care_title:"Good to know",
+  c1:"For culture and reflection only. This is not professional advice. Please don’t use it for medical, legal, financial or investment decisions.",
+  c2:"The guide uses traditional rules (zodiac relationships and the 2027 flying stars). Different masters can read these differently.",
+  c3:"Privacy: everything is calculated on your device. Your birth details are not sent, stored or shared. Built with Malaysia’s PDPA 2010 and Indonesia’s UU PDP No. 27/2022 in mind.",
+  c4:"Views and content are the author’s own and do not represent any organisation.",
+  footer:"2027 Year Guide · for culture and reflection"
+},
+ms:{
+  langName:"Bahasa Malaysia", locale:"ms-MY",
+  animals:["Tikus","Lembu","Harimau","Arnab","Naga","Ular","Kuda","Kambing","Monyet","Ayam","Anjing","Babi"],
+  ds:{N:"U",NE:"TL",E:"T",SE:"TG",S:"S",SW:"BD",W:"B",NW:"BL",C:"Tengah"},
+  dirs:{N:"Utara",NE:"Timur Laut",E:"Timur",SE:"Tenggara",S:"Selatan",SW:"Barat Daya",W:"Barat",NW:"Barat Laut"},
+  title:"Panduan Tahun 2027", subtitle:"Tahun Kambing Api · 丁未",
+  install:"Tambah ke skrin utama", install_title:"Tambah ke skrin utama",
+  install_ios:"iPhone atau iPad: tekan butang Kongsi, kemudian “Tambah ke Skrin Utama”.",
+  install_android:"Android: buka menu pelayar (⋮), kemudian “Tambah ke skrin utama” atau “Pasang aplikasi”.",
+  close:"Tutup",
+  intro:"Pilih tahun lahir anda untuk lihat ramalan 2027 dalam bahasa mudah. Nak bacaan yang lebih tepat? Isi maklumat tambahan di bawah. Tak wajib pun.",
+  year_label:"Tahun lahir anda", year_ph:"Pilih tahun",
+  year_note:"Tahun Cina bermula sekitar 4 Februari. Lahir pada Januari atau awal Februari? Masukkan tarikh lahir penuh di bawah Maklumat tambahan.",
+  empty:"Pilih tahun lahir di atas dan ramalan 2027 anda akan muncul di sini.",
+  you_are:"Zodiak Cina anda: {animal}", cn_year:"Tahun Cina {y}",
+  do_label:"Elok dibuat", watch_label:"Berhati-hati",
+  tone_good:"Menyokong", tone_steady:"Stabil", tone_care:"Berhati-hati", tone_bad:"Bertembung",
+  r_ben_t:"Tahun kelahiran anda (Ben Ming Nian)", r_ben_s:"Orang Kambing bertemu zodiak sendiri pada 2027. Tradisi melihatnya sebagai tahun untuk berhati-hati dan stabil, bukan tahun malang.", r_ben_d:"Pakai sesuatu yang berwarna merah, teruskan pemeriksaan kesihatan dan rancang langkah besar dengan teliti.", r_ben_w:"Jangan tergesa-gesa membuat keputusan besar atau memikul terlalu banyak.",
+  r_clash_t:"Bertembung dengan tahun (Chong)", r_clash_s:"Lembu berlawanan dengan Kambing, jadi 2027 membawa perubahan dan sedikit geseran. Ia juga boleh mendorong anda memperbaharui sesuatu.", r_clash_d:"Rancang perubahan dengan sengaja: berpindah, jawatan baharu atau permulaan baharu.", r_clash_w:"Elakkan rancangan perjalanan berisiko, pertengkaran dan keputusan besar yang tergesa-gesa.",
+  r_punish_t:"Hukuman (geseran tersembunyi)", r_punish_s:"Anjing dan Kambing membentuk “hukuman”: pertikaian kecil dan tekanan boleh bertimbun senyap-senyap.", r_punish_d:"Tulis setiap perjanjian dan kemaskan dokumen anda.", r_punish_w:"Elakkan pertikaian undang-undang, mengumpat dan memendam tekanan.",
+  r_harm_t:"Mudarat (geseran sesama orang)", r_harm_s:"Tikus dan Kambing membentuk “mudarat”: salah faham dan persahabatan yang renggang lebih mudah berlaku.", r_harm_d:"Cakap dengan jelas dan pastikan orang lain faham.", r_harm_w:"Jangan mudah percaya khabar angin atau meminjamkan wang sesuka hati.",
+  r_six_t:"Enam Keharmonian (sekutu kuat)", r_six_s:"Kuda dan Kambing pasangan klasik. 2027 membawa sokongan, rakan kongsi yang baik dan urusan yang lebih lancar.", r_six_d:"Terima peluang kerjasama dan rancangan keluarga.", r_six_w:"Jangan terlalu banyak berjanji hanya kerana semuanya nampak mudah.",
+  r_three_t:"Tiga Keharmonian (aliran baik)", r_three_s:"Arnab, Kambing dan Babi satu kumpulan yang serasi. 2027 berjalan lebih lancar untuk anda berbanding kebanyakan orang.", r_three_d:"Mulakan projek dan luaskan rangkaian anda.", r_three_w:"Jangan bersenang-senang. Tuah pun perlukan usaha.",
+  r_none_t:"Neutral (tahun stabil)", r_none_s:"Zodiak anda tiada kaitan khas dengan Kambing. Tahun 2027 bergantung pada usaha anda, dan rentak bulanan di bawah banyak membantu.", r_none_d:"Rancang mengikut bulan-bulan terbaik anda.", r_none_w:"Elakkan komitmen besar dalam bulan yang perlu berhati-hati.",
+  best_months:"Bulan terbaik untuk anda", care_months:"Berhati-hati pada",
+  ribbon_title:"12 bulan anda",
+  ribbon_note:"Bulan Cina bermula pada peralihan solar term (sekitar 4 hingga 8 haribulan), bukan pada 1hb. Ketik bulan untuk butiran. Tarikh adalah anggaran (±1 hari).",
+  month_of:"Bulan {animal}",
+  rl_ben:"Zodiak sama", rl_clash:"Bertembung", rl_punish:"Hukuman", rl_harm:"Mudarat", rl_six:"Enam Keharmonian", rl_three:"Tiga Keharmonian", rl_mixed:"Bercampur", rl_none:"Neutral",
+  m_ben:"Bulan zodiak anda sendiri. Bertenang dan stabil.",
+  m_clash:"Berlawanan dengan zodiak anda. Jangkakan geseran atau perubahan mengejut; tangguhkan langkah besar.",
+  m_punish:"Tekanan bertambah secara senyap. Kemaskan dokumen dan janji anda.",
+  m_harm:"Salah faham mudah berlaku. Cakap dengan jelas dan berbudi bahasa.",
+  m_six:"Bulan sekutu yang kuat. Baik untuk urusan, rakan kongsi dan keluarga.",
+  m_three:"Bulan yang lancar. Baik untuk memulakan sesuatu dan berjumpa orang.",
+  m_mixed:"Isyarat bercampur: membantu dan tegang serentak. Teruskan dengan tenang.",
+  m_none:"Bulan neutral. Teruskan kerja yang stabil.",
+  more_title:"Maklumat tambahan (pilihan)", more_sub:"Untuk bacaan lebih tepat: tarikh lahir penuh, arah peribadi dan perkara yang penting kepada anda.",
+  dob_label:"Tarikh lahir penuh",
+  dob_early:"Anda lahir sebelum Li Chun, jadi tahun Cina anda ialah {y} ({animal}).", dob_ok:"Tahun Cina anda ialah {y} ({animal}).",
+  gender_label:"Jantina (untuk arah peribadi anda)", g_male:"Lelaki", g_female:"Perempuan",
+  gender_note:"Formula Kua tradisional menggunakan lelaki atau perempuan.",
+  focus_label:"Apa yang paling penting kepada anda?",
+  f_career:"Kerjaya", f_money:"Wang", f_love:"Cinta", f_health:"Kesihatan", f_family:"Keluarga",
+  focus_title:"Untuk perkara yang penting kepada anda pada 2027",
+  need_year:"Pilih tahun lahir dahulu.",
+  f_career_good:"Sokongan orang sekeliling baik. Ambil tugasan yang menonjol dan mohon apa yang anda mahu pada bulan-bulan terbaik.",
+  f_career_steady:"Kemajuan stabil. Tingkatkan kemahiran dan pastikan butirannya tepat.",
+  f_career_care:"Elakkan bertukar kerja besar-besaran dan politik pejabat. Kemaskan rekod dan biar orang lain di sorotan.",
+  f_money_good:"Baik untuk urusan dan kerjasama. Tetap simpan dana kecemasan.",
+  f_money_steady:"Aliran stabil. Semak perbelanjaan dan jangan kejar untung cepat.",
+  f_money_care:"Lindungi apa yang ada. Elakkan risiko besar, baca kontrak dua kali dan simpan wang tunai tambahan.",
+  f_love_good:"Tahun yang hangat untuk perhubungan. Masa yang baik untuk berkenalan atau mengeratkan ikatan.",
+  f_love_steady:"Tahun yang tenang. Masa bersama yang kecil tetapi tetap lebih bermakna daripada gaya besar-besaran.",
+  f_love_care:"Jaga kata-kata, terutama pada bulan yang tegang. Dengar dahulu, putuskan kemudian.",
+  f_health_good:"Tenaga kekal baik. Teruskan rutin dan pemeriksaan berkala.",
+  f_health_steady:"Stabil. Tidur dan air lebih penting daripada sebarang petua.",
+  f_health_care:"Perlahankan langkah dan berehat lebih. Buat pemeriksaan berkala dan elakkan kerja berlebihan. Jika ada yang merisaukan, jumpa doktor.",
+  f_family_good:"Rumah terasa lebih hangat. Rancang percutian atau kenduri keluarga pada bulan yang baik.",
+  f_family_steady:"Tenang dan stabil. Teruskan rutin mudah yang mengeratkan keluarga.",
+  f_family_care:"Geseran kecil boleh membesar. Pilih sabar; satu perbualan tenang lebih baik daripada lima pertengkaran.",
+  kua_title:"Arah terbaik anda", kua_sub:"Nombor Kua anda ialah {n}.",
+  d_sheng:"Kekayaan dan kejayaan", d_sheng_h:"Hadap arah ini di meja kerja.",
+  d_tian:"Kesihatan dan orang yang membantu", d_tian_h:"Halakan kepala katil ke arah ini.",
+  d_yan:"Perhubungan dan umur panjang", d_yan_h:"Baik untuk bilik tidur atau ruang keluarga.",
+  d_jue:"Elakkan", d_jue_h:"Elakkan untuk meja kerja dan kepala katil.",
+  map_title:"Peta rumah dan pejabat 2027", map_sub:"Ketik arah untuk lihat bintang 2027.",
+  map_tap:"Ketik satu arah di atas. Utara di bahagian atas. Ukur dari tengah rumah atau bilik dengan kompas telefon.",
+  map_legend:"★ arah baik anda · ✕ elakkan untuk anda (dipaparkan selepas anda isi tahun dan jantina)",
+  map_water:"Ada kolam hiasan atau akuarium? Nasihat lazim untuk 2027: utamakan tenggara, selatan atau barat laut, dan jauhkan air dari utara dan barat.",
+  s1_n:"Putih 1 · Orang yang membantu", s1_t:"Baik untuk ruang kerja dan tempat bermesyuarat. Bantuan orang dan kemajuan mudah datang di sini.",
+  s2_n:"Hitam 2 · Penyakit", s2_t:"Kekalkan tenang dan senyap. Elakkan pengubahsuaian besar, dan jangan tidur di sini jika boleh. Barang logam (seperti loceng loyang yang bunyinya lembut) ialah penawar tradisi.",
+  s3_n:"Jed 3 · Pertengkaran", s3_t:"Berjaga-jaga dengan pertengkaran dan isu undang-undang. Kemaskan kawasan ini dan elakkan bertengkar kuat di sini.",
+  s4_n:"Hijau 4 · Belajar dan cinta", s4_t:"Baik untuk belajar, kerja kreatif dan perhubungan. Tempat yang elok untuk meja atau sudut belajar.",
+  s5_n:"Kuning 5 · Malang", s5_t:"Tempat paling perlu berhati-hati pada 2027. Elakkan menggali, mengubah suai dan bunyi bising di sini. Kekalkan senyap; barang logam ialah penawar tradisi.",
+  s6_n:"Putih 6 · Kuasa", s6_t:"Menyokong kepimpinan, disiplin dan keputusan yang baik. Elok untuk pejabat di rumah.",
+  s7_n:"Merah 7 · Pertengkaran dan kecurian", s7_t:"Kunci dengan baik dan simpan barang berharga dengan selamat. Elakkan kata-kata tajam dan mengumpat di kawasan ini.",
+  s8_n:"Putih 8 · Kekayaan", s8_t:"Tempat yang baik untuk urusan wang. Pastikan terang, bersih dan sentiasa digunakan (meja atau ruang keluarga).",
+  s9_n:"Ungu 9 · Perayaan", s9_t:"Membawa berita gembira dan rezeki akan datang. Baik untuk berkumpul, tetapi kekalkan tenaga yang tenang, jangan terlalu panas.",
+  support_title:"Sokong panduan percuma ini", support_sub:"Percuma digunakan. Jika ia membantu, sedikit sumbangan tanda terima kasih amat dihargai.",
+  qr_reka:"Reka", qr_wise:"Wise (dari luar negara)", qr_soon:"Kod QR akan datang",
+  care_title:"Perlu diketahui",
+  c1:"Untuk budaya dan renungan sahaja. Ini bukan nasihat profesional. Jangan gunakan untuk keputusan perubatan, undang-undang, kewangan atau pelaburan.",
+  c2:"Panduan ini menggunakan peraturan tradisional (hubungan zodiak dan bintang terbang 2027). Guru yang berbeza mungkin membaca dengan cara berbeza.",
+  c3:"Privasi: semua pengiraan dibuat pada peranti anda. Butiran kelahiran anda tidak dihantar, disimpan atau dikongsi. Direka dengan mengambil kira PDPA 2010 Malaysia dan UU PDP No. 27/2022 Indonesia.",
+  c4:"Pandangan dan kandungan ini adalah milik penulis sendiri dan tidak mewakili mana-mana organisasi.",
+  footer:"Panduan Tahun 2027 · untuk budaya dan renungan"
+},
+zh:{
+  langName:"中文", locale:"zh-CN",
+  animals:["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"],
+  ds:{N:"北",NE:"东北",E:"东",SE:"东南",S:"南",SW:"西南",W:"西",NW:"西北",C:"中宫"},
+  dirs:{N:"北",NE:"东北",E:"东",SE:"东南",S:"南",SW:"西南",W:"西",NW:"西北"},
+  title:"2027年运程指南", subtitle:"火羊年 · 丁未",
+  install:"添加到主屏幕", install_title:"添加到主屏幕",
+  install_ios:"iPhone 或 iPad：点按“分享”按钮，再选“添加到主屏幕”。",
+  install_android:"安卓：打开浏览器菜单（⋮），选择“添加到主屏幕”或“安装应用”。",
+  close:"关闭",
+  intro:"选择你的出生年份，用最简单的话看你的2027年。想要更精准？可在下方补充更多资料，完全自愿。",
+  year_label:"你的出生年份", year_ph:"选择年份",
+  year_note:"农历新年份约从2月4日（立春）开始。生于1月或2月初？请在“更多资料”里填写完整生日。",
+  empty:"在上方选择出生年份，你的2027年运势会显示在这里。",
+  you_are:"你的生肖：{animal}", cn_year:"生肖年 {y}年",
+  do_label:"宜", watch_label:"忌",
+  tone_good:"顺", tone_steady:"平", tone_care:"宜小心", tone_bad:"相冲",
+  r_ben_t:"本命年", r_ben_s:"属羊的人在2027年遇上自己的生肖。传统认为这一年宜谨慎、求稳，并不是坏年份。", r_ben_d:"穿戴一点红色，按时体检，大事慎重安排。", r_ben_w:"别急着做大决定，也别揽太多事。",
+  r_clash_t:"冲太岁", r_clash_s:"属牛与羊相冲，2027年多变动，也多些摩擦；同时也是推动你更新生活的机会。", r_clash_d:"有计划地做出改变，例如搬家、转换岗位、重新出发。", r_clash_w:"避免高风险的出行、争吵和仓促的大决定。",
+  r_punish_t:"刑太岁（暗中摩擦）", r_punish_s:"属狗与羊相刑，小纠纷和压力容易在暗处积累。", r_punish_d:"协议白纸黑字，文件资料整理好。", r_punish_w:"避免法律纠纷、是非闲话，也别把压力闷在心里。",
+  r_harm_t:"害太岁（人际摩擦）", r_harm_s:"属鼠与羊相害，容易有误会，朋友关系也可能变淡。", r_harm_d:"沟通要清楚，并确认对方听懂了。", r_harm_w:"别轻信传言，也别随便借钱给人。",
+  r_six_t:"六合太岁（贵人相助）", r_six_s:"属马与羊是经典搭档。2027年有人帮、有好伙伴，合作也更顺。", r_six_d:"欣然接受合作和家庭计划。", r_six_w:"别因为一切顺利就乱许诺。",
+  r_three_t:"三合太岁（运势顺畅）", r_three_s:"兔、羊、猪同属一组，关系友好。2027年你的运势比多数人更顺。", r_three_d:"开展新项目，扩大人脉。", r_three_w:"别坐享其成，好运也要努力。",
+  r_none_t:"无特别冲合（平稳之年）", r_none_s:"你的生肖与羊没有特别关系。2027年靠自己把握，下方每月的节奏会帮上忙。", r_none_d:"围绕你最好的月份来安排事情。", r_none_w:"需要小心的月份，避免做大承诺。",
+  best_months:"你的最佳月份", care_months:"需要小心的月份",
+  ribbon_title:"你的十二个月",
+  ribbon_note:"农历月份以节气交接为界（约在4至8日），不是每月1日。点按月份查看详情。日期为约数（±1天）。",
+  month_of:"{animal}月",
+  rl_ben:"同生肖", rl_clash:"相冲", rl_punish:"相刑", rl_harm:"相害", rl_six:"六合", rl_three:"三合", rl_mixed:"合中带刑", rl_none:"平",
+  m_ben:"与你同生肖的月份，稳扎稳打。",
+  m_clash:"与你的生肖相冲。多摩擦或突变，大动作宜延后。",
+  m_punish:"压力暗中累积。文件和承诺要处理干净。",
+  m_harm:"容易有误会。说话要清楚、客气。",
+  m_six:"贵人月。适合谈合作、见伙伴、顾家庭。",
+  m_three:"顺畅月。适合开始新事、认识新朋友。",
+  m_mixed:"好坏参半：有助力也有压力。稳步前进。",
+  m_none:"平稳月。踏实做事。",
+  more_title:"更多资料（自愿）", more_sub:"想要更精准：填写完整生日、个人方位，以及你最在意的事。",
+  dob_label:"完整出生日期",
+  dob_early:"你生在立春之前，所以生肖年是{y}年（{animal}）。", dob_ok:"你的生肖年是{y}年（{animal}）。",
+  gender_label:"性别（用于个人方位）", g_male:"男", g_female:"女",
+  gender_note:"传统命卦公式分男女计算。",
+  focus_label:"你最在意什么？",
+  f_career:"事业", f_money:"财运", f_love:"感情", f_health:"健康", f_family:"家庭",
+  focus_title:"针对你在意的事",
+  need_year:"请先选择出生年份。",
+  f_career_good:"贵人运佳。好月份里多争取曝光，也勇于提出自己的诉求。",
+  f_career_steady:"稳步前进。多充实技能，细节做扎实。",
+  f_career_care:"避免大幅转职和办公室是非。资料整理好，把风头让给别人。",
+  f_money_good:"利于谈生意与合作。仍要留好应急资金。",
+  f_money_steady:"财运平稳。检视开销，别追求快钱。",
+  f_money_care:"守住已有的。避免大风险，合约多看两遍，多备现金。",
+  f_love_good:"感情运暖。适合认识新朋友或加深关系。",
+  f_love_steady:"平静的一年。日常相处的小时间，比大场面更重要。",
+  f_love_care:"说话要留意，尤其是紧张的月份。先听，后决定。",
+  f_health_good:"精力不错。维持作息，定期检查。",
+  f_health_steady:"平稳。睡眠和喝水，比任何偏方都重要。",
+  f_health_care:"放慢脚步，多休息。定期检查，避免过劳。若有担心，请看医生。",
+  f_family_good:"家里更温暖。好月份里安排家庭旅行或聚会。",
+  f_family_steady:"安稳平静。维持那些把家连在一起的简单习惯。",
+  f_family_care:"小摩擦可能变大。多一分耐心，一次平静的谈话胜过五次争吵。",
+  kua_title:"你的最佳方位", kua_sub:"你的命卦数是 {n}。",
+  d_sheng:"财运与事业", d_sheng_h:"办公时面向此方。",
+  d_tian:"健康与贵人", d_tian_h:"床头朝向此方。",
+  d_yan:"感情与长寿", d_yan_h:"适合卧室或家庭活动区。",
+  d_jue:"宜避开", d_jue_h:"书桌朝向和床头都要避开。",
+  map_title:"2027年家居与办公室方位图", map_sub:"点按方位，查看该方位的2027年飞星。",
+  map_tap:"请点按上方的方位。上方为北。请站在家或房间的中心，用手机指南针测方位。",
+  map_legend:"★ 你的吉方 · ✕ 你应避开（填写年份和性别后显示）",
+  map_water:"想放水景或鱼缸？2027年常见建议：放在东南、南或西北，北方和西方避免放水。",
+  s1_n:"一白 · 贵人星", s1_t:"适合工作区和会客处。贵人相助，进展较顺。",
+  s2_n:"二黑 · 病符星", s2_t:"保持安静平和。尽量避免大兴土木，也尽量不要在此睡觉。传统以金属物化解（如声音轻柔的铜铃）。",
+  s3_n:"三碧 · 是非星", s3_t:"留意口角与官非。保持整洁，避免在此高声争执。",
+  s4_n:"四绿 · 文昌桃花", s4_t:"利于读书、创作与人际感情。适合设书桌或学习角落。",
+  s5_n:"五黄 · 灾煞星", s5_t:"2027年最需谨慎的方位。避免动土、装修与噪音，保持安静；传统以金属物化解。",
+  s6_n:"六白 · 权威星", s6_t:"有利领导力、纪律与好决策。适合设家庭办公室。",
+  s7_n:"七赤 · 口舌盗贼", s7_t:"门窗锁好，贵重物品收妥。此处避免尖酸的话和闲言碎语。",
+  s8_n:"八白 · 财星", s8_t:"适合处理钱财事务。保持明亮、整洁、有人气（书桌或家人活动区）。",
+  s9_n:"九紫 · 喜庆星", s9_t:"带来喜讯与未来的收获。适合聚会，但气氛宜平和，不要过热。",
+  support_title:"支持这份免费指南", support_sub:"免费使用。如果对你有帮助，欢迎小额打赏，不胜感激。",
+  qr_reka:"Reka", qr_wise:"Wise（海外汇款）", qr_soon:"二维码即将上线",
+  care_title:"请留意",
+  c1:"仅供文化与反思参考，并非专业建议。请勿用于医疗、法律、财务或投资决定。",
+  c2:"本指南采用传统规则（生肖关系与2027年飞星）。不同老师的解读可能不同。",
+  c3:"隐私：所有计算都在你的设备上完成，你的出生资料不会被发送、储存或分享。设计时已参考马来西亚《2010年个人数据保护法》（PDPA）和印尼《2022年第27号个人数据保护法》（UU PDP）。",
+  c4:"内容与观点属作者个人，不代表任何机构。",
+  footer:"2027年运程指南 · 仅供文化与反思参考"
+}
+};
+
+/* ============================================================
+   DATA (language-independent)
+   ============================================================ */
+const CN_ANIMALS = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+// Day of February on which Li Chun (start of the Chinese solar year) falls, 1930-2026 (Beijing/KL time)
+const LICHUN = "4554455445544554445444544454445444544454445444544444444444444444444444444444444444444443444344434";
+// Month starts of the 2027 (Ding Wei) year, on solar terms. Index 0 = Tiger month (branch 2).
+const MONTH_STARTS = [[2027,2,4],[2027,3,6],[2027,4,5],[2027,5,6],[2027,6,6],[2027,7,7],[2027,8,8],[2027,9,8],[2027,10,8],[2027,11,7],[2027,12,7],[2028,1,6]];
+const MONTH_END_LAST = [2028,2,3];
+const GOAT = 7;
+
+const SIX = new Set(["0-1","2-11","3-10","4-9","5-8","6-7"]);
+const HARM = new Set(["0-7","1-6","2-5","3-4","8-11","9-10"]);
+const THREE = [[8,0,4],[11,3,7],[2,6,10],[5,9,1]];
+const PUNISH = [[2,5,8],[1,10,7],[0,3]];
+const TONE_OF = {ben:"care",clash:"bad",punish:"care",harm:"care",six:"good",three:"good",mixed:"steady",none:"steady"};
+const SYMBOL = {good:"✓",steady:"–",care:"!",bad:"✕"};
+
+// 2027 annual flying stars by direction (centre = 9)
+const STAR_AT = {N:5,NE:3,E:7,SE:8,S:4,SW:6,W:2,NW:1,C:9};
+const STAR_TONE = {1:"good",2:"bad",3:"care",4:"good",5:"bad",6:"good",7:"care",8:"good",9:"good"};
+const COMPASS_ORDER = ["NW","N","NE","W","C","E","SW","S","SE"];
+
+// Kua directions: [Sheng Qi, Tian Yi, Yan Nian, Jue Ming]
+const KUA = {1:["SE","E","S","SW"],2:["NE","W","NW","N"],3:["S","N","SE","W"],4:["N","S","E","NE"],
+             6:["W","NE","SW","S"],7:["NW","SW","NE","E"],8:["SW","NW","W","SE"],9:["E","SE","N","NW"]};
+
+/* ============================================================
+   LOGIC
+   ============================================================ */
+const state = {lang:"en", year:null, dob:"", gender:null, focus:new Set(), month:0, star:null};
+
+function t(key, params){
+  let s = (I18N[state.lang] && I18N[state.lang][key]);
+  if (s === undefined) s = I18N.en[key];
+  if (s === undefined) return key;
+  if (params) for (const k in params) s = s.split("{"+k+"}").join(params[k]);
+  return s;
+}
+const animalName = i => I18N[state.lang].animals[i] || I18N.en.animals[i];
+const branchOf = y => (((y-1900)%12)+12)%12;
+
+function relation(a,b){
+  if (a===b) return "ben";
+  if (((a-b+12)%12)===6) return "clash";
+  const k = a<b ? a+"-"+b : b+"-"+a;
+  const good = SIX.has(k) ? "six" : (THREE.some(g=>g.includes(a)&&g.includes(b)) ? "three" : null);
+  const bad = PUNISH.some(g=>g.includes(a)&&g.includes(b)) ? "punish" : (HARM.has(k) ? "harm" : null);
+  if (good && bad) return "mixed";
+  return good || bad || "none";
+}
+
+function lichunDay(y){ const c = LICHUN[y-1930]; return c ? parseInt(c,10) : 4; }
+// returns {cy, early} from an ISO date string
+function chineseYearFromDob(iso){
+  const [y,m,d] = iso.split("-").map(Number);
+  const early = (m===1) || (m===2 && d<lichunDay(y));
+  return {cy: early ? y-1 : y, early};
+}
+function effectiveYear(){
+  if (!state.year) return null;
+  if (state.dob) return chineseYearFromDob(state.dob).cy;
+  return state.year;
+}
+
+function kuaNumber(cy, gender){
+  const two = String(cy).slice(-2);
+  let sum = parseInt(two[0],10) + parseInt(two[1],10);
+  while (sum > 9) sum = Math.floor(sum/10) + (sum%10);
+  let k;
+  if (cy < 2000) k = gender==="male" ? 10 - sum : sum + 5;
+  else           k = gender==="male" ? 9 - sum  : sum + 6;
+  while (k > 9) k = Math.floor(k/10) + (k%10);
+  if (k === 0) k = 9;
+  if (k === 5) k = gender==="male" ? 2 : 8;
+  return k;
+}
+
+function monthRange(i){
+  const s = MONTH_STARTS[i];
+  const next = i < 11 ? MONTH_STARTS[i+1] : null;
+  const start = new Date(Date.UTC(s[0], s[1]-1, s[2]));
+  let end;
+  if (next){ end = new Date(Date.UTC(next[0], next[1]-1, next[2]) - 86400000); }
+  else end = new Date(Date.UTC(MONTH_END_LAST[0], MONTH_END_LAST[1]-1, MONTH_END_LAST[2]));
+  return {start, end};
+}
+const fmtShort = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{day:"numeric",month:"short",timeZone:"UTC"}).format(d);
+const fmtMonth = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{month:"short",timeZone:"UTC"}).format(d);
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+const $ = id => document.getElementById(id);
+
+function applyStatic(){
+  document.documentElement.lang = state.lang === "zh" ? "zh-CN" : state.lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+  // year options keep value, relabel
+  const sel = $("year"); const cur = sel.value;
+  sel.innerHTML = "";
+  const ph = document.createElement("option");
+  ph.value = ""; ph.textContent = t("year_ph"); sel.appendChild(ph);
+  for (let y = 2026; y >= 1930; y--){
+    const o = document.createElement("option");
+    o.value = y; o.textContent = y + " · " + animalName(branchOf(y));
+    sel.appendChild(o);
+  }
+  sel.value = cur;
+  $("mapLegend").textContent = t("map_legend");
+  document.querySelectorAll(".qr .ph").forEach(p => p.textContent = t("qr_soon"));
+}
+
+function renderResult(){
+  const cy = effectiveYear();
+  const box = $("result");
+  if (!cy){
+    box.innerHTML = '<div class="card tone-steady" style="border-style:dashed">'+t("empty")+'</div>';
+    $("ribbonSec").hidden = true;
+    return;
+  }
+  const a = branchOf(cy);
+  const rel = relation(a, GOAT);
+  const tone = TONE_OF[rel];
+  const key = (rel==="mixed") ? "none" : rel;
+  box.innerHTML =
+    '<div class="card">'+
+      '<div class="res-head"><span class="seal cjk" aria-hidden="true">'+CN_ANIMALS[a]+'</span>'+
+        '<div><h2>'+t("you_are",{animal:animalName(a)})+'</h2><p>'+t("cn_year",{y:cy})+'</p></div></div>'+
+      '<span class="badge tone-'+tone+'">'+SYMBOL[tone]+' '+t("r_"+key+"_t")+'</span>'+
+      '<p class="sum">'+t("r_"+key+"_s")+'</p>'+
+      '<div class="dw"><div><strong>'+t("do_label")+'</strong>'+t("r_"+key+"_d")+'</div>'+
+      '<div><strong>'+t("watch_label")+'</strong>'+t("r_"+key+"_w")+'</div></div>'+
+      '<div class="months-sum" id="monthsSum"></div>'+
+    '</div>';
+  renderRibbon(a);
+}
+
+function monthTone(a, i){
+  const b = (2+i) % 12;
+  const rel = relation(a, b);
+  return {b, rel, tone: TONE_OF[rel]};
+}
+
+function renderRibbon(a){
+  $("ribbonSec").hidden = false;
+  const rib = $("ribbon");
+  rib.innerHTML = "";
+  const best = [], careful = [];
+  for (let i=0;i<12;i++){
+    const m = monthTone(a,i);
+    const r = monthRange(i);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "tile tone-"+m.tone;
+    btn.setAttribute("aria-pressed", i===state.month ? "true":"false");
+    btn.setAttribute("aria-label", fmtShort(r.start)+" – "+fmtShort(r.end)+", "+t("month_of",{animal:animalName(m.b)})+", "+t("tone_"+m.tone));
+    btn.innerHTML = '<span class="mo">'+fmtMonth(r.start)+'</span><span class="an cjk">'+CN_ANIMALS[m.b]+'</span><span class="sy">'+SYMBOL[m.tone]+'</span>';
+    btn.addEventListener("click", () => { state.month = i; renderRibbon(a); $("ribbon").children[i].focus(); });
+    rib.appendChild(btn);
+    if (m.tone==="good") best.push(fmtMonth(r.start));
+    if (m.tone==="care" || m.tone==="bad") careful.push({n:fmtMonth(r.start), tone:m.tone});
+  }
+  // detail
+  const m = monthTone(a, state.month), r = monthRange(state.month);
+  const d = $("monthDetail");
+  d.className = "detail tone-"+m.tone;
+  d.innerHTML = '<b>'+fmtShort(r.start)+' – '+fmtShort(r.end)+' · '+t("month_of",{animal:animalName(m.b)})+'</b>'+
+                '<small>'+SYMBOL[m.tone]+' '+t("rl_"+m.rel)+'</small>'+t("m_"+m.rel);
+  // summary lines under result
+  const ms = $("monthsSum");
+  if (ms){
+    let h = "";
+    if (best.length) h += '<div class="row"><b>'+t("best_months")+':</b>'+best.map(n=>'<span class="pill tone-good">✓ '+n+'</span>').join("")+'</div>';
+    if (careful.length) h += '<div class="row"><b>'+t("care_months")+':</b>'+careful.map(c=>'<span class="pill tone-'+c.tone+'">'+(c.tone==="bad"?"✕ ":"! ")+c.n+'</span>').join("")+'</div>';
+    ms.innerHTML = h;
+  }
+}
+
+function renderDobNote(){
+  const n = $("dobNote");
+  if (!state.dob){ n.textContent = ""; return; }
+  const r = chineseYearFromDob(state.dob);
+  n.textContent = t(r.early ? "dob_early" : "dob_ok", {y:r.cy, animal:animalName(branchOf(r.cy))});
+}
+
+function personalDirs(){
+  const cy = effectiveYear();
+  if (!cy || !state.gender) return null;
+  const n = kuaNumber(cy, state.gender);
+  return {n, d:KUA[n]};
+}
+
+function renderExtras(){
+  const cy = effectiveYear();
+  const ex = $("extras");
+  const wantsKua = !!state.gender, wantsFocus = state.focus.size > 0;
+  if (!wantsKua && !wantsFocus){ ex.innerHTML = ""; ex.style.display = "none"; return; }
+  ex.style.display = "grid";
+  if (!cy){ ex.innerHTML = '<p class="note" style="margin:0">'+t("need_year")+'</p>'; return; }
+  let h = "";
+  if (wantsKua){
+    const p = personalDirs();
+    const rows = [["sheng","good"],["tian","good"],["yan","good"],["jue","bad"]];
+    h += '<div><h3>'+t("kua_title")+'</h3><p class="note" style="margin:0 0 8px">'+t("kua_sub",{n:p.n})+'</p><div class="dirs">';
+    rows.forEach((r,i) => {
+      const dn = I18N[state.lang].dirs[p.d[i]];
+      h += '<div class="dirrow tone-'+r[1]+'"><div><b>'+t("d_"+r[0])+'</b><div class="what">'+t("d_"+r[0]+"_h")+'</div></div><span class="dn">'+dn+'</span></div>';
+    });
+    h += '</div></div>';
+  }
+  if (wantsFocus){
+    const a = branchOf(cy);
+    const tone = TONE_OF[relation(a, GOAT)];
+    const tk = tone==="good" ? "good" : (tone==="steady" ? "steady" : "care");
+    h += '<div><h3>'+t("focus_title")+'</h3><div style="display:grid;gap:8px;margin-top:8px">';
+    ["career","money","love","health","family"].forEach(f => {
+      if (state.focus.has(f)) h += '<div class="tip"><strong>'+t("f_"+f)+'</strong>'+t("f_"+f+"_"+tk)+'</div>';
+    });
+    h += '</div></div>';
+  }
+  ex.innerHTML = h;
+}
+
+function renderMap(){
+  const grid = $("compass");
+  grid.innerHTML = "";
+  const p = personalDirs();
+  COMPASS_ORDER.forEach(dir => {
+    const star = STAR_AT[dir], tone = STAR_TONE[star];
+    let mark = "";
+    if (p && dir !== "C"){
+      if (p.d.slice(0,3).includes(dir)) mark = "★";
+      else if (p.d[3] === dir) mark = "✕";
+    }
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "cell tone-"+tone;
+    b.setAttribute("aria-pressed", state.star===dir ? "true":"false");
+    b.setAttribute("aria-label", (dir==="C" ? I18N[state.lang].ds.C : I18N[state.lang].dirs[dir]) + ": " + t("s"+star+"_n") + (mark ? " "+mark : ""));
+    b.innerHTML = (mark ? '<span class="mk">'+mark+'</span>' : '')+
+      '<span class="dr">'+I18N[state.lang].ds[dir]+'</span><span class="st">'+star+'</span><span class="sn">'+t("s"+star+"_n").split(" · ")[0]+'</span>';
+    b.addEventListener("click", () => { state.star = dir; renderMap(); const k = COMPASS_ORDER.indexOf(dir); $("compass").children[k].focus(); });
+    grid.appendChild(b);
+  });
+  const d = $("starDetail");
+  if (!state.star){ d.className = "detail"; d.style.borderStyle = "dashed"; d.textContent = t("map_tap"); return; }
+  const star = STAR_AT[state.star];
+  d.style.borderStyle = "solid";
+  d.className = "detail tone-"+STAR_TONE[star];
+  const dn = state.star==="C" ? I18N[state.lang].ds.C : I18N[state.lang].dirs[state.star];
+  d.innerHTML = '<b>'+dn+' · '+t("s"+star+"_n")+'</b>'+t("s"+star+"_t");
+}
+
+function renderAll(){
+  renderResult();
+  renderDobNote();
+  renderExtras();
+  renderMap();
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+function init(){
+  // language menu
+  const langSel = $("lang");
+  Object.keys(I18N).forEach(k => {
+    const o = document.createElement("option");
+    o.value = k; o.textContent = I18N[k].langName; langSel.appendChild(o);
+  });
+  let saved = null;
+  try { saved = localStorage.getItem("guide2027.lang"); } catch(e){}
+  const nav = (navigator.language || "en").toLowerCase();
+  state.lang = (saved && I18N[saved]) ? saved : (nav.startsWith("ms") && I18N.ms ? "ms" : (nav.startsWith("zh") && I18N.zh ? "zh" : "en"));
+  langSel.value = state.lang;
+  langSel.addEventListener("change", () => {
+    state.lang = langSel.value;
+    try { localStorage.setItem("guide2027.lang", state.lang); } catch(e){}
+    applyStatic(); renderAll();
+  });
+
+  $("year").addEventListener("change", e => {
+    const v = e.target.value ? parseInt(e.target.value,10) : null;
+    state.year = v;
+    if (state.dob && (!v || parseInt(state.dob.slice(0,4),10) !== v)){ state.dob = ""; $("dob").value = ""; }
+    renderAll();
+  });
+  $("dob").addEventListener("change", e => {
+    const v = e.target.value;
+    if (v && /^\d{4}-\d{2}-\d{2}$/.test(v)){
+      const y = parseInt(v.slice(0,4),10);
+      if (y >= 1930 && y <= 2026){
+        state.dob = v; state.year = y; $("year").value = String(y);
+      }
+    } else { state.dob = ""; }
+    renderAll();
+  });
+  $("genderChips").addEventListener("click", e => {
+    const b = e.target.closest("button[data-g]"); if (!b) return;
+    state.gender = (state.gender === b.dataset.g) ? null : b.dataset.g;
+    document.querySelectorAll("#genderChips .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.g===state.gender ? "true":"false"));
+    renderExtras(); renderMap();
+  });
+  $("focusChips").addEventListener("click", e => {
+    const b = e.target.closest("button[data-f]"); if (!b) return;
+    const f = b.dataset.f;
+    if (state.focus.has(f)) state.focus.delete(f); else state.focus.add(f);
+    b.setAttribute("aria-pressed", state.focus.has(f) ? "true":"false");
+    renderExtras();
+  });
+
+  // default month = current month of the 2027 year if we are inside it
+  const now = Date.now();
+  for (let i=0;i<12;i++){ const r = monthRange(i); if (now >= r.start.getTime() && now <= r.end.getTime()+86399999){ state.month = i; break; } }
+
+  // QR fallbacks
+  document.querySelectorAll(".qr img").forEach(img => {
+    img.addEventListener("error", () => {
+      const ph = document.createElement("div"); ph.className = "ph"; ph.textContent = t("qr_soon");
+      img.replaceWith(ph);
+    });
+  });
+
+  // install button
+  let deferred = null;
+  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; });
+  const standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone;
+  if (standalone) $("installBtn").hidden = true;
+  $("installBtn").addEventListener("click", async () => {
+    if (deferred){ deferred.prompt(); try { await deferred.userChoice; } catch(e){} deferred = null; return; }
+    const dlg = $("installDlg");
+    if (dlg.showModal) dlg.showModal(); else alert(t("install_ios") + "\n\n" + t("install_android"));
+  });
+  $("installClose").addEventListener("click", () => $("installDlg").close());
+
+  applyStatic();
+  renderAll();
+}
+document.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
