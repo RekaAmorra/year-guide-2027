@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to read your 2027 Year Guide result · Reka Amorra</title>
+<meta name="description" content="Four parts, five minutes. What the colours mean in the 2027 Year Guide, and how each day gets its rating.">
+<meta property="og:type" conteRekaAmorra
+year-guide-2027
+Repository navigation
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security and quality
+Insights
+Settings
+Files
+Go to file
+t
+T
+README.md
+icon-192.png
+icon-512.png
+index.html
+manifest.webmanifest
+404 - page not found
+The main branch of year-guide-2027 does not contain the path how-to-read.nt="article">
+<meta property="og:title" content="How to read your 2027 Year Guide result">
+<meta property="og:description" content="Four parts, five minutes. What the colours mean, and how each day gets its rating.">
+<meta property="og:url" content="https://rekaamorra.github.io/year-guide-2027/how-to-read/">
+<meta name="theme-color" content="#ffffff">
+<style>
+:root{
+  --ink:#1d2430; --muted:#5d6878; --line:#e3e8ef; --seal:#b8282f; --blue:#0b5cad;
+  --good-bg:#e3f4e8; --good-bd:#b9e1c5; --good-tx:#17653a;
+  --steady-bg:#edf1f6; --steady-bd:#d3dce8; --steady-tx:#3d4b5f;
+  --care-bg:#fde8ea; --care-bd:#f4c3c8; --care-tx:#9b2d37;
+  --bad-bg:#f8cdd2; --bad-bd:#eba0a8; --bad-tx:#7e1f28;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:#fff; color:var(--ink);
+  font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC","Hiragino Sans","Noto Sans CJK SC","Noto Sans CJK JP","Yu Gothic","Microsoft YaHei",sans-serif}
+.wrap{max-width:740px; margin:0 auto; padding:0 16px 56px}
+.cjk{font-family:"Noto Serif CJK SC","Noto Serif CJK JP","Songti SC","Hiragino Mincho ProN","Yu Mincho",STSong,SimSun,serif}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid #8fb4e8; outline-offset:2px}
+
+.topbar{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; padding:16px 0 8px}
+.mark{font-weight:800; letter-spacing:.2px}
+.langs{display:flex; gap:6px; flex-wrap:wrap}
+.langs button{font:inherit; font-size:.88rem; font-weight:700; min-height:40px; padding:6px 14px; border-radius:999px; border:1.5px solid #cfd7e2; background:#fff; color:var(--ink); cursor:pointer}
+.langs button[aria-pressed=true]{background:var(--ink); color:#fff; border-color:var(--ink)}
+
+.kicker{margin:26px 0 6px; font-size:.9rem; font-weight:700; color:var(--blue)}
+h1{margin:0; font-size:clamp(1.9rem,6vw,2.6rem); line-height:1.15; font-weight:800}
+.standfirst{margin:12px 0 0; color:var(--muted); font-size:1.1rem}
+.byline{margin:16px 0 0; padding-bottom:16px; border-bottom:4px solid var(--ink); color:var(--muted); font-size:.92rem}
+.actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.btn{display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:8px 18px; border-radius:12px; font-weight:700; font-size:.95rem; text-decoration:none; border:1.5px solid #cfd7e2; background:#fff; color:var(--ink)}
+.btn.primary{background:var(--seal); border-color:var(--seal); color:#fff}
+
+.box{border-radius:18px; padding:18px 20px; margin-top:22px; border:1.5px solid}
+.box h2{margin:0 0 8px; font-size:1.05rem}
+.box ul{margin:0; padding-left:20px; display:grid; gap:8px}
+.tone-good{background:var(--good-bg); border-color:var(--good-bd); color:var(--good-tx)}
+.tone-steady{background:var(--steady-bg); border-color:var(--steady-bd); color:var(--steady-tx)}
+.tone-care{background:var(--care-bg); border-color:var(--care-bd); color:var(--care-tx)}
+.tone-bad{background:var(--bad-bg); border-color:var(--bad-bd); color:var(--bad-tx)}
+.box.tldr{background:#f6f8fb; border-color:var(--line); color:var(--ink); border-left:6px solid var(--seal)}
+
+.legend{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+.pill{display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:999px; font-weight:700; font-size:.9rem; border:1.5px solid}
+
+section.step{margin-top:44px}
+.sh{display:flex; align-items:center; gap:12px; margin-bottom:10px}
+.badge{flex:none; width:40px; height:40px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800}
+.sh h2{margin:0; font-size:1.4rem; line-height:1.25}
+p{margin:0 0 12px}
+.cap{font-size:.88rem; color:var(--muted)}
+
+.rels{display:grid; gap:10px; margin-top:14px}
+@media(min-width:620px){.rels{grid-template-columns:1fr 1fr}}
+.rel{border:1.5px solid; border-radius:16px; padding:12px 14px}
+.rel b{display:block}
+.rel .an{font-size:.88rem; opacity:.9; margin:2px 0 4px}
+.rel span.m{font-size:.95rem}
+
+.months{display:grid; grid-template-columns:repeat(6,1fr); gap:8px; margin:14px 0 6px}
+.mt{border:1.5px solid; border-radius:12px; padding:8px 2px; text-align:center; line-height:1.2}
+.mt .a{font-size:.8rem; font-weight:700}
+.mt .c{font-size:1.4rem; margin:2px 0}
+.mt .s{font-size:.85rem; font-weight:800}
+
+.flow{display:grid; gap:0; margin:14px 0}
+.fl{border:1.5px solid var(--line); border-radius:16px; padding:12px 16px; background:#fff}
+.fl b{display:block}
+.fl.last{border-width:2px; border-color:var(--ink)}
+.arrow{text-align:center; color:#9aa7b4; font-size:1.2rem; line-height:1.4}
+
+.ex{display:grid; gap:10px; margin-top:12px}
+.exr{display:grid; grid-template-columns:62px 1fr; gap:12px; align-items:center}
+.dt{border:1.5px solid; border-radius:12px; text-align:center; padding:6px 0; line-height:1.15}
+.dt .w{font-size:.75rem}
+.dt .n{font-size:1.25rem; font-weight:800}
+.dt .p{font-size:.85rem}
+.dt .s{font-size:.8rem; font-weight:800}
+.exr .t{font-size:.97rem}
+.read{margin-top:14px; font-weight:700}
+
+ul.plain{margin:10px 0 0; padding-left:22px; display:grid; gap:8px}
+
+.check{background:#fffdf9; }
+.check ul{list-style:none; padding:0; display:grid; gap:10px; margin:0}
+.check li{display:grid; grid-template-columns:26px 1fr; gap:10px; align-items:start}
+.check li::before{content:""; width:22px; height:22px; border:2px solid var(--ink); border-radius:6px; margin-top:3px}
+
+details{margin-top:18px; border:1.5px solid var(--line); border-radius:14px; padding:12px 16px}
+summary{cursor:pointer; font-weight:700}
+details p{margin-top:10px; font-size:.95rem}
+
+.bio{display:flex; gap:14px; align-items:center; margin-top:36px; padding-top:20px; border-top:1.5px solid var(--line)}
+.av{flex:none; width:52px; height:52px; border-radius:50%; background:var(--seal); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.bio p{margin:0; font-size:.95rem; color:var(--muted)}
+footer{margin-top:22px; text-align:center; color:var(--muted); font-size:.85rem}
+.bottom-actions{margin-top:24px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <span class="mark">Reka Amorra</span>
+    <div class="langs" id="langs" role="group" aria-label="Language"></div>
+  </div>
+
+  <header>
+    <p class="kicker" data-i18n="kicker"></p>
+    <h1 data-i18n="title"></h1>
+    <p class="standfirst" data-i18n="standfirst"></p>
+    <p class="byline" data-i18n="byline"></p>
+    <div class="actions">
+      <a class="btn primary" id="guideTop" href="../" data-i18n="btn_guide"></a>
+      <a class="btn li-btn" href="#" target="_blank" rel="noopener" hidden data-i18n="btn_comment"></a>
+    </div>
+  </header>
+
+  <div class="box tldr">
+    <h2 data-i18n="tldr_label"></h2>
+    <ul>
+      <li data-i18n="tl1"></li><li data-i18n="tl2"></li><li data-i18n="tl3"></li><li data-i18n="tl4"></li>
+    </ul>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <section class="step">
+    <div class="sh"><span class="badge">1</span><h2 data-i18n="s1_t"></h2></div>
+    <p data-i18n="s1_p"></p>
+    <div class="rels" id="rels"></div>
+  </section>
+
+  <section class="step">
+    <div class="sh"><span class="badge">2</span><h2 data-i18n="s2_t"></h2></div>
+    <p data-i18n="s2_p1"></p>
+    <p data-i18n="s2_p2"></p>
+    <div class="months" id="months"></div>
+    <p class="cap" data-i18n="s2_cap"></p>
+    <p class="cap" data-i18n="s2_note"></p>
+  </section>
+
+  <section class="step">
+    <div class="sh"><span class="badge">3</span><h2 data-i18n="s3_t"></h2></div>
+    <p data-i18n="s3_p1"></p>
+    <h3 style="margin:18px 0 0" data-i18n="s3_flow_t"></h3>
+    <div class="flow">
+      <div class="fl"><b data-i18n="f1_t"></b><span data-i18n="f1_d"></span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="fl"><b data-i18n="f2_t"></b><span data-i18n="f2_d"></span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="fl"><b data-i18n="f3_t"></b><span data-i18n="f3_d"></span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="fl last"><b data-i18n="f4_t"></b><span data-i18n="f4_d"></span></div>
+    </div>
+    <p data-i18n="s3_p2"></p>
+    <h3 style="margin:22px 0 2px" data-i18n="ex_t"></h3>
+    <p class="cap" data-i18n="ex_cap"></p>
+    <div class="ex" id="ex"></div>
+    <p class="read" data-i18n="ex_read"></p>
+  </section>
+
+  <section class="step">
+    <div class="sh"><span class="badge">4</span><h2 data-i18n="s4_t"></h2></div>
+    <ul class="plain">
+      <li data-i18n="s4_li1"></li><li data-i18n="s4_li2"></li><li data-i18n="s4_li3"></li><li data-i18n="s4_li4"></li>
+    </ul>
+  </section>
+
+  <div class="box check tone-good" style="background:#f4faf6">
+    <h2 data-i18n="chk_t"></h2>
+    <ul>
+      <li data-i18n="chk1"></li><li data-i18n="chk2"></li><li data-i18n="chk3"></li>
+      <li data-i18n="chk4"></li><li data-i18n="chk5"></li><li data-i18n="chk6"></li>
+    </ul>
+  </div>
+
+  <div class="box tone-care">
+    <h2 data-i18n="watch_t"></h2>
+    <p style="margin:0" data-i18n="watch_p"></p>
+  </div>
+
+  <details>
+    <summary data-i18n="m_sum"></summary>
+    <p data-i18n="m_p1"></p><p data-i18n="m_p2"></p><p data-i18n="m_p3"></p>
+  </details>
+
+  <div class="box tone-steady">
+    <h2 data-i18n="priv_t"></h2>
+    <p data-i18n="priv_p1"></p><p data-i18n="priv_p2"></p><p style="margin:0" data-i18n="priv_p3"></p>
+  </div>
+
+  <div class="actions bottom-actions">
+    <a class="btn primary" id="guideBottom" href="../" data-i18n="btn_guide"></a>
+    <a class="btn li-btn" href="#" target="_blank" rel="noopener" hidden data-i18n="btn_comment"></a>
+  </div>
+
+  <div class="bio"><span class="av">RA</span><p data-i18n="bio"></p></div>
+  <footer data-i18n="foot"></footer>
+</div>
+
+<script>
+/* Set this to the LinkedIn post link once the post is live. The "Comment on LinkedIn" buttons stay hidden until then. */
+const LINKEDIN_POST_URL = "https://lnkd.in/p/gKBQ3Y2S";
+
+const I18N = {
+en:{ langName:"English", locale:"en-GB", htmlLang:"en",
+  animals:["Rat","Ox","Tiger","Rabbit","Dragon","Snake","Horse","Goat","Monkey","Rooster","Dog","Pig"],
+  pageTitle:"How to read your 2027 Year Guide result · Reka Amorra",
+  kicker:"Explainer · 2027 Year Guide",
+  title:"How to read your 2027 Year Guide result",
+  standfirst:"Four parts, five minutes. What the colours mean, and how each day gets its rating.",
+  byline:"Reka Amorra · Nov 2026 · 4 min read",
+  btn_guide:"Open the guide", btn_comment:"Comment on LinkedIn",
+  tldr_label:"The short version",
+  tl1:"Your result has four parts: your sign against the Goat year, your 12 months, a week-by-week day finder, and optional home directions.",
+  tl2:"Green is supportive. Blue-grey is steady. Pink is careful. Deep red is a clash. Each colour also has a symbol: ✓ – ! ✕.",
+  tl3:"Each day gets its rating from three things: the day type, how the day sits with your sign, and the year-breaking day.",
+  tl4:"It is a guide for culture and reference. A real deadline comes before any symbol.",
+  leg_good:"Supportive", leg_steady:"Steady", leg_care:"Careful", leg_bad:"Clash",
+  s1_t:"Your sign and the year",
+  s1_p:"The first thing you see is one badge. It says how your sign sits with the Goat year, which runs about 4 Feb 2027 to 3 Feb 2028. There are seven kinds.",
+  rn_six:"Six Harmonies", rm_six:"A strong ally. Support and smoother deals.",
+  rn_three:"Three Harmonies", rm_three:"Good flow. Easier than most this year.",
+  rn_none:"Neutral", rm_none:"No special tie. The months and days do the guiding.",
+  rn_ben:"Own year", rm_ben:"Go careful and steady. Tradition says it is not a bad year.",
+  rn_harm:"Harm", rm_harm:"Misunderstandings come easily. Say things clearly.",
+  rn_punish:"Punishment", rm_punish:"Hidden friction. Keep paperwork and promises clean.",
+  rn_clash:"Clash", rm_clash:"Change and some friction. Plan changes on purpose.",
+  s2_t:"Your 12 months",
+  s2_p1:"Each tile is one Chinese month, named after an animal. Chinese months start on solar terms, around the 4th to 8th, not on the 1st. So the Tiger month starts on 4 Feb, not 1 Feb.",
+  s2_p2:"The tile shows how that month’s animal sits with your sign. Tap a tile in the guide for the dates and a one-line note.",
+  s2_cap:"Example: born 1990 (Horse). Same colours and symbols as in the guide.",
+  s2_note:"Best months and careful months are also listed above the strip.",
+  s3_t:"Week by week",
+  s3_p1:"Pick what you are doing: Business, Love, Travel & moving, or Health. Then each day shows its date, two Chinese characters (the day’s pillar) and a symbol.",
+  s3_flow_t:"How a day gets its symbol",
+  f1_t:"1. Day type", f1_d:"One of 12 day types (the 12 Day Officers). Each one is good or bad for different things.",
+  f2_t:"2. Your sign", f2_d:"A clash day is ✕. A day that supports your sign moves up one step. A tense day moves down one step.",
+  f3_t:"3. Year-breaking day", f3_d:"In 2027 every Ox day breaks the Goat year. Those days are ✕ for everyone.",
+  f4_t:"The symbol", f4_d:"✓ good, – fair, ! careful, ✕ avoid.",
+  s3_p2:"The strongest day types are Success 成 and Open 开. The weakest are Destroy 破 and Close 闭. The other eight sit in between and depend on what you are doing.",
+  ex_t:"Worked example", ex_cap:"Born 1990 (Horse), Business, 29 Mar to 4 Apr 2027.",
+  ex_d1:"Stable 定 is good for signing, and a Goat day is a Six Harmonies match for a Horse.",
+  ex_d2:"Initiate 执 is fair for business. Nothing special with your sign.",
+  ex_d3:"Destroy 破 is a clashing day. Skip launches and signing.",
+  ex_d4:"Danger 危 is normally careful, but a Dog day supports a Horse and lifts it to fair.",
+  ex_d5:"Success 成 is one of the best days.",
+  ex_d6:"A Rat day clashes with a Horse. Avoid it, even though Harvest 收 is fair.",
+  ex_d7:"Open 开 is a top day, but an Ox day breaks the Goat year. Avoid.",
+  ex_read:"Reading it: Monday and Friday are the days to use. The weekend is the one to skip.",
+  s4_t:"The optional extras",
+  s4_li1:"Exact birth date: fixes people born in January or early February, because the Chinese year starts at Li Chun, around 4 Feb.",
+  s4_li2:"Gender: only needed for your personal directions (your Kua number). The old formula uses male or female.",
+  s4_li3:"What matters to you: adds a short tip for career, money, love, health or family.",
+  s4_li4:"Home and office map: tap a direction to see its 2027 star. North is at the top. Measure from the centre of your home with a phone compass.",
+  chk_t:"Save this: before you pick a date",
+  chk1:"Choose the thing first: Business, Love, Travel & moving or Health.",
+  chk2:"If you have a choice, take a ✓ day.",
+  chk3:"✕ means a clash with your sign, or a year-breaking day. Pick another date if you can.",
+  chk4:"! days are fine for routine work. Keep big signings and launches for ✓ days.",
+  chk5:"Court dates, medical appointments and contract deadlines do not move for a symbol. Keep them.",
+  chk6:"Treat it as a guide, not a verdict.",
+  watch_t:"What it does not do",
+  watch_p:"It does not use your birth hour or a full Four Pillars chart. It does not use the 28 Mansions. Different masters add more rules and can disagree with each other. For a wedding or a big launch, many people still ask a master as well.",
+  m_sum:"How it is worked out",
+  m_p1:"The rules are standard Chinese almanac (Tong Shu) conventions: the 12 Day Officers, the relationships between the 12 animals (six harmonies, three harmonies, harm, punishment, clash), the year-breaking day, Li Chun as the start of the year, the Kua formula for personal directions and the 2027 annual flying stars.",
+  m_p2:"Solar-term dates are calculated for Malaysia time (UTC+8) and can be one day off. Day ratings follow the calendar date.",
+  m_p3:"These are traditional conventions, not measured facts, so there are no statistics to cite. Schools differ, and the guide follows one common version.",
+  priv_t:"Privacy and disclaimer",
+  priv_p1:"For culture and reference only, not professional advice. Please do not use it for medical, legal, financial or investment decisions.",
+  priv_p2:"Birth details are worked out on your phone and are not sent or saved. Built with Malaysia’s PDPA 2010 and Indonesia’s UU PDP No. 27/2022 in mind.",
+  priv_p3:"Views and content are the author’s own and do not represent any organisation.",
+  bio:"Reka Amorra writes plain guides on affiliate marketing and creator tools for Malaysia and Indonesia.",
+  foot:"© 2026 Reka Amorra"
+},
+id:{ langName:"Bahasa Indonesia", locale:"id-ID", htmlLang:"id",
+  animals:["Tikus","Kerbau","Macan","Kelinci","Naga","Ular","Kuda","Kambing","Monyet","Ayam","Anjing","Babi"],
+  pageTitle:"Cara membaca hasil Panduan Tahun 2027 · Reka Amorra",
+  kicker:"Penjelasan · Panduan Tahun 2027",
+  title:"Cara membaca hasil Panduan Tahun 2027 kamu",
+  standfirst:"Empat bagian, lima menit. Arti warna dan cara tiap hari mendapat nilainya.",
+  byline:"Reka Amorra · Nov 2026 · 4 menit baca",
+  btn_guide:"Buka panduannya", btn_comment:"Komentar di LinkedIn",
+  tldr_label:"Ringkasnya",
+  tl1:"Hasil kamu punya empat bagian: shio kamu terhadap tahun Kambing, 12 bulan kamu, pencari hari per minggu, dan arah rumah (opsional).",
+  tl2:"Hijau berarti mendukung. Abu-biru berarti stabil. Merah muda berarti hati-hati. Merah tua berarti bentrok. Tiap warna juga punya simbol: ✓ – ! ✕.",
+  tl3:"Nilai tiap hari datang dari tiga hal: jenis harinya, hubungan hari itu dengan shio kamu, dan hari pemecah tahun.",
+  tl4:"Ini panduan untuk budaya dan referensi. Tenggat yang nyata lebih penting daripada simbol apa pun.",
+  leg_good:"Mendukung", leg_steady:"Stabil", leg_care:"Hati-hati", leg_bad:"Bentrok",
+  s1_t:"Shio kamu dan tahunnya",
+  s1_p:"Hal pertama yang muncul adalah satu lencana. Isinya hubungan shio kamu dengan tahun Kambing, yang berjalan sekitar 4 Feb 2027 sampai 3 Feb 2028. Ada tujuh jenis.",
+  rn_six:"Harmoni Enam", rm_six:"Sekutu kuat. Ada dukungan dan urusan lebih lancar.",
+  rn_three:"Harmoni Tiga", rm_three:"Alurnya bagus. Lebih mudah daripada kebanyakan orang tahun ini.",
+  rn_none:"Netral", rm_none:"Tidak ada hubungan khusus. Bulan dan hari yang jadi penuntun.",
+  rn_ben:"Tahun shio sendiri", rm_ben:"Jalani dengan hati-hati dan tenang. Menurut tradisi, ini bukan tahun sial.",
+  rn_harm:"Merugikan (Hai)", rm_harm:"Salah paham gampang terjadi. Bicaralah yang jelas.",
+  rn_punish:"Hukuman (Xing)", rm_punish:"Gesekan tersembunyi. Rapikan dokumen dan janji.",
+  rn_clash:"Bentrok (Chong)", rm_clash:"Ada perubahan dan sedikit gesekan. Rencanakan perubahan dengan sengaja.",
+  s2_t:"12 bulan kamu",
+  s2_p1:"Tiap kotak adalah satu bulan Tionghoa, dinamai dengan hewan. Bulan Tionghoa mulai pada pergantian solar term, sekitar tanggal 4 sampai 8, bukan tanggal 1. Jadi bulan Macan mulai 4 Feb, bukan 1 Feb.",
+  s2_p2:"Kotak menunjukkan hubungan hewan bulan itu dengan shio kamu. Ketuk kotak di panduan untuk melihat tanggal dan catatan satu baris.",
+  s2_cap:"Contoh: lahir 1990 (Kuda). Warna dan simbolnya sama dengan di panduan.",
+  s2_note:"Bulan terbaik dan bulan yang perlu hati-hati juga tertulis di atas deretan kotak.",
+  s3_t:"Minggu demi minggu",
+  s3_p1:"Pilih yang sedang kamu lakukan: Usaha, Asmara, Bepergian & pindahan, atau Kesehatan. Lalu tiap hari menampilkan tanggal, dua karakter Mandarin (pilar harinya), dan satu simbol.",
+  s3_flow_t:"Bagaimana sebuah hari mendapat simbol",
+  f1_t:"1. Jenis hari", f1_d:"Satu dari 12 jenis hari (12 Day Officer). Tiap jenis cocok atau tidak untuk hal yang berbeda.",
+  f2_t:"2. Shio kamu", f2_d:"Hari yang bentrok berarti ✕. Hari yang mendukung shio kamu naik satu tingkat. Hari yang tegang turun satu tingkat.",
+  f3_t:"3. Hari pemecah tahun", f3_d:"Di 2027, setiap hari Kerbau memecah tahun Kambing. Hari itu ✕ untuk semua orang.",
+  f4_t:"Simbolnya", f4_d:"✓ baik, – biasa, ! hati-hati, ✕ hindari.",
+  s3_p2:"Jenis hari terkuat adalah Sukses 成 dan Buka 开. Yang terlemah adalah Hancur 破 dan Tutup 闭. Delapan lainnya ada di tengah dan tergantung apa yang kamu lakukan.",
+  ex_t:"Contoh nyata", ex_cap:"Lahir 1990 (Kuda), Usaha, 29 Mar sampai 4 Apr 2027.",
+  ex_d1:"Mantap 定 bagus untuk tanda tangan, dan hari Kambing cocok dengan Kuda (Harmoni Enam).",
+  ex_d2:"Pegang 执 biasa saja untuk usaha. Tidak ada hubungan khusus dengan shio kamu.",
+  ex_d3:"Hancur 破 adalah hari bentrok. Lewati peluncuran dan tanda tangan.",
+  ex_d4:"Bahaya 危 biasanya hati-hati, tapi hari Anjing mendukung Kuda dan menaikkannya jadi biasa.",
+  ex_d5:"Sukses 成 adalah salah satu hari terbaik.",
+  ex_d6:"Hari Tikus bentrok dengan Kuda. Hindari, walau Panen 收 itu biasa saja.",
+  ex_d7:"Buka 开 hari yang top, tapi hari Kerbau memecah tahun Kambing. Hindari.",
+  ex_read:"Cara bacanya: Senin dan Jumat adalah hari yang dipakai. Akhir pekan sebaiknya dilewati.",
+  s4_t:"Tambahan opsional",
+  s4_li1:"Tanggal lahir lengkap: memperbaiki hasil untuk yang lahir Januari atau awal Februari, karena tahun Tionghoa mulai di Li Chun, sekitar 4 Feb.",
+  s4_li2:"Jenis kelamin: hanya perlu untuk arah pribadi (angka Kua kamu). Rumus tradisionalnya membedakan laki-laki dan perempuan.",
+  s4_li3:"Hal yang penting buat kamu: menambah tips singkat untuk karier, uang, asmara, kesehatan, atau keluarga.",
+  s4_li4:"Peta rumah dan kantor: ketuk arah untuk melihat bintang 2027-nya. Utara ada di atas. Ukur dari titik tengah rumah dengan kompas ponsel.",
+  chk_t:"Simpan ini: sebelum memilih tanggal",
+  chk1:"Tentukan dulu urusannya: Usaha, Asmara, Bepergian & pindahan, atau Kesehatan.",
+  chk2:"Kalau bisa memilih, ambil hari ✓.",
+  chk3:"✕ berarti bentrok dengan shio kamu, atau hari pemecah tahun. Pilih tanggal lain kalau bisa.",
+  chk4:"Hari ! boleh untuk pekerjaan rutin. Simpan tanda tangan dan peluncuran besar untuk hari ✓.",
+  chk5:"Jadwal sidang, janji dokter, dan tenggat kontrak tidak bergeser karena simbol. Tetap jalankan.",
+  chk6:"Anggap ini panduan, bukan vonis.",
+  watch_t:"Yang tidak dilakukan panduan ini",
+  watch_p:"Panduan ini tidak memakai jam lahir atau bazi lengkap. Tidak memakai 28 Mansion. Guru yang berbeda menambah aturan sendiri dan bisa tidak sependapat. Untuk pernikahan atau peluncuran besar, banyak orang tetap bertanya juga ke guru.",
+  m_sum:"Cara menghitungnya",
+  m_p1:"Aturannya adalah kebiasaan standar almanak Tionghoa (Tong Shu): 12 Day Officer, hubungan antar 12 hewan (harmoni enam, harmoni tiga, merugikan, hukuman, bentrok), hari pemecah tahun, Li Chun sebagai awal tahun, rumus Kua untuk arah pribadi, dan bintang terbang tahunan 2027.",
+  m_p2:"Tanggal solar term dihitung untuk waktu Malaysia (UTC+8) dan bisa meleset satu hari. Nilai hari mengikuti tanggal kalender.",
+  m_p3:"Ini kebiasaan tradisional, bukan fakta terukur, jadi tidak ada statistik untuk dikutip. Tiap aliran berbeda, dan panduan ini mengikuti salah satu versi yang umum.",
+  priv_t:"Privasi dan penafian",
+  priv_p1:"Hanya untuk budaya dan referensi, bukan nasihat profesional. Jangan dipakai untuk keputusan medis, hukum, keuangan, atau investasi.",
+  priv_p2:"Data lahir dihitung di ponsel kamu dan tidak dikirim atau disimpan. Dirancang dengan memperhatikan UU PDP No. 27 Tahun 2022 (Indonesia) dan PDPA 2010 (Malaysia).",
+  priv_p3:"Pandangan dan isi ini milik penulis pribadi dan tidak mewakili organisasi mana pun.",
+  bio:"Reka Amorra menulis panduan sederhana tentang pemasaran afiliasi dan alat kreator untuk Malaysia dan Indonesia.",
+  foot:"© 2026 Reka Amorra"
+},
+zh:{ langName:"中文", locale:"zh-CN", htmlLang:"zh-CN",
+  animals:["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"],
+  pageTitle:"怎样看懂你的2027年运程指南结果 · Reka Amorra",
+  kicker:"解读 · 2027年运程指南",
+  title:"怎样看懂你的2027年运程指南结果",
+  standfirst:"四个部分，五分钟看完。颜色代表什么，每一天的评分又是怎么来的。",
+  byline:"Reka Amorra · 2026年11月 · 阅读约4分钟",
+  btn_guide:"打开指南", btn_comment:"到 LinkedIn 留言",
+  tldr_label:"简单来说",
+  tl1:"你的结果分四部分：你的生肖与羊年的关系、十二个月、按周的择日工具，以及可选的家居方位。",
+  tl2:"绿色是顺，蓝灰是平，粉色是宜小心，深红是相冲。每种颜色也配有符号：✓ – ! ✕。",
+  tl3:"每一天的评分来自三样东西：日型、这一天与你生肖的关系，以及岁破日。",
+  tl4:"这是供文化与参考的指南。真正的期限比任何符号都重要。",
+  leg_good:"顺", leg_steady:"平", leg_care:"宜小心", leg_bad:"相冲",
+  s1_t:"你的生肖与这一年",
+  s1_p:"最先看到的是一个徽章，说明你的生肖与羊年（约2027年2月4日至2028年2月3日）的关系，共有七种。",
+  rn_six:"六合", rm_six:"贵人相助。有支持，合作更顺。",
+  rn_three:"三合", rm_three:"运势顺畅。今年比多数人轻松。",
+  rn_none:"无特别冲合", rm_none:"没有特别关系。靠每月、每日的节奏来参考。",
+  rn_ben:"本命年", rm_ben:"宜谨慎、求稳。传统认为这不是坏年份。",
+  rn_harm:"相害", rm_harm:"容易有误会。说话要说清楚。",
+  rn_punish:"相刑", rm_punish:"暗中有摩擦。文件和承诺要处理干净。",
+  rn_clash:"相冲", rm_clash:"多变动，也有些摩擦。变化要有计划地做。",
+  s2_t:"你的十二个月",
+  s2_p1:"每一格是一个农历月，以动物命名。农历月以节气为界，约在4至8日，不是1日。所以虎月从2月4日开始，而不是2月1日。",
+  s2_p2:"每一格显示该月的动物与你的生肖的关系。在指南里点按格子，可看日期和一句说明。",
+  s2_cap:"例子：1990年出生（属马）。颜色和符号与指南一致。",
+  s2_note:"最佳月份和需要小心的月份，也会列在这一排的上方。",
+  s3_t:"按周查看",
+  s3_p1:"先选你要做的事：事业、感情、出行搬家或健康。每一天会显示日期、两个汉字（当天的干支）和一个符号。",
+  s3_flow_t:"一天的符号是怎么来的",
+  f1_t:"1. 日型", f1_d:"十二日型之一（建除十二神）。每一种适合和不适合的事不同。",
+  f2_t:"2. 你的生肖", f2_d:"相冲的日子是 ✕。对你生肖有助力的日子升一级。有压力的日子降一级。",
+  f3_t:"3. 岁破日", f3_d:"2027年每个丑日（牛日）都冲破羊年，对所有人都是 ✕。",
+  f4_t:"符号", f4_d:"✓ 吉，– 平，! 宜小心，✕ 忌。",
+  s3_p2:"最强的日型是成和开，最弱的是破和闭。其余八种居中，要看你做的是什么事。",
+  ex_t:"实际例子", ex_cap:"1990年出生（属马），事业，2027年3月29日至4月4日。",
+  ex_d1:"定日宜签约，而未日（羊日）与午（马）六合。",
+  ex_d2:"执日对事业是平。与你的生肖没有特别关系。",
+  ex_d3:"破日是冲破之日，避开开业和签约。",
+  ex_d4:"危日本来宜小心，但戌日（狗日）对属马有助力，升为平。",
+  ex_d5:"成日是最好的日子之一。",
+  ex_d6:"子日（鼠日）与属马相冲，宜避开，尽管收日本身是平。",
+  ex_d7:"开日是上好日子，但丑日（牛日）冲破羊年，宜避开。",
+  ex_read:"读法：星期一和星期五是可用的日子，周末则跳过。",
+  s4_t:"可选的补充资料",
+  s4_li1:"完整出生日期：能校正1月或2月初出生的人，因为农历年从立春（约2月4日）算起。",
+  s4_li2:"性别：只在算个人方位（命卦数）时才需要。传统公式分男女。",
+  s4_li3:"你在意的事：会加上事业、财运、感情、健康或家庭的简短提示。",
+  s4_li4:"家居与办公室方位图：点按方位看2027年的飞星。上方为北。请站在家的中心，用手机指南针测方位。",
+  chk_t:"收藏这份清单：选日子之前",
+  chk1:"先决定要做的事：事业、感情、出行搬家或健康。",
+  chk2:"有得选的话，选 ✓ 的日子。",
+  chk3:"✕ 表示与你的生肖相冲，或是岁破日。可以的话请改日。",
+  chk4:"! 的日子做日常事务无妨。大的签约和开业留给 ✓ 的日子。",
+  chk5:"开庭日、看医生的预约和合约期限，不会因为符号而改动，照常进行。",
+  chk6:"当作参考，不是定论。",
+  watch_t:"它做不到的事",
+  watch_p:"它没有用到你的出生时辰，也不是完整的四柱八字。没有用二十八宿。不同老师会加上自己的规则，看法也可能不同。结婚或大型开业，很多人还是会另外请教老师。",
+  m_sum:"计算方式",
+  m_p1:"规则采用通行的黄历（通书）惯例：建除十二神、十二生肖之间的关系（六合、三合、相害、相刑、相冲）、岁破日、以立春作年的开始、个人方位的命卦公式，以及2027年的流年飞星。",
+  m_p2:"节气日期按马来西亚时间（UTC+8）计算，可能相差一天。日子的评分以日历日期为准。",
+  m_p3:"这些是传统惯例，不是量度出来的事实，所以没有统计数字可引用。各派说法不同，本指南采用其中一种常见版本。",
+  priv_t:"隐私与免责声明",
+  priv_p1:"仅供文化与参考，并非专业建议。请勿用于医疗、法律、财务或投资决定。",
+  priv_p2:"出生资料在你的手机上计算，不会被发送或储存。设计时已参考马来西亚《2010年个人数据保护法》（PDPA）和印尼《2022年第27号个人数据保护法》（UU PDP）。",
+  priv_p3:"内容与观点属作者个人，不代表任何机构。",
+  bio:"Reka Amorra 为马来西亚和印尼的读者，撰写联盟营销与创作者工具的简明指南。",
+  foot:"© 2026 Reka Amorra"
+},
+ja:{ langName:"日本語", locale:"ja-JP", htmlLang:"ja",
+  chars:["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"],
+  animals:["ネズミ","ウシ","トラ","ウサギ","タツ","ヘビ","ウマ","ヒツジ","サル","ニワトリ","イヌ","イノシシ"],
+  pageTitle:"2027年 運勢ガイドの結果の読み方 · Reka Amorra",
+  kicker:"解説 · 2027年 運勢ガイド",
+  title:"2027年 運勢ガイドの結果の読み方",
+  standfirst:"4つのパートで5分。色の意味と、1日ごとの評価がどう決まるかを説明します。",
+  byline:"Reka Amorra · 2026年11月 · 読了目安4分",
+  btn_guide:"ガイドを開く", btn_comment:"LinkedInでコメント",
+  tldr_label:"かんたんにまとめると",
+  tl1:"結果は4つのパートです：あなたの干支とヒツジ年の関係、12か月、週ごとの日取り、そして任意の家の方位。",
+  tl2:"緑は追い風、青灰色は安定、ピンクは慎重に、濃い赤は衝突。色ごとに記号もあります：✓ – ! ✕。",
+  tl3:"1日の評価は3つで決まります：日の種類、その日とあなたの干支の関係、そして歳破日。",
+  tl4:"文化と参考のためのガイドです。実際の期限は、どんな記号よりも優先してください。",
+  leg_good:"追い風", leg_steady:"安定", leg_care:"慎重に", leg_bad:"衝突",
+  s1_t:"あなたの干支と今年",
+  s1_p:"最初に出るのはバッジひとつ。あなたの干支がヒツジ年（2027年2月4日ごろ〜2028年2月3日）とどんな関係かを示します。全部で7種類です。",
+  rn_six:"六合", rm_six:"強い味方。支えがあり、話がスムーズに進みます。",
+  rn_three:"三合", rm_three:"流れがよい年。多くの人より楽です。",
+  rn_none:"特別な関係なし", rm_none:"特別な縁はありません。月と日のリズムが目安です。",
+  rn_ben:"本命年", rm_ben:"慎重に、安定を保って。伝統では悪い年ではありません。",
+  rn_harm:"害", rm_harm:"誤解が生まれやすい。はっきり伝えましょう。",
+  rn_punish:"刑", rm_punish:"見えにくい摩擦。書類と約束を整えて。",
+  rn_clash:"衝突", rm_clash:"変化と多少の摩擦。変化は自分で計画して。",
+  s2_t:"あなたの12か月",
+  s2_p1:"1つのタイルが中国暦の1か月で、動物の名前がついています。中国暦の月は1日ではなく節気（4〜8日ごろ）で始まります。だから寅の月は2月1日ではなく2月4日から。",
+  s2_p2:"タイルは、その月の動物とあなたの干支の関係を表します。ガイドでタイルをタップすると、日付と一言メモが見られます。",
+  s2_cap:"例：1990年生まれ（午）。色も記号もガイドと同じです。",
+  s2_note:"おすすめの月と慎重にしたい月は、タイルの上にも書かれます。",
+  s3_t:"週ごとのカレンダー",
+  s3_p1:"まず、やりたいことを選びます：仕事、恋愛、旅行・引っ越し、健康。すると、日ごとに日付、漢字2文字（その日の干支）、記号が表示されます。",
+  s3_flow_t:"1日の記号が決まるしくみ",
+  f1_t:"1. 日の種類", f1_d:"十二直のうちの1つ。種類ごとに、向くこと・向かないことが違います。",
+  f2_t:"2. あなたの干支", f2_d:"衝突の日は ✕。あなたの干支を後押しする日は1段上がり、緊張のある日は1段下がります。",
+  f3_t:"3. 歳破日", f3_d:"2027年は、丑の日がすべてヒツジ年の歳破日です。誰にとっても ✕ です。",
+  f4_t:"記号", f4_d:"✓ 吉、– ふつう、! 慎重に、✕ 避ける。",
+  s3_p2:"いちばん強い日の種類は成と開、いちばん弱いのは破と閉です。残りの8つはその中間で、やりたいこと次第です。",
+  ex_t:"実際の例", ex_cap:"1990年生まれ（午）、仕事、2027年3月29日〜4月4日。",
+  ex_d1:"定の日は契約によい日で、未の日は午（ウマ）と六合の相性です。",
+  ex_d2:"執の日は仕事にはふつう。あなたの干支とは特別な関係なし。",
+  ex_d3:"破の日は衝突の日。開業や契約は避けて。",
+  ex_d4:"危の日は本来は慎重に。ただ、戌の日は午を後押しするので、ふつうに上がります。",
+  ex_d5:"成の日は、いちばんよい日のひとつ。",
+  ex_d6:"子の日は午と衝突します。収の日自体はふつうでも、避けましょう。",
+  ex_d7:"開の日は上々の日ですが、丑の日はヒツジ年の歳破日。避けましょう。",
+  ex_read:"読み方：月曜日と金曜日が使える日。週末は見送りです。",
+  s4_t:"任意の追加項目",
+  s4_li1:"生年月日：1月〜2月初旬生まれの方の結果を正確にします。中国暦の年は立春（2月4日ごろ）から始まるためです。",
+  s4_li2:"性別：自分の方位（本命卦）を出すときだけ必要です。伝統の計算式は男女で分かれます。",
+  s4_li3:"気になること：仕事、お金、恋愛、健康、家族の一言アドバイスを追加します。",
+  s4_li4:"家とオフィスの方位図：方角をタップすると、その方位の2027年の星が見られます。上が北です。家の中心から、スマホのコンパスで測ってください。",
+  chk_t:"保存用：日を選ぶ前のチェック",
+  chk1:"まず、やりたいことを決める：仕事、恋愛、旅行・引っ越し、健康。",
+  chk2:"選べるなら、✓ の日を。",
+  chk3:"✕ は干支の衝突か歳破日です。できれば別の日に。",
+  chk4:"! の日は日常の仕事ならOK。大きな契約や開業は ✓ の日に。",
+  chk5:"裁判の日、通院の予約、契約の期限は、記号のために動かしません。そのまま守りましょう。",
+  chk6:"断定ではなく、目安として使いましょう。",
+  watch_t:"このガイドができないこと",
+  watch_p:"生まれた時刻や、四柱推命の完全な命式は使っていません。二十八宿も使っていません。流派や師によって加えるルールが違い、意見が分かれることもあります。結婚や大きな開業では、さらに師に相談する人も多いです。",
+  m_sum:"計算のしかた",
+  m_p1:"ルールは、通書（暦）の標準的な慣習に従っています：十二直、十二支どうしの関係（六合、三合、害、刑、衝）、歳破日、立春を年の始まりとすること、個人の方位を出す本命卦の計算式、2027年の年の飛星です。",
+  m_p2:"節気の日付はマレーシア時間（UTC+8）で計算していて、1日ずれることがあります。日の評価は暦の日付で決まります。",
+  m_p3:"これらは測定された事実ではなく伝統的な慣習なので、引用できる統計はありません。流派によって違いがあり、このガイドは一般的な版のひとつに従っています。",
+  priv_t:"プライバシーと免責",
+  priv_p1:"文化と参考のためのものです。専門的なアドバイスではありません。医療・法律・金融・投資の判断には使わないでください。",
+  priv_p2:"生年月日などは端末内で計算され、送信も保存もされません。マレーシアのPDPA 2010とインドネシアのUU PDP（2022年第27号）を意識して設計しています。",
+  priv_p3:"内容や意見は作者個人のものであり、いかなる組織も代表しません。",
+  bio:"Reka Amorraは、マレーシアとインドネシア向けに、アフィリエイトマーケティングとクリエイター向けツールのやさしいガイドを書いています。",
+  foot:"© 2026 Reka Amorra"
+}
+};
+
+const CN = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+const SYM = {good:"✓",steady:"–",care:"!",bad:"✕"};
+let lang = "en";
+const t = k => (I18N[lang][k] !== undefined ? I18N[lang][k] : I18N.en[k]);
+const animal = i => I18N[lang].animals[i];
+const charOf = i => (I18N[lang].chars || CN)[i];
+
+function pickLang(){
+  const q = (new URLSearchParams(location.search).get("lang") || location.hash.replace("#","")).toLowerCase();
+  if (I18N[q]) return q;
+  const n = (navigator.language || "en").toLowerCase();
+  if (n.startsWith("id") || n.startsWith("in")) return "id";
+  if (n.startsWith("ja")) return "ja";
+  if (n.startsWith("zh")) return "zh";
+  return "en";
+}
+const fmt = (d,o) => new Intl.DateTimeFormat(I18N[lang].locale, Object.assign({timeZone:"UTC"},o)).format(d);
+
+function render(){
+  const L = I18N[lang];
+  document.documentElement.lang = L.htmlLang; document.title = L.pageTitle;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+  // language buttons
+  const lb = document.getElementById("langs"); lb.innerHTML = "";
+  Object.keys(I18N).forEach(k => {
+    const b = document.createElement("button"); b.type = "button"; b.textContent = I18N[k].langName;
+    b.setAttribute("aria-pressed", k===lang ? "true":"false");
+    b.addEventListener("click", () => { lang = k; try{ history.replaceState(null,"","?lang="+k); }catch(e){} render(); });
+    lb.appendChild(b);
+  });
+  // links
+  ["guideTop","guideBottom"].forEach(id => document.getElementById(id).setAttribute("href","../?lang="+lang));
+  document.querySelectorAll(".li-btn").forEach(a => { if (LINKEDIN_POST_URL){ a.href = LINKEDIN_POST_URL; a.hidden = false; } else { a.hidden = true; } });
+  // legend
+  document.getElementById("legend").innerHTML = ["good","steady","care","bad"].map(k =>
+    '<span class="pill tone-'+k+'">'+SYM[k]+' '+t("leg_"+k)+'</span>').join("");
+  // relation cards
+  const rels = [["six","good",[6]],["three","good",[3,11]],["none","steady",[2,4,5,8,9]],["ben","care",[7]],["harm","care",[0]],["punish","care",[10]],["clash","bad",[1]]];
+  document.getElementById("rels").innerHTML = rels.map(r =>
+    '<div class="rel tone-'+r[1]+'"><b>'+SYM[r[1]]+' '+t("rn_"+r[0])+'</b><div class="an">'+r[2].map(animal).join(" · ")+'</div><span class="m">'+t("rm_"+r[0])+'</span></div>').join("");
+  // 12-month strip for a Horse (born 1990): same tones the guide shows
+  const tones = ["good","steady","steady","steady","care","good","steady","steady","good","steady","bad","care"];
+  const starts = [[2027,2,4],[2027,3,6],[2027,4,5],[2027,5,6],[2027,6,6],[2027,7,7],[2027,8,8],[2027,9,8],[2027,10,8],[2027,11,7],[2027,12,7],[2028,1,6]];
+  document.getElementById("months").innerHTML = starts.map((s,i) => {
+    const d = new Date(Date.UTC(s[0],s[1]-1,s[2]));
+    return '<div class="mt tone-'+tones[i]+'"><div class="a">'+fmt(d,{month:"short"})+'</div><div class="c cjk">'+charOf((2+i)%12)+'</div><div class="s">'+SYM[tones[i]]+'</div></div>';
+  }).join("");
+  // worked example: Horse, Business, 29 Mar - 4 Apr 2027 (pillars and ratings computed with the guide's own rules)
+  const days = [["丁未","good"],["戊申","steady"],["己酉","care"],["庚戌","steady"],["辛亥","good"],["壬子","bad"],["癸丑","bad"]];
+  document.getElementById("ex").innerHTML = days.map((x,i) => {
+    const d = new Date(Date.UTC(2027,2,29+i));
+    return '<div class="exr"><div class="dt tone-'+x[1]+'"><div class="w">'+fmt(d,{weekday:"short"})+'</div><div class="n">'+d.getUTCDate()+'</div><div class="p cjk">'+x[0]+'</div><div class="s">'+SYM[x[1]]+'</div></div><div class="t">'+t("ex_d"+(i+1))+'</div></div>';
+  }).join("");
+}
+document.addEventListener("DOMContentLoaded", () => { lang = pickLang(); render(); });
+</script>
+</body>
+</html>
