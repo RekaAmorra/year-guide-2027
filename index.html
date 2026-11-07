@@ -2,1323 +2,556 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2027 Year Guide · 丁未</title>
-<meta name="description" content="A simple, free guide to the 2027 Fire Goat year, by Chinese zodiac. Culture and reflection only.">
-<meta name="theme-color" content="#b8282f">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="2027 Guide">
-<script>(function(){var t="light";try{t=localStorage.getItem("guide2027.theme")||"light"}catch(e){}document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to read your 2027 Year Guide result · Reka Amorra</title>
+<meta name="description" content="Four parts, five minutes. What the colours mean in the 2027 Year Guide, and how each day gets its rating.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to read your 2027 Year Guide result">
+<meta property="og:description" content="Four parts, five minutes. What the colours mean, and how each day gets its rating.">
+<meta property="og:url" content="https://rekaamorra.github.io/year-guide-2027/how-to-read/">
+<meta name="theme-color" content="#ffffff">
 <style>
 :root{
-  --bg:#ffffff; --ink:#1d2430; --muted:#5d6878; --muted2:#39434f; --line:#e3e8ef;
-  --field-bg:#ffffff; --field-bd:#cfd7e2; --hover:#f6f8fb; --seal:#b8282f;
+  --ink:#1d2430; --muted:#5d6878; --line:#e3e8ef; --seal:#b8282f; --blue:#0b5cad;
   --good-bg:#e3f4e8; --good-bd:#b9e1c5; --good-tx:#17653a;
   --steady-bg:#edf1f6; --steady-bd:#d3dce8; --steady-tx:#3d4b5f;
   --care-bg:#fde8ea; --care-bd:#f4c3c8; --care-tx:#9b2d37;
   --bad-bg:#f8cdd2; --bad-bd:#eba0a8; --bad-tx:#7e1f28;
-  --focus:#8fb4e8;
-  color-scheme: light;
-}
-:root[data-theme="dark"]{
-  --bg:#121820; --ink:#e8edf3; --muted:#9aa6b6; --muted2:#b7c2d0; --line:#2a3442;
-  --field-bg:#1a222d; --field-bd:#3a4757; --hover:#1c2531; --seal:#c93a41;
-  --good-bg:#14301f; --good-bd:#25593a; --good-tx:#92e3b0;
-  --steady-bg:#1d2633; --steady-bd:#2f3d51; --steady-tx:#bccadb;
-  --care-bg:#3a1d22; --care-bd:#6b303a; --care-tx:#f3a7b0;
-  --bad-bg:#4b1f27; --bad-bd:#7f3441; --bad-tx:#ffb5bd;
-  --focus:#5f8fd0;
-  color-scheme: dark;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC","Hiragino Sans","Noto Sans CJK SC","Noto Sans CJK JP","Yu Gothic","Microsoft YaHei",sans-serif;
-  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
-}
-.wrap{max-width:680px; margin:0 auto; padding:0 16px 40px}
+body{margin:0; background:#fff; color:var(--ink);
+  font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC","Hiragino Sans","Noto Sans CJK SC","Noto Sans CJK JP","Yu Gothic","Microsoft YaHei",sans-serif}
+.wrap{max-width:740px; margin:0 auto; padding:0 16px 56px}
 .cjk{font-family:"Noto Serif CJK SC","Noto Serif CJK JP","Songti SC","Hiragino Mincho ProN","Yu Mincho",STSong,SimSun,serif}
-a{color:inherit}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid #8fb4e8; outline-offset:2px}
 
-.top{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; padding:14px 0 10px}
-.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
-.brand h1{margin:0; font-size:1.15rem; line-height:1.2}
-.brand p{margin:0; font-size:.82rem; color:var(--muted)}
-.tools{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
-select,input[type=date]{
-  font:inherit; font-size:1rem; color:var(--ink); background:var(--field-bg);
-  border:1.5px solid var(--field-bd); border-radius:10px; padding:10px 12px; min-height:44px;
-}
-select:focus-visible,input:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
-.btn{
-  font:inherit; font-size:.9rem; font-weight:600; min-height:44px; padding:8px 14px; border-radius:10px;
-  border:1.5px solid var(--field-bd); background:var(--field-bg); color:var(--ink); cursor:pointer;
-  display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
-}
-.btn:hover{background:var(--hover)}
+.topbar{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; padding:16px 0 8px}
+.mark{font-weight:800; letter-spacing:.2px}
+.langs{display:flex; gap:6px; flex-wrap:wrap}
+.langs button{font:inherit; font-size:.88rem; font-weight:700; min-height:40px; padding:6px 14px; border-radius:999px; border:1.5px solid #cfd7e2; background:#fff; color:var(--ink); cursor:pointer}
+.langs button[aria-pressed=true]{background:var(--ink); color:#fff; border-color:var(--ink)}
+
+.kicker{margin:26px 0 6px; font-size:.9rem; font-weight:700; color:var(--blue)}
+h1{margin:0; font-size:clamp(1.9rem,6vw,2.6rem); line-height:1.15; font-weight:800}
+.standfirst{margin:12px 0 0; color:var(--muted); font-size:1.1rem}
+.byline{margin:16px 0 0; padding-bottom:16px; border-bottom:4px solid var(--ink); color:var(--muted); font-size:.92rem}
+.actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.btn{display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:8px 18px; border-radius:12px; font-weight:700; font-size:.95rem; text-decoration:none; border:1.5px solid #cfd7e2; background:#fff; color:var(--ink)}
 .btn.primary{background:var(--seal); border-color:var(--seal); color:#fff}
-.btn.icon{width:44px; padding:0; font-size:1.2rem}
 
-.seal{
-  display:inline-flex; align-items:center; justify-content:center; flex:none;
-  width:76px; height:76px; border-radius:12px; background:var(--seal); color:#fff;
-  font-size:2.6rem; font-weight:700; transform:rotate(-3deg); box-shadow:0 0 0 3px var(--bg), 0 0 0 4.5px var(--seal);
-}
-.seal.sm{width:42px; height:42px; font-size:1rem; border-radius:8px; transform:none; box-shadow:none; letter-spacing:-1px}
-
-.card{border:1.5px solid var(--line); border-radius:16px; padding:18px; margin-top:16px; background:var(--bg)}
-.lead{margin:0 0 14px; font-size:1.02rem}
-label.lbl,.lbl{display:block; font-weight:700; margin-bottom:6px}
-#year{width:100%; font-size:1.1rem; font-weight:600}
-.note{font-size:.84rem; color:var(--muted); margin:8px 0 0}
-
+.box{border-radius:18px; padding:18px 20px; margin-top:22px; border:1.5px solid}
+.box h2{margin:0 0 8px; font-size:1.05rem}
+.box ul{margin:0; padding-left:20px; display:grid; gap:8px}
 .tone-good{background:var(--good-bg); border-color:var(--good-bd); color:var(--good-tx)}
 .tone-steady{background:var(--steady-bg); border-color:var(--steady-bd); color:var(--steady-tx)}
 .tone-care{background:var(--care-bg); border-color:var(--care-bd); color:var(--care-tx)}
 .tone-bad{background:var(--bad-bg); border-color:var(--bad-bd); color:var(--bad-tx)}
+.box.tldr{background:#f6f8fb; border-color:var(--line); color:var(--ink); border-left:6px solid var(--seal)}
 
-.res-head{display:flex; gap:16px; align-items:center}
-.res-head h2{margin:0; font-size:1.35rem; line-height:1.25}
-.res-head p{margin:2px 0 0; color:var(--muted); font-size:.9rem}
-.badge{display:inline-block; margin:16px 0 8px; padding:6px 12px; border-radius:999px; font-weight:700; font-size:.92rem; border:1.5px solid}
-.sum{margin:0 0 12px}
-.dw{display:grid; gap:10px}
-@media(min-width:560px){.dw{grid-template-columns:1fr 1fr}}
-.dw div{border:1.5px solid var(--line); border-radius:12px; padding:10px 12px; font-size:.95rem}
-.dw strong{display:block; font-size:.85rem; color:var(--muted); margin-bottom:2px}
-.months-sum{margin-top:14px; display:grid; gap:8px; font-size:.95rem}
-.months-sum .row{display:flex; flex-wrap:wrap; gap:6px; align-items:center}
-.pill{padding:3px 10px; border-radius:999px; font-size:.85rem; font-weight:700; border:1.5px solid}
+.legend{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+.pill{display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:999px; font-weight:700; font-size:.9rem; border:1.5px solid}
 
-h2.pt{margin:0 0 4px; font-size:1.25rem}
-h3{margin:0 0 4px; font-size:1.05rem}
-.ribbon{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:12px}
-@media(min-width:560px){.ribbon{grid-template-columns:repeat(6,1fr)}}
-.tile{
-  font:inherit; cursor:pointer; text-align:center; border:1.5px solid; border-radius:12px;
-  padding:8px 4px; min-height:78px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
-}
-.tile .mo{font-weight:700; font-size:.92rem}
-.tile .an{font-size:1.35rem; line-height:1.1}
-.tile .sy{font-size:.85rem; font-weight:700}
-.tile[aria-pressed=true]{outline:3px solid var(--ink); outline-offset:1px}
-.detail{margin-top:12px; padding:12px 14px; border-radius:12px; border:1.5px solid var(--line)}
-.detail b{display:block}
-.detail small{display:block; opacity:.85}
+section.step{margin-top:44px}
+.sh{display:flex; align-items:center; gap:12px; margin-bottom:10px}
+.badge{flex:none; width:40px; height:40px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800}
+.sh h2{margin:0; font-size:1.4rem; line-height:1.25}
+p{margin:0 0 12px}
+.cap{font-size:.88rem; color:var(--muted)}
 
-details.card>summary{cursor:pointer; list-style:none; font-weight:700; font-size:1.05rem; display:flex; justify-content:space-between; align-items:center; gap:12px}
-details.card>summary::-webkit-details-marker{display:none}
-details.card>summary::after{content:"＋"; font-weight:700; color:var(--seal); font-size:1.2rem}
-details.card[open]>summary::after{content:"－"}
-details.card>summary small{display:block; font-weight:400; color:var(--muted); font-size:.85rem}
-.field{margin-top:16px}
-.chips{display:flex; flex-wrap:wrap; gap:8px}
-.chip{font:inherit; font-size:.95rem; font-weight:600; min-height:44px; padding:8px 16px; border-radius:999px; border:1.5px solid var(--field-bd); background:var(--field-bg); color:var(--ink); cursor:pointer}
-.chip[aria-pressed=true]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
-.extras{margin-top:18px; border-top:1.5px solid var(--line); padding-top:14px; display:grid; gap:10px}
-.tip{border:1.5px solid var(--line); border-radius:12px; padding:10px 12px; font-size:.95rem}
-.tip strong{display:block}
-.dirs{display:grid; gap:8px}
-.dirrow{display:flex; justify-content:space-between; gap:10px; border:1.5px solid; border-radius:12px; padding:10px 12px; align-items:center}
-.dirrow .what{font-size:.82rem; opacity:.9}
-.dirrow .dn{font-weight:800; font-size:1.05rem; white-space:nowrap}
+.rels{display:grid; gap:10px; margin-top:14px}
+@media(min-width:620px){.rels{grid-template-columns:1fr 1fr}}
+.rel{border:1.5px solid; border-radius:16px; padding:12px 14px}
+.rel b{display:block}
+.rel .an{font-size:.88rem; opacity:.9; margin:2px 0 4px}
+.rel span.m{font-size:.95rem}
 
-.compass{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:14px}
-.cell{
-  font:inherit; cursor:pointer; border:1.5px solid; border-radius:12px; min-height:92px; padding:6px 4px;
-  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px; position:relative; text-align:center;
-}
-.cell .dr{font-size:.78rem; font-weight:700; opacity:.85}
-.cell .st{font-size:1.7rem; font-weight:800; line-height:1.1}
-.cell .sn{font-size:.72rem; line-height:1.2}
-.cell .mk{position:absolute; top:4px; right:7px; font-size:.95rem; font-weight:800}
-.cell[aria-pressed=true]{outline:3px solid var(--ink); outline-offset:1px}
+.months{display:grid; grid-template-columns:repeat(6,1fr); gap:8px; margin:14px 0 6px}
+.mt{border:1.5px solid; border-radius:12px; padding:8px 2px; text-align:center; line-height:1.2}
+.mt .a{font-size:.8rem; font-weight:700}
+.mt .c{font-size:1.4rem; margin:2px 0}
+.mt .s{font-size:.85rem; font-weight:800}
 
-/* support page */
-.support{text-align:center}
-.qrs{display:flex; flex-wrap:wrap; gap:22px; justify-content:center; margin-top:16px}
-.qr{text-align:center; width:200px; margin:0; display:flex; flex-direction:column; align-items:center; gap:8px}
-.qr img,.qr .ph{width:200px; height:200px; border-radius:12px; border:1.5px solid var(--line); object-fit:contain; background:#fff; padding:8px}
-.qr .ph{display:flex; align-items:center; justify-content:center; color:#5d6878; font-size:.85rem; border-style:dashed}
-.qr figcaption{font-weight:700; font-size:.9rem; line-height:1.35}
-.back{margin-top:20px}
+.flow{display:grid; gap:0; margin:14px 0}
+.fl{border:1.5px solid var(--line); border-radius:16px; padding:12px 16px; background:#fff}
+.fl b{display:block}
+.fl.last{border-width:2px; border-color:var(--ink)}
+.arrow{text-align:center; color:#9aa7b4; font-size:1.2rem; line-height:1.4}
 
-.care ul{margin:8px 0 0; padding-left:20px; display:grid; gap:8px; font-size:.9rem; color:var(--muted2)}
-footer{margin-top:22px; text-align:center; color:var(--muted); font-size:.8rem}
-footer nav{margin-bottom:8px; font-size:.9rem}
-footer nav a{color:var(--muted)}
+.ex{display:grid; gap:10px; margin-top:12px}
+.exr{display:grid; grid-template-columns:62px 1fr; gap:12px; align-items:center}
+.dt{border:1.5px solid; border-radius:12px; text-align:center; padding:6px 0; line-height:1.15}
+.dt .w{font-size:.75rem}
+.dt .n{font-size:1.25rem; font-weight:800}
+.dt .p{font-size:.85rem}
+.dt .s{font-size:.8rem; font-weight:800}
+.exr .t{font-size:.97rem}
+.read{margin-top:14px; font-weight:700}
 
-dialog{border:1.5px solid var(--line); border-radius:16px; max-width:min(92vw,420px); padding:20px; background:var(--bg); color:var(--ink)}
-dialog::backdrop{background:rgba(10,14,20,.5)}
-dialog p{margin:8px 0}
+ul.plain{margin:10px 0 0; padding-left:22px; display:grid; gap:8px}
+
+.check{background:#fffdf9; }
+.check ul{list-style:none; padding:0; display:grid; gap:10px; margin:0}
+.check li{display:grid; grid-template-columns:26px 1fr; gap:10px; align-items:start}
+.check li::before{content:""; width:22px; height:22px; border:2px solid var(--ink); border-radius:6px; margin-top:3px}
+
+details{margin-top:18px; border:1.5px solid var(--line); border-radius:14px; padding:12px 16px}
+summary{cursor:pointer; font-weight:700}
+details p{margin-top:10px; font-size:.95rem}
+
+.bio{display:flex; gap:14px; align-items:center; margin-top:36px; padding-top:20px; border-top:1.5px solid var(--line)}
+.av{flex:none; width:52px; height:52px; border-radius:50%; background:var(--seal); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+.bio p{margin:0; font-size:.95rem; color:var(--muted)}
+footer{margin-top:22px; text-align:center; color:var(--muted); font-size:.85rem}
+.bottom-actions{margin-top:24px}
 [hidden]{display:none!important}
-@media (prefers-reduced-motion:no-preference){ .res-head .seal{animation:stamp .35s ease-out} }
-@keyframes stamp{from{transform:rotate(-3deg) scale(1.25);opacity:0}to{transform:rotate(-3deg) scale(1);opacity:1}}
-
-/* week by week */
-.wk-nav{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:14px}
-.wk-nav b{flex:1; text-align:center; font-size:.98rem}
-.days{display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin-top:10px}
-.day{
-  font:inherit; cursor:pointer; text-align:center; border:1.5px solid; border-radius:10px; padding:6px 1px;
-  min-height:88px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px; min-width:0;
-}
-.day .wd{font-size:.7rem; opacity:.85}
-.day .dd{font-size:1.1rem; font-weight:800; line-height:1.1}
-.day .pl{font-size:.82rem}
-.day .sy{font-size:.82rem; font-weight:800}
-.day[disabled]{opacity:.4; cursor:default; border-style:dashed; background:transparent; color:var(--muted)}
-.day[aria-pressed=true]{outline:3px solid var(--ink); outline-offset:1px}
-.catrows{display:grid; gap:6px; margin-top:10px}
-.catrow{display:flex; justify-content:space-between; gap:8px; font-size:.92rem; border:1.5px solid; border-radius:10px; padding:6px 10px}
-.catrow.sel{outline:2px solid var(--ink); outline-offset:1px}
-.detail p{margin:6px 0 0}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="top">
-    <a class="brand" href="#home">
-      <span class="seal sm cjk" aria-hidden="true">丁未</span>
-      <div>
-        <h1 data-i18n="title">2027 Year Guide</h1>
-        <p data-i18n="subtitle"></p>
-      </div>
-    </a>
-    <div class="tools">
-      <select id="lang" aria-label="Language"></select>
-      <button id="themeBtn" class="btn icon" type="button"><span id="themeIcon" aria-hidden="true">☾</span></button>
-      <button id="installBtn" class="btn" type="button" data-i18n="install"></button>
+  <div class="topbar">
+    <span class="mark">Reka Amorra</span>
+    <div class="langs" id="langs" role="group" aria-label="Language"></div>
+  </div>
+
+  <header>
+    <p class="kicker" data-i18n="kicker"></p>
+    <h1 data-i18n="title"></h1>
+    <p class="standfirst" data-i18n="standfirst"></p>
+    <p class="byline" data-i18n="byline"></p>
+    <div class="actions">
+      <a class="btn primary" id="guideTop" href="../" data-i18n="btn_guide"></a>
+      <a class="btn li-btn" href="#" target="_blank" rel="noopener" hidden data-i18n="btn_comment"></a>
     </div>
   </header>
 
-  <!-- PAGE 1: the guide -->
-  <div id="pageMain">
-  <main>
-    <section class="card">
-      <p class="lead" data-i18n="intro"></p>
-      <label class="lbl" for="year" data-i18n="year_label"></label>
-      <select id="year"></select>
-      <p class="note" data-i18n="year_note"></p>
-    </section>
-
-    <section id="result" aria-live="polite"></section>
-
-    <section id="ribbonSec" class="card" hidden>
-      <h3 data-i18n="ribbon_title"></h3>
-      <p class="note" style="margin-top:0" data-i18n="ribbon_note"></p>
-      <div id="ribbon" class="ribbon"></div>
-      <div id="monthDetail" class="detail" aria-live="polite"></div>
-    </section>
-
-    <section id="weekSec" class="card" hidden>
-      <h3 data-i18n="week_title"></h3>
-      <p class="note" style="margin-top:0" data-i18n="week_sub"></p>
-      <div class="chips" id="actChips" style="margin-top:12px">
-        <button type="button" class="chip" data-a="biz" aria-pressed="true" data-i18n="a_biz"></button>
-        <button type="button" class="chip" data-a="love" aria-pressed="false" data-i18n="a_love"></button>
-        <button type="button" class="chip" data-a="move" aria-pressed="false" data-i18n="a_move"></button>
-        <button type="button" class="chip" data-a="health" aria-pressed="false" data-i18n="a_health"></button>
-      </div>
-      <p class="note" id="actHint"></p>
-      <div class="wk-nav">
-        <button type="button" class="btn icon" id="wkPrev">‹</button>
-        <b id="wkLabel"></b>
-        <button type="button" class="btn icon" id="wkNext">›</button>
-      </div>
-      <div class="days" id="days"></div>
-      <div class="months-sum" id="bestDays" style="margin-top:12px"></div>
-      <div id="dayDetail" class="detail" aria-live="polite"></div>
-      <p class="note" data-i18n="week_note"></p>
-    </section>
-
-    <details id="more" class="card">
-      <summary><span><span data-i18n="more_title"></span><small data-i18n="more_sub"></small></span></summary>
-
-      <div class="field">
-        <label class="lbl" for="dob" data-i18n="dob_label"></label>
-        <input type="date" id="dob" min="1930-01-01" max="2026-12-31">
-        <p class="note" id="dobNote"></p>
-      </div>
-
-      <div class="field">
-        <span class="lbl" data-i18n="gender_label"></span>
-        <div class="chips" id="genderChips">
-          <button type="button" class="chip" data-g="male" aria-pressed="false" data-i18n="g_male"></button>
-          <button type="button" class="chip" data-g="female" aria-pressed="false" data-i18n="g_female"></button>
-        </div>
-        <p class="note" data-i18n="gender_note"></p>
-      </div>
-
-      <div class="field">
-        <span class="lbl" data-i18n="focus_label"></span>
-        <div class="chips" id="focusChips">
-          <button type="button" class="chip" data-f="career" aria-pressed="false" data-i18n="f_career"></button>
-          <button type="button" class="chip" data-f="money" aria-pressed="false" data-i18n="f_money"></button>
-          <button type="button" class="chip" data-f="love" aria-pressed="false" data-i18n="f_love"></button>
-          <button type="button" class="chip" data-f="health" aria-pressed="false" data-i18n="f_health"></button>
-          <button type="button" class="chip" data-f="family" aria-pressed="false" data-i18n="f_family"></button>
-        </div>
-      </div>
-
-      <div class="extras" id="extras" aria-live="polite"></div>
-    </details>
-
-    <details id="mapSec" class="card">
-      <summary><span><span data-i18n="map_title"></span><small data-i18n="map_sub"></small></span></summary>
-      <div class="compass" id="compass"></div>
-      <div id="starDetail" class="detail tone-steady" style="margin-top:12px"></div>
-      <p class="note" id="mapLegend"></p>
-      <p class="note" data-i18n="map_water"></p>
-    </details>
-
-    <section class="card care">
-      <h3 data-i18n="care_title"></h3>
-      <ul>
-        <li data-i18n="c1"></li>
-        <li data-i18n="c2"></li>
-        <li data-i18n="c3"></li>
-        <li data-i18n="c4"></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <nav><a href="#support" data-i18n="nav_support"></a></nav>
-    <p data-i18n="footer"></p>
-  </footer>
+  <div class="box tldr">
+    <h2 data-i18n="tldr_label"></h2>
+    <ul>
+      <li data-i18n="tl1"></li><li data-i18n="tl2"></li><li data-i18n="tl3"></li><li data-i18n="tl4"></li>
+    </ul>
+    <div class="legend" id="legend"></div>
   </div>
 
-  <!-- PAGE 2: support -->
-  <div id="pageSupport" hidden>
-    <section class="card support">
-      <h2 class="pt" data-i18n="support_title"></h2>
-      <p class="note" style="margin-top:0" data-i18n="support_sub"></p>
-      <div class="qrs">
-        <figure class="qr">
-          <img src="data:image/png;base64,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" alt="Malaysia National QR">
-          <figcaption data-i18n="qr_my"></figcaption>
-        </figure>
-        <figure class="qr">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoAQAAAABSnlx4AAACVklEQVR42u2bMZKbQBBF31+oQhm6AbqBj4Bu4CMJ3QyO4UzcAGVQhfQdjNBubeYIj92TDXrR7+qZ3z0tmT9YHwQddNBBBx30v0Fj289t03jFnpC7xivQzNtPF9sOBTOgL7btDkBqZqsbj4Xdg/wl2qHgPvQgCVhKaMeD3DXThkgqQ8EM6PLbvlgBW5dBQHtbQsFsY/mQh5+TDNMRhtOvUDA7urUNUFjn+wGuJ9INCLbXUHBP+ipJ6lKgJiwPzSIAS5I+QsFMTk2922fLQ4bZ0ExYNJVDwaxoqxskSadqRdJBTna0vS1SONN9aVlngMsNcM8i2dNDMB5kWq9OJ2oo+Nd3W/xyIjRpMwPUtvtmfnmXtELBLGJZr1vPJXXOqG37BkC9KmKZTSy7NnXOqhWoU6Os8CtRe4rIy/2i8+TS1yu2veKeKuUbnxXfM3rU+cQy5Vszgz1Vdkeq0KsnkWmZOVOpRB4OAPVspRZL63thXbxEPZ+fM03Pfu+8tB15uf+pmcqErWKY4fL1BpyKuAGzcjM2NHPx7pQlezOnWEamZeVmVlLJ964BUyxl21ED5kQPKpFOlS0dq4fssTKDDpbO9zL6bLvQ7/eGdFou5fr6MP5YBM0NNBxDwazcTPKaXrf2yzZzJkN4zSzr+cLu682qps4ZbdyAu99pEsBD28zZWOJ+lAT3KiYCs6UtD8eHdG5s+3p8KPxJJm7m+1o+uF7rCTEqfdEzFMyGfs2cVTZDMysNYKc33fRGGAru7zXnzVV2zVR8TsOH18yBVvxbM+iggw466P+S/g32UwKcnKF2zQAAAABJRU5ErkJggg==" alt="Wise QR">
-          <figcaption data-i18n="qr_intl"></figcaption>
-          <a class="btn primary" href="https://wise.com/pay/me/mohamedm3529" target="_blank" rel="noopener" data-i18n="wise_btn"></a>
-        </figure>
-      </div>
-      <p class="note" data-i18n="support_note"></p>
-      <div class="back"><a class="btn" href="#home" data-i18n="support_back"></a></div>
-    </section>
-    <footer><p data-i18n="footer"></p></footer>
+  <section class="step">
+    <div class="sh"><span class="badge">1</span><h2 data-i18n="s1_t"></h2></div>
+    <p data-i18n="s1_p"></p>
+    <div class="rels" id="rels"></div>
+  </section>
+
+  <section class="step">
+    <div class="sh"><span class="badge">2</span><h2 data-i18n="s2_t"></h2></div>
+    <p data-i18n="s2_p1"></p>
+    <p data-i18n="s2_p2"></p>
+    <div class="months" id="months"></div>
+    <p class="cap" data-i18n="s2_cap"></p>
+    <p class="cap" data-i18n="s2_note"></p>
+  </section>
+
+  <section class="step">
+    <div class="sh"><span class="badge">3</span><h2 data-i18n="s3_t"></h2></div>
+    <p data-i18n="s3_p1"></p>
+    <h3 style="margin:18px 0 0" data-i18n="s3_flow_t"></h3>
+    <div class="flow">
+      <div class="fl"><b data-i18n="f1_t"></b><span data-i18n="f1_d"></span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="fl"><b data-i18n="f2_t"></b><span data-i18n="f2_d"></span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="fl"><b data-i18n="f3_t"></b><span data-i18n="f3_d"></span></div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="fl last"><b data-i18n="f4_t"></b><span data-i18n="f4_d"></span></div>
+    </div>
+    <p data-i18n="s3_p2"></p>
+    <h3 style="margin:22px 0 2px" data-i18n="ex_t"></h3>
+    <p class="cap" data-i18n="ex_cap"></p>
+    <div class="ex" id="ex"></div>
+    <p class="read" data-i18n="ex_read"></p>
+  </section>
+
+  <section class="step">
+    <div class="sh"><span class="badge">4</span><h2 data-i18n="s4_t"></h2></div>
+    <ul class="plain">
+      <li data-i18n="s4_li1"></li><li data-i18n="s4_li2"></li><li data-i18n="s4_li3"></li><li data-i18n="s4_li4"></li>
+    </ul>
+  </section>
+
+  <div class="box check tone-good" style="background:#f4faf6">
+    <h2 data-i18n="chk_t"></h2>
+    <ul>
+      <li data-i18n="chk1"></li><li data-i18n="chk2"></li><li data-i18n="chk3"></li>
+      <li data-i18n="chk4"></li><li data-i18n="chk5"></li><li data-i18n="chk6"></li>
+    </ul>
   </div>
 
+  <div class="box tone-care">
+    <h2 data-i18n="watch_t"></h2>
+    <p style="margin:0" data-i18n="watch_p"></p>
+  </div>
+
+  <details>
+    <summary data-i18n="m_sum"></summary>
+    <p data-i18n="m_p1"></p><p data-i18n="m_p2"></p><p data-i18n="m_p3"></p>
+  </details>
+
+  <div class="box tone-steady">
+    <h2 data-i18n="priv_t"></h2>
+    <p data-i18n="priv_p1"></p><p data-i18n="priv_p2"></p><p style="margin:0" data-i18n="priv_p3"></p>
+  </div>
+
+  <div class="actions bottom-actions">
+    <a class="btn primary" id="guideBottom" href="../" data-i18n="btn_guide"></a>
+    <a class="btn li-btn" href="#" target="_blank" rel="noopener" hidden data-i18n="btn_comment"></a>
+  </div>
+
+  <div class="bio"><span class="av">RA</span><p data-i18n="bio"></p></div>
+  <footer data-i18n="foot"></footer>
 </div>
 
-<dialog id="installDlg">
-  <h3 data-i18n="install_title"></h3>
-  <p data-i18n="install_ios"></p>
-  <p data-i18n="install_android"></p>
-  <button class="btn primary" id="installClose" type="button" data-i18n="close"></button>
-</dialog>
-
 <script>
-/* ============================================================
-   LANGUAGE PACKS
-   To add a language (e.g. Bahasa Indonesia "id", Tamil "ta"):
-   copy the whole "en" block, rename the key, translate the values,
-   and fill animals / ds / locale. It appears in the menu automatically.
-   ============================================================ */
+/* Set this to the LinkedIn post link once the post is live. The "Comment on LinkedIn" buttons stay hidden until then. */
+const LINKEDIN_POST_URL = "https://lnkd.in/p/gKBQ3Y2S";
+
 const I18N = {
-en:{
-  langName:"English", locale:"en-GB",
+en:{ langName:"English", locale:"en-GB", htmlLang:"en",
   animals:["Rat","Ox","Tiger","Rabbit","Dragon","Snake","Horse","Goat","Monkey","Rooster","Dog","Pig"],
-  ds:{N:"N",NE:"NE",E:"E",SE:"SE",S:"S",SW:"SW",W:"W",NW:"NW",C:"Centre"},
-  dirs:{N:"North",NE:"North-east",E:"East",SE:"South-east",S:"South",SW:"South-west",W:"West",NW:"North-west"},
-  title:"2027 Year Guide", subtitle:"Year of the Fire Goat · 丁未",
-  install:"Add to home screen", install_title:"Add to your home screen",
-  install_ios:"iPhone or iPad: tap the Share button, then “Add to Home Screen”.",
-  install_android:"Android: open the browser menu (⋮), then “Add to Home screen” or “Install app”.",
-  close:"Close",
-  intro:"Choose your birth year to see your 2027 in plain words. Want a sharper reading? Add more details below. It’s optional.",
-  year_label:"Your birth year", year_ph:"Choose year",
-  year_note:"The Chinese year begins around 4 Feb. Born in January or early February? Add your exact birth date under More details.",
-  empty:"Pick your birth year above and your 2027 appears here.",
-  you_are:"Your zodiac animal: {animal}", cn_year:"Chinese year {y}",
-  do_label:"Do", watch_label:"Watch out",
-  tone_good:"Supportive", tone_steady:"Steady", tone_care:"Take care", tone_bad:"Clash",
-  r_ben_t:"Your own year (Ben Ming Nian)", r_ben_s:"Goat people meet their own sign in 2027. Tradition sees this as a year to be careful and steady, not a bad year.", r_ben_d:"Wear something red, keep up health check-ups and plan big moves carefully.", r_ben_w:"Don’t rush big decisions or take on too much.",
-  r_clash_t:"Clash with the year", r_clash_s:"Ox sits opposite Goat, so 2027 brings change and some friction. It can also push you to renew things.", r_clash_d:"Plan changes on purpose: a move, a new role, a fresh start.", r_clash_w:"Avoid risky travel plans, arguments and rushed big decisions.",
-  r_punish_t:"Punishment (hidden friction)", r_punish_s:"Dog and Goat form a “punishment”: small disputes and stress can build up quietly.", r_punish_d:"Put agreements in writing and keep your paperwork in order.", r_punish_w:"Avoid legal disputes, gossip and bottling up stress.",
-  r_harm_t:"Harm (people friction)", r_harm_s:"Rat and Goat form a “harm”: misunderstandings and cooling friendships are more likely.", r_harm_d:"Communicate clearly and check that others understood.", r_harm_w:"Don’t trust rumours or lend money casually.",
-  r_six_t:"Six Harmonies (strong ally)", r_six_s:"Horse and Goat are a classic pair. 2027 brings support, good partners and smoother deals.", r_six_d:"Say yes to partnerships and family plans.", r_six_w:"Don’t over-promise just because things feel easy.",
-  r_three_t:"Three Harmonies (good flow)", r_three_s:"Rabbit, Goat and Pig form one friendly trio. 2027 flows better for you than for most.", r_three_d:"Start projects and widen your network.", r_three_w:"Don’t coast. Good luck still needs effort.",
-  r_none_t:"Neutral (steady year)", r_none_s:"Your sign has no special tie to the Goat. 2027 is what you make of it, and the monthly rhythm below does most of the guiding.", r_none_d:"Plan around your best months.", r_none_w:"Avoid big commitments in the careful months.",
-  best_months:"Best months for you", care_months:"Go carefully in",
-  ribbon_title:"Your 12 months",
-  ribbon_note:"Chinese months start on solar terms (around the 4th to 8th), not on the 1st. Tap a month for details. Dates are approximate (±1 day).",
-  month_of:"{animal} month",
-  rl_ben:"Same sign", rl_clash:"Clash", rl_punish:"Punishment", rl_harm:"Harm", rl_six:"Six Harmonies", rl_three:"Three Harmonies", rl_mixed:"Mixed", rl_none:"Neutral",
-  m_ben:"Your own sign’s month. Keep it steady.",
-  m_clash:"Opposes your sign. Expect friction or sudden change; delay big moves.",
-  m_punish:"Pressure builds quietly. Keep paperwork and promises clean.",
-  m_harm:"Misunderstandings come easily. Say things clearly and kindly.",
-  m_six:"A strong ally month. Good for deals, partners and family.",
-  m_three:"A flowing month. Good for starting things and meeting people.",
-  m_mixed:"Mixed signals: helpful and tense at once. Move steadily.",
-  m_none:"A neutral month. Do the steady work.",
-  more_title:"More details (optional)", more_sub:"For a sharper reading: exact birth date, personal directions and what matters to you.",
-  dob_label:"Exact birth date",
-  dob_early:"Born before Li Chun, so your Chinese year is {y} ({animal}).", dob_ok:"Your Chinese year is {y} ({animal}).",
-  gender_label:"Gender (for your personal directions)", g_male:"Male", g_female:"Female",
-  gender_note:"The traditional Kua formula uses male or female.",
-  focus_label:"What matters most to you?",
-  f_career:"Career", f_money:"Money", f_love:"Love", f_health:"Health", f_family:"Family",
-  focus_title:"For what matters to you in 2027",
-  need_year:"Choose your birth year first.",
-  f_career_good:"Good backing from others. Take visible work and ask for what you want in your best months.",
-  f_career_steady:"Steady progress. Build skills and get the details right.",
-  f_career_care:"Avoid big job moves and office politics. Keep records tidy and let others take the spotlight.",
-  f_money_good:"Favourable for deals and partnerships. Still keep an emergency fund.",
-  f_money_steady:"Steady flow. Review your spending and don’t chase quick wins.",
-  f_money_care:"Protect what you have. Avoid big risks, read contracts twice and keep extra cash.",
-  f_love_good:"A warm year for relationships. A good time to meet people or deepen a bond.",
-  f_love_steady:"A calm year. Small, regular time together beats grand gestures.",
-  f_love_care:"Mind your words, especially in the tense months. Listen first, decide later.",
-  f_health_good:"Energy holds up well. Keep your routine and regular check-ups.",
-  f_health_steady:"Steady. Sleep and water matter more than any remedy.",
-  f_health_care:"Slow down and rest more. Keep up regular check-ups and avoid overwork. If something worries you, see a doctor.",
-  f_family_good:"Home feels warmer. Plan a family trip or gathering in a good month.",
-  f_family_steady:"Quiet and stable. Keep the simple routines that hold the home together.",
-  f_family_care:"Small frictions can grow. Choose patience; one calm talk beats five arguments.",
-  kua_title:"Your best directions", kua_sub:"Your Kua number is {n}.",
-  d_sheng:"Wealth and success", d_sheng_h:"Face this way at your desk.",
-  d_tian:"Health and helpful people", d_tian_h:"Point your bed head this way.",
-  d_yan:"Relationships and long life", d_yan_h:"Good for the bedroom or family room.",
-  d_jue:"Avoid", d_jue_h:"Avoid for your desk and bed head.",
-  map_title:"2027 home and office map", map_sub:"Tap a direction to see its 2027 star.",
-  map_tap:"Tap a direction above. North is at the top. Measure from the centre of your home or room with a phone compass.",
-  map_legend:"★ your good directions · ✕ avoid for you (shown after you add year and gender)",
-  map_water:"Water feature or fish tank? Common advice for 2027 is to favour the south-east, south or north-west, and keep water away from the north and west.",
-  s1_n:"White 1 · Helpful people", s1_t:"Good for work areas and meeting spots. Helpful people and steady progress come easier here.",
-  s2_n:"Black 2 · Illness", s2_t:"Keep it calm and quiet. Avoid heavy renovation, and avoid sleeping here if you can. A metal item (like a soft-sounding brass bell) is the traditional remedy.",
-  s3_n:"Jade 3 · Arguments", s3_t:"Watch for quarrels and legal fuss. Keep the area tidy and avoid loud confrontations here.",
-  s4_n:"Green 4 · Study and romance", s4_t:"Good for study, creative work and relationships. A fine place for a desk or study corner.",
-  s5_n:"Yellow 5 · Misfortune", s5_t:"The most cautious spot of 2027. Avoid digging, renovation and noise here. Keep it quiet; metal items are the traditional remedy.",
-  s6_n:"White 6 · Authority", s6_t:"Supports leadership, discipline and good decisions. Good for a home office.",
-  s7_n:"Red 7 · Quarrels and theft", s7_t:"Lock up well and keep valuables safe. Avoid sharp words and gossip in this area.",
-  s8_n:"White 8 · Wealth", s8_t:"A good spot for money matters. Keep it bright, clean and lived-in (a desk or the family area).",
-  s9_n:"Purple 9 · Celebration", s9_t:"Brings happy news and future gains. Good for gatherings, but keep the energy calm, not overheated.",
-  support_title:"Support this free guide", support_sub:"It’s free to use. If it helped you, a small thank-you is always appreciated.",
-  qr_reka:"Reka", qr_wise:"Wise (from overseas)", qr_soon:"QR coming soon",
-  care_title:"Good to know",
-  c1:"For culture and reflection only. This is not professional advice. Please don’t use it for medical, legal, financial or investment decisions.",
-  c2:"The guide uses traditional rules (zodiac relationships and the 2027 flying stars). Different masters can read these differently.",
-  c3:"Privacy: everything is calculated on your device. Your birth details are not sent, stored or shared. Built with Malaysia’s PDPA 2010 and Indonesia’s UU PDP No. 27/2022 in mind.",
-  c4:"Views and content are the author’s own and do not represent any organisation.",
-  theme_to_dark:"Switch to dark mode", theme_to_light:"Switch to light mode",
-  nav_support:"Support this guide", support_back:"← Back to the guide",
-  support_note:"Completely optional. The guide stays free either way.",
-  qr_my:"Malaysia: scan with any banking app or e-wallet",
-  qr_intl:"International: scan or tap to give via Wise", wise_btn:"Give via Wise",
-  week_title:"Week by week", week_sub:"Pick what you want to do, then see which days suit it.",
-  a_biz:"Business", a_love:"Love", a_move:"Travel & move", a_health:"Health",
-  a_biz_d:"Launch, open, sign a deal, pitch", a_love_d:"Date, propose, get engaged, marry, make up", a_move_d:"Start a trip, move house, move in", a_health_d:"Check-ups, treatment, starting a routine",
-  week_prev:"Previous week", week_next:"Next week",
-  best_days:"Best days this week", no_good:"No standout day this week. Stick to routine work.",
-  lv_good:"Good day", lv_ok:"Fair day", lv_avoid:"Better to avoid", lv_bad:"Avoid",
-  dn_clash:"This day clashes with your sign.", dn_harm:"This day is a little tense for your sign.", dn_help:"This day supports your sign.",
-  dn_sui:"Year-breaking day (an Ox day in a Goat year). Avoid big starts.", dn_ben:"Your own sign’s day. Keep it steady.",
-  day_of:"{animal} day", day_off:"Outside the 2027 Goat year", officer_label:"Day type",
-  week_note:"Day ratings use the traditional 12 Day Officers, how the day relates to your sign, and the year-breaking day. Other masters add more rules (28 Mansions, personal charts), so treat this as a simple guide, not a verdict.",
-  o0_n:"Establish 建", o0_t:"A good day to start things and set direction.",
-  o1_n:"Remove 除", o1_t:"Good for clearing out, cleaning and healing. Quiet for new launches.",
-  o2_n:"Full 满", o2_t:"Good for celebrations, openings and closing deals. Not for medical treatment.",
-  o3_n:"Balance 平", o3_t:"An average day. Fine for routine work and small steps.",
-  o4_n:"Stable 定", o4_t:"Good for signing, buying, engagements and moving in. Avoid travel and disputes.",
-  o5_n:"Initiate 执", o5_t:"Good for finishing work and planting plans. Avoid travel and moving house.",
-  o6_n:"Destroy 破", o6_t:"A clashing day. Avoid launches, weddings and signing. Fine for demolition and treatment.",
-  o7_n:"Danger 危", o7_t:"Take care. Avoid risk, climbing and long trips.",
-  o8_n:"Success 成", o8_t:"One of the best days. Good for launches, weddings, signing and travel.",
-  o9_n:"Harvest 收", o9_t:"Good for collecting payments and receiving. Avoid travel and treatment.",
-  o10_n:"Open 开", o10_t:"One of the best days. Good for opening, launching, weddings, travel and moving in.",
-  o11_n:"Close 闭", o11_t:"A closing day. Avoid launches, weddings and trips. Good for wrapping things up.",
-  footer:"2027 Year Guide · for culture and reflection"
+  pageTitle:"How to read your 2027 Year Guide result · Reka Amorra",
+  kicker:"Explainer · 2027 Year Guide",
+  title:"How to read your 2027 Year Guide result",
+  standfirst:"Four parts, five minutes. What the colours mean, and how each day gets its rating.",
+  byline:"Reka Amorra · Nov 2026 · 4 min read",
+  btn_guide:"Open the guide", btn_comment:"Comment on LinkedIn",
+  tldr_label:"The short version",
+  tl1:"Your result has four parts: your sign against the Goat year, your 12 months, a week-by-week day finder, and optional home directions.",
+  tl2:"Green is supportive. Blue-grey is steady. Pink is careful. Deep red is a clash. Each colour also has a symbol: ✓ – ! ✕.",
+  tl3:"Each day gets its rating from three things: the day type, how the day sits with your sign, and the year-breaking day.",
+  tl4:"It is a guide for culture and reference. A real deadline comes before any symbol.",
+  leg_good:"Supportive", leg_steady:"Steady", leg_care:"Careful", leg_bad:"Clash",
+  s1_t:"Your sign and the year",
+  s1_p:"The first thing you see is one badge. It says how your sign sits with the Goat year, which runs about 4 Feb 2027 to 3 Feb 2028. There are seven kinds.",
+  rn_six:"Six Harmonies", rm_six:"A strong ally. Support and smoother deals.",
+  rn_three:"Three Harmonies", rm_three:"Good flow. Easier than most this year.",
+  rn_none:"Neutral", rm_none:"No special tie. The months and days do the guiding.",
+  rn_ben:"Own year", rm_ben:"Go careful and steady. Tradition says it is not a bad year.",
+  rn_harm:"Harm", rm_harm:"Misunderstandings come easily. Say things clearly.",
+  rn_punish:"Punishment", rm_punish:"Hidden friction. Keep paperwork and promises clean.",
+  rn_clash:"Clash", rm_clash:"Change and some friction. Plan changes on purpose.",
+  s2_t:"Your 12 months",
+  s2_p1:"Each tile is one Chinese month, named after an animal. Chinese months start on solar terms, around the 4th to 8th, not on the 1st. So the Tiger month starts on 4 Feb, not 1 Feb.",
+  s2_p2:"The tile shows how that month’s animal sits with your sign. Tap a tile in the guide for the dates and a one-line note.",
+  s2_cap:"Example: born 1990 (Horse). Same colours and symbols as in the guide.",
+  s2_note:"Best months and careful months are also listed above the strip.",
+  s3_t:"Week by week",
+  s3_p1:"Pick what you are doing: Business, Love, Travel & moving, or Health. Then each day shows its date, two Chinese characters (the day’s pillar) and a symbol.",
+  s3_flow_t:"How a day gets its symbol",
+  f1_t:"1. Day type", f1_d:"One of 12 day types (the 12 Day Officers). Each one is good or bad for different things.",
+  f2_t:"2. Your sign", f2_d:"A clash day is ✕. A day that supports your sign moves up one step. A tense day moves down one step.",
+  f3_t:"3. Year-breaking day", f3_d:"In 2027 every Ox day breaks the Goat year. Those days are ✕ for everyone.",
+  f4_t:"The symbol", f4_d:"✓ good, – fair, ! careful, ✕ avoid.",
+  s3_p2:"The strongest day types are Success 成 and Open 开. The weakest are Destroy 破 and Close 闭. The other eight sit in between and depend on what you are doing.",
+  ex_t:"Worked example", ex_cap:"Born 1990 (Horse), Business, 29 Mar to 4 Apr 2027.",
+  ex_d1:"Stable 定 is good for signing, and a Goat day is a Six Harmonies match for a Horse.",
+  ex_d2:"Initiate 执 is fair for business. Nothing special with your sign.",
+  ex_d3:"Destroy 破 is a clashing day. Skip launches and signing.",
+  ex_d4:"Danger 危 is normally careful, but a Dog day supports a Horse and lifts it to fair.",
+  ex_d5:"Success 成 is one of the best days.",
+  ex_d6:"A Rat day clashes with a Horse. Avoid it, even though Harvest 收 is fair.",
+  ex_d7:"Open 开 is a top day, but an Ox day breaks the Goat year. Avoid.",
+  ex_read:"Reading it: Monday and Friday are the days to use. The weekend is the one to skip.",
+  s4_t:"The optional extras",
+  s4_li1:"Exact birth date: fixes people born in January or early February, because the Chinese year starts at Li Chun, around 4 Feb.",
+  s4_li2:"Gender: only needed for your personal directions (your Kua number). The old formula uses male or female.",
+  s4_li3:"What matters to you: adds a short tip for career, money, love, health or family.",
+  s4_li4:"Home and office map: tap a direction to see its 2027 star. North is at the top. Measure from the centre of your home with a phone compass.",
+  chk_t:"Save this: before you pick a date",
+  chk1:"Choose the thing first: Business, Love, Travel & moving or Health.",
+  chk2:"If you have a choice, take a ✓ day.",
+  chk3:"✕ means a clash with your sign, or a year-breaking day. Pick another date if you can.",
+  chk4:"! days are fine for routine work. Keep big signings and launches for ✓ days.",
+  chk5:"Court dates, medical appointments and contract deadlines do not move for a symbol. Keep them.",
+  chk6:"Treat it as a guide, not a verdict.",
+  watch_t:"What it does not do",
+  watch_p:"It does not use your birth hour or a full Four Pillars chart. It does not use the 28 Mansions. Different masters add more rules and can disagree with each other. For a wedding or a big launch, many people still ask a master as well.",
+  m_sum:"How it is worked out",
+  m_p1:"The rules are standard Chinese almanac (Tong Shu) conventions: the 12 Day Officers, the relationships between the 12 animals (six harmonies, three harmonies, harm, punishment, clash), the year-breaking day, Li Chun as the start of the year, the Kua formula for personal directions and the 2027 annual flying stars.",
+  m_p2:"Solar-term dates are calculated for Malaysia time (UTC+8) and can be one day off. Day ratings follow the calendar date.",
+  m_p3:"These are traditional conventions, not measured facts, so there are no statistics to cite. Schools differ, and the guide follows one common version.",
+  priv_t:"Privacy and disclaimer",
+  priv_p1:"For culture and reference only, not professional advice. Please do not use it for medical, legal, financial or investment decisions.",
+  priv_p2:"Birth details are worked out on your phone and are not sent or saved. Built with Malaysia’s PDPA 2010 and Indonesia’s UU PDP No. 27/2022 in mind.",
+  priv_p3:"Views and content are the author’s own and do not represent any organisation.",
+  bio:"Reka Amorra writes plain guides on affiliate marketing and creator tools for Malaysia and Indonesia.",
+  foot:"© 2026 Reka Amorra"
 },
-id:{
-  langName:"Bahasa Indonesia", locale:"id-ID",
+id:{ langName:"Bahasa Indonesia", locale:"id-ID", htmlLang:"id",
   animals:["Tikus","Kerbau","Macan","Kelinci","Naga","Ular","Kuda","Kambing","Monyet","Ayam","Anjing","Babi"],
-  ds:{N:"U",NE:"TL",E:"T",SE:"TG",S:"S",SW:"BD",W:"B",NW:"BL",C:"Tengah"},
-  dirs:{N:"Utara",NE:"Timur Laut",E:"Timur",SE:"Tenggara",S:"Selatan",SW:"Barat Daya",W:"Barat",NW:"Barat Laut"},
-  title:"Panduan Tahun 2027", subtitle:"Tahun Kambing Api · 丁未",
-  install:"Tambahkan ke layar utama", install_title:"Tambahkan ke layar utama",
-  install_ios:"iPhone atau iPad: ketuk tombol Bagikan, lalu pilih “Tambah ke Layar Utama”.",
-  install_android:"Android: buka menu browser (⋮), lalu pilih “Tambahkan ke layar utama” atau “Instal aplikasi”.",
-  close:"Tutup",
-  intro:"Pilih tahun lahir Anda untuk melihat peruntungan 2027 dengan bahasa sederhana. Mau hasil yang lebih tajam? Isi data tambahan di bawah. Tidak wajib kok.",
-  year_label:"Tahun lahir Anda", year_ph:"Pilih tahun",
-  year_note:"Tahun Tionghoa mulai sekitar 4 Februari. Lahir di bulan Januari atau awal Februari? Isi tanggal lahir lengkap di bagian Data tambahan.",
-  empty:"Pilih tahun lahir di atas, dan peruntungan 2027 Anda akan muncul di sini.",
-  you_are:"Shio Anda: {animal}", cn_year:"Tahun Tionghoa {y}",
-  do_label:"Baik dilakukan", watch_label:"Waspadai",
-  tone_good:"Mendukung", tone_steady:"Stabil", tone_care:"Hati-hati", tone_bad:"Bentrok",
-  r_ben_t:"Tahun shio Anda sendiri (Ben Ming Nian)", r_ben_s:"Orang bershio Kambing bertemu shionya sendiri di 2027. Menurut tradisi, ini tahun untuk berhati-hati dan menjaga kestabilan, bukan tahun sial.", r_ben_d:"Kenakan sesuatu yang berwarna merah, rutin cek kesehatan, dan rencanakan langkah besar dengan matang.", r_ben_w:"Jangan terburu-buru mengambil keputusan besar atau menanggung terlalu banyak.",
-  r_clash_t:"Bentrok dengan tahun (Chong)", r_clash_s:"Kerbau berseberangan dengan Kambing, jadi 2027 membawa perubahan dan sedikit gesekan. Ini juga bisa jadi dorongan untuk memperbarui banyak hal.", r_clash_d:"Rencanakan perubahan dengan sengaja: pindah, ganti peran, atau mulai dari awal.", r_clash_w:"Hindari rencana perjalanan yang berisiko, pertengkaran, dan keputusan besar yang terburu-buru.",
-  r_punish_t:"Hukuman / Xing (gesekan tersembunyi)", r_punish_s:"Anjing dan Kambing membentuk “hukuman”: perselisihan kecil dan stres bisa menumpuk diam-diam.", r_punish_d:"Buat perjanjian secara tertulis dan rapikan semua dokumen.", r_punish_w:"Hindari sengketa hukum, bergosip, dan memendam stres.",
-  r_harm_t:"Merugikan / Hai (gesekan antarmanusia)", r_harm_s:"Tikus dan Kambing membentuk “hai”: salah paham dan renggangnya pertemanan lebih mudah terjadi.", r_harm_d:"Bicara dengan jelas dan pastikan lawan bicara paham.", r_harm_w:"Jangan mudah percaya gosip atau meminjamkan uang sembarangan.",
-  r_six_t:"Harmoni Enam / Liu He (sekutu kuat)", r_six_s:"Kuda dan Kambing adalah pasangan klasik. 2027 membawa dukungan, mitra yang baik, dan urusan yang lebih lancar.", r_six_d:"Terima ajakan kerja sama dan rencana keluarga.", r_six_w:"Jangan mengumbar janji hanya karena semuanya terasa mudah.",
-  r_three_t:"Harmoni Tiga / San He (aliran lancar)", r_three_s:"Kelinci, Kambing, dan Babi satu kelompok yang saling mendukung. Tahun 2027 berjalan lebih lancar bagi Anda dibanding kebanyakan orang.", r_three_d:"Mulai proyek baru dan perluas jaringan.", r_three_w:"Jangan berpuas diri. Keberuntungan tetap butuh usaha.",
-  r_none_t:"Netral (tahun yang stabil)", r_none_s:"Shio Anda tidak punya hubungan khusus dengan Kambing. Tahun 2027 tergantung usaha Anda, dan ritme bulanan di bawah akan banyak membantu.", r_none_d:"Susun rencana di sekitar bulan-bulan terbaik Anda.", r_none_w:"Hindari komitmen besar di bulan-bulan yang perlu waspada.",
-  best_months:"Bulan terbaik untuk Anda", care_months:"Hati-hati di bulan",
-  ribbon_title:"12 bulan Anda",
-  ribbon_note:"Bulan Tionghoa dimulai pada pergantian solar term (sekitar tanggal 4 sampai 8), bukan tanggal 1. Ketuk bulan untuk melihat detail. Tanggal bersifat perkiraan (±1 hari).",
-  month_of:"Bulan {animal}",
-  rl_ben:"Shio sama", rl_clash:"Bentrok", rl_punish:"Hukuman", rl_harm:"Merugikan", rl_six:"Harmoni Enam", rl_three:"Harmoni Tiga", rl_mixed:"Campuran", rl_none:"Netral",
-  m_ben:"Bulan shio Anda sendiri. Jalani dengan tenang.",
-  m_clash:"Berlawanan dengan shio Anda. Siap-siap ada gesekan atau perubahan mendadak; tunda langkah besar.",
-  m_punish:"Tekanan menumpuk diam-diam. Jaga dokumen dan janji tetap rapi.",
-  m_harm:"Salah paham mudah terjadi. Sampaikan dengan jelas dan baik-baik.",
-  m_six:"Bulan sekutu yang kuat. Cocok untuk transaksi, mitra, dan keluarga.",
-  m_three:"Bulan yang mengalir lancar. Cocok untuk memulai sesuatu dan bertemu orang baru.",
-  m_mixed:"Sinyalnya campur: membantu sekaligus tegang. Melangkahlah dengan tenang.",
-  m_none:"Bulan netral. Kerjakan hal-hal rutin dengan konsisten.",
-  more_title:"Data tambahan (opsional)", more_sub:"Untuk hasil lebih tajam: tanggal lahir lengkap, arah pribadi, dan hal yang penting bagi Anda.",
-  dob_label:"Tanggal lahir lengkap",
-  dob_early:"Anda lahir sebelum Li Chun, jadi tahun Tionghoa Anda adalah {y} ({animal}).", dob_ok:"Tahun Tionghoa Anda adalah {y} ({animal}).",
-  gender_label:"Jenis kelamin (untuk arah pribadi Anda)", g_male:"Laki-laki", g_female:"Perempuan",
-  gender_note:"Rumus Kua tradisional membedakan laki-laki dan perempuan.",
-  focus_label:"Apa yang paling penting bagi Anda?",
-  f_career:"Karier", f_money:"Keuangan", f_love:"Asmara", f_health:"Kesehatan", f_family:"Keluarga",
-  focus_title:"Untuk hal yang penting bagi Anda di 2027",
-  need_year:"Pilih tahun lahir dulu.",
-  f_career_good:"Dukungan dari orang sekitar kuat. Ambil tugas yang terlihat dan ajukan apa yang Anda inginkan di bulan-bulan terbaik.",
-  f_career_steady:"Kemajuan stabil. Asah keterampilan dan pastikan detailnya benar.",
-  f_career_care:"Hindari pindah kerja besar-besaran dan politik kantor. Rapikan catatan dan biarkan orang lain jadi sorotan.",
-  f_money_good:"Baik untuk transaksi dan kemitraan. Tetap siapkan dana darurat.",
-  f_money_steady:"Arus stabil. Tinjau pengeluaran dan jangan mengejar untung cepat.",
-  f_money_care:"Jaga yang sudah ada. Hindari risiko besar, baca kontrak dua kali, dan simpan uang tunai lebih banyak.",
-  f_love_good:"Tahun yang hangat untuk hubungan. Waktu yang baik untuk berkenalan atau mempererat ikatan.",
-  f_love_steady:"Tahun yang tenang. Waktu bersama yang kecil tapi rutin lebih berarti daripada kejutan besar.",
-  f_love_care:"Jaga ucapan, terutama di bulan-bulan yang tegang. Dengarkan dulu, putuskan kemudian.",
-  f_health_good:"Stamina terjaga. Pertahankan rutinitas dan cek kesehatan berkala.",
-  f_health_steady:"Stabil. Tidur dan minum air putih lebih penting daripada ramuan apa pun.",
-  f_health_care:"Pelankan langkah dan istirahat lebih banyak. Rutin cek kesehatan dan hindari kerja berlebihan. Kalau ada yang mengkhawatirkan, periksakan ke dokter.",
-  f_family_good:"Rumah terasa lebih hangat. Rencanakan liburan atau kumpul keluarga di bulan yang baik.",
-  f_family_steady:"Tenang dan stabil. Pertahankan kebiasaan sederhana yang merekatkan keluarga.",
-  f_family_care:"Gesekan kecil bisa membesar. Pilih sabar; satu obrolan tenang lebih baik daripada lima kali bertengkar.",
-  kua_title:"Arah terbaik Anda", kua_sub:"Angka Kua Anda adalah {n}.",
-  d_sheng:"Rezeki dan kesuksesan", d_sheng_h:"Hadapkan meja kerja ke arah ini.",
-  d_tian:"Kesehatan dan orang yang membantu", d_tian_h:"Arahkan kepala tempat tidur ke sini.",
-  d_yan:"Hubungan dan umur panjang", d_yan_h:"Baik untuk kamar tidur atau ruang keluarga.",
-  d_jue:"Hindari", d_jue_h:"Hindari untuk meja kerja dan kepala tempat tidur.",
-  map_title:"Peta rumah dan kantor 2027", map_sub:"Ketuk arah untuk melihat bintang 2027-nya.",
-  map_tap:"Ketuk salah satu arah di atas. Utara ada di bagian atas. Ukur dari titik tengah rumah atau ruangan dengan kompas ponsel.",
-  map_legend:"★ arah baik Anda · ✕ hindari untuk Anda (muncul setelah Anda mengisi tahun dan jenis kelamin)",
-  map_water:"Mau pasang kolam hias atau akuarium? Saran umum untuk 2027: pilih tenggara, selatan, atau barat laut, dan jauhkan air dari utara dan barat.",
-  s1_n:"Putih 1 · Orang yang membantu", s1_t:"Bagus untuk area kerja dan tempat rapat. Bantuan orang dan kemajuan lebih mudah datang di sini.",
-  s2_n:"Hitam 2 · Penyakit", s2_t:"Jaga tetap tenang dan sepi. Hindari renovasi besar, dan sebisa mungkin jangan tidur di sini. Benda logam (misalnya lonceng kuningan yang bunyinya lembut) adalah penangkal tradisional.",
-  s3_n:"Giok 3 · Pertengkaran", s3_t:"Waspadai pertengkaran dan urusan hukum. Jaga area ini tetap rapi dan hindari adu mulut di sini.",
-  s4_n:"Hijau 4 · Belajar dan asmara", s4_t:"Bagus untuk belajar, kerja kreatif, dan hubungan. Tempat yang cocok untuk meja atau pojok belajar.",
-  s5_n:"Kuning 5 · Kemalangan", s5_t:"Titik yang paling perlu diwaspadai di 2027. Hindari menggali, merenovasi, dan membuat bising di sini. Jaga tetap sunyi; benda logam adalah penangkal tradisional.",
-  s6_n:"Putih 6 · Wibawa", s6_t:"Mendukung kepemimpinan, disiplin, dan keputusan yang baik. Cocok untuk ruang kerja di rumah.",
-  s7_n:"Merah 7 · Pertengkaran dan pencurian", s7_t:"Kunci dengan baik dan simpan barang berharga dengan aman. Hindari kata-kata tajam dan bergosip di area ini.",
-  s8_n:"Putih 8 · Kekayaan", s8_t:"Tempat yang baik untuk urusan uang. Jaga tetap terang, bersih, dan sering dipakai (meja kerja atau area keluarga).",
-  s9_n:"Ungu 9 · Perayaan", s9_t:"Membawa kabar gembira dan keuntungan di masa depan. Cocok untuk berkumpul, tapi jaga energinya tetap tenang, jangan terlalu panas.",
-  support_title:"Dukung panduan gratis ini", support_sub:"Gratis dipakai. Kalau terasa bermanfaat, ucapan terima kasih kecil sangat kami hargai.",
-  qr_reka:"Reka", qr_wise:"Wise", qr_soon:"Kode QR segera hadir",
-  care_title:"Perlu diketahui",
-  c1:"Hanya untuk budaya dan refleksi diri. Ini bukan nasihat profesional. Jangan dipakai untuk keputusan medis, hukum, keuangan, atau investasi.",
-  c2:"Panduan ini memakai aturan tradisional (hubungan shio dan bintang terbang 2027). Guru yang berbeda bisa membacanya dengan cara berbeda.",
-  c3:"Privasi: semua perhitungan dilakukan di perangkat Anda. Data kelahiran Anda tidak dikirim, disimpan, atau dibagikan. Dirancang dengan memperhatikan UU PDP No. 27 Tahun 2022 (Indonesia) dan PDPA 2010 (Malaysia).",
-  c4:"Pandangan dan isi panduan ini milik penulis pribadi dan tidak mewakili organisasi mana pun.",
-  theme_to_dark:"Ganti ke mode gelap", theme_to_light:"Ganti ke mode terang",
-  nav_support:"Dukung panduan ini", support_back:"← Kembali ke panduan",
-  support_note:"Sepenuhnya opsional. Panduan ini tetap gratis.",
-  qr_my:"Malaysia: pindai dengan aplikasi bank atau e-wallet apa pun",
-  qr_intl:"Internasional: pindai atau ketuk untuk memberi lewat Wise", wise_btn:"Beri lewat Wise",
-  week_title:"Minggu demi minggu", week_sub:"Pilih apa yang ingin Anda lakukan, lalu lihat hari mana yang cocok.",
-  a_biz:"Usaha", a_love:"Asmara", a_move:"Bepergian & pindahan", a_health:"Kesehatan",
-  a_biz_d:"Meluncurkan, membuka usaha, tanda tangan kontrak, presentasi", a_love_d:"Kencan, melamar, bertunangan, menikah, berbaikan", a_move_d:"Memulai perjalanan, pindah rumah, masuk rumah baru", a_health_d:"Cek kesehatan, pengobatan, memulai rutinitas baru",
-  week_prev:"Minggu sebelumnya", week_next:"Minggu berikutnya",
-  best_days:"Hari terbaik minggu ini", no_good:"Tidak ada hari yang menonjol minggu ini. Kerjakan hal rutin saja.",
-  lv_good:"Hari baik", lv_ok:"Hari biasa", lv_avoid:"Sebaiknya dihindari", lv_bad:"Hindari",
-  dn_clash:"Hari ini bentrok dengan shio Anda.", dn_harm:"Hari ini agak tegang untuk shio Anda.", dn_help:"Hari ini mendukung shio Anda.",
-  dn_sui:"Hari pemecah tahun (hari Kerbau di tahun Kambing). Hindari memulai hal besar.", dn_ben:"Hari shio Anda sendiri. Jalani dengan tenang.",
-  day_of:"Hari {animal}", day_off:"Di luar tahun Kambing 2027", officer_label:"Jenis hari",
-  week_note:"Penilaian hari memakai 12 Day Officer tradisional, hubungan hari dengan shio Anda, dan hari pemecah tahun. Guru lain menambahkan aturan lain (28 Mansion, bazi pribadi), jadi anggap ini panduan sederhana, bukan vonis.",
-  o0_n:"Mulai 建", o0_t:"Hari yang baik untuk memulai sesuatu dan menentukan arah.",
-  o1_n:"Bersih-bersih 除", o1_t:"Baik untuk membereskan, membersihkan, dan penyembuhan. Kurang cocok untuk peluncuran baru.",
-  o2_n:"Penuh 满", o2_t:"Baik untuk perayaan, pembukaan, dan menutup kesepakatan. Kurang baik untuk pengobatan.",
-  o3_n:"Seimbang 平", o3_t:"Hari biasa. Cocok untuk pekerjaan rutin dan langkah kecil.",
-  o4_n:"Mantap 定", o4_t:"Baik untuk tanda tangan, membeli, bertunangan, dan masuk rumah baru. Hindari bepergian dan perselisihan.",
-  o5_n:"Pegang 执", o5_t:"Baik untuk menuntaskan pekerjaan dan menanam rencana. Hindari bepergian dan pindahan.",
-  o6_n:"Hancur 破", o6_t:"Hari yang bentrok. Hindari peluncuran, pernikahan, dan tanda tangan. Cocok untuk bongkar-bongkar dan pengobatan.",
-  o7_n:"Bahaya 危", o7_t:"Berhati-hatilah. Hindari risiko, memanjat, dan perjalanan jauh.",
-  o8_n:"Sukses 成", o8_t:"Salah satu hari terbaik. Baik untuk peluncuran, pernikahan, tanda tangan, dan bepergian.",
-  o9_n:"Panen 收", o9_t:"Baik untuk menagih pembayaran dan menerima. Hindari bepergian dan pengobatan.",
-  o10_n:"Buka 开", o10_t:"Salah satu hari terbaik. Baik untuk membuka usaha, peluncuran, pernikahan, bepergian, dan pindah rumah.",
-  o11_n:"Tutup 闭", o11_t:"Hari penutup. Hindari peluncuran, pernikahan, dan perjalanan. Baik untuk menyelesaikan urusan.",
-  footer:"Panduan Tahun 2027 · untuk budaya dan refleksi"
+  pageTitle:"Cara membaca hasil Panduan Tahun 2027 · Reka Amorra",
+  kicker:"Penjelasan · Panduan Tahun 2027",
+  title:"Cara membaca hasil Panduan Tahun 2027 kamu",
+  standfirst:"Empat bagian, lima menit. Arti warna dan cara tiap hari mendapat nilainya.",
+  byline:"Reka Amorra · Nov 2026 · 4 menit baca",
+  btn_guide:"Buka panduannya", btn_comment:"Komentar di LinkedIn",
+  tldr_label:"Ringkasnya",
+  tl1:"Hasil kamu punya empat bagian: shio kamu terhadap tahun Kambing, 12 bulan kamu, pencari hari per minggu, dan arah rumah (opsional).",
+  tl2:"Hijau berarti mendukung. Abu-biru berarti stabil. Merah muda berarti hati-hati. Merah tua berarti bentrok. Tiap warna juga punya simbol: ✓ – ! ✕.",
+  tl3:"Nilai tiap hari datang dari tiga hal: jenis harinya, hubungan hari itu dengan shio kamu, dan hari pemecah tahun.",
+  tl4:"Ini panduan untuk budaya dan referensi. Tenggat yang nyata lebih penting daripada simbol apa pun.",
+  leg_good:"Mendukung", leg_steady:"Stabil", leg_care:"Hati-hati", leg_bad:"Bentrok",
+  s1_t:"Shio kamu dan tahunnya",
+  s1_p:"Hal pertama yang muncul adalah satu lencana. Isinya hubungan shio kamu dengan tahun Kambing, yang berjalan sekitar 4 Feb 2027 sampai 3 Feb 2028. Ada tujuh jenis.",
+  rn_six:"Harmoni Enam", rm_six:"Sekutu kuat. Ada dukungan dan urusan lebih lancar.",
+  rn_three:"Harmoni Tiga", rm_three:"Alurnya bagus. Lebih mudah daripada kebanyakan orang tahun ini.",
+  rn_none:"Netral", rm_none:"Tidak ada hubungan khusus. Bulan dan hari yang jadi penuntun.",
+  rn_ben:"Tahun shio sendiri", rm_ben:"Jalani dengan hati-hati dan tenang. Menurut tradisi, ini bukan tahun sial.",
+  rn_harm:"Merugikan (Hai)", rm_harm:"Salah paham gampang terjadi. Bicaralah yang jelas.",
+  rn_punish:"Hukuman (Xing)", rm_punish:"Gesekan tersembunyi. Rapikan dokumen dan janji.",
+  rn_clash:"Bentrok (Chong)", rm_clash:"Ada perubahan dan sedikit gesekan. Rencanakan perubahan dengan sengaja.",
+  s2_t:"12 bulan kamu",
+  s2_p1:"Tiap kotak adalah satu bulan Tionghoa, dinamai dengan hewan. Bulan Tionghoa mulai pada pergantian solar term, sekitar tanggal 4 sampai 8, bukan tanggal 1. Jadi bulan Macan mulai 4 Feb, bukan 1 Feb.",
+  s2_p2:"Kotak menunjukkan hubungan hewan bulan itu dengan shio kamu. Ketuk kotak di panduan untuk melihat tanggal dan catatan satu baris.",
+  s2_cap:"Contoh: lahir 1990 (Kuda). Warna dan simbolnya sama dengan di panduan.",
+  s2_note:"Bulan terbaik dan bulan yang perlu hati-hati juga tertulis di atas deretan kotak.",
+  s3_t:"Minggu demi minggu",
+  s3_p1:"Pilih yang sedang kamu lakukan: Usaha, Asmara, Bepergian & pindahan, atau Kesehatan. Lalu tiap hari menampilkan tanggal, dua karakter Mandarin (pilar harinya), dan satu simbol.",
+  s3_flow_t:"Bagaimana sebuah hari mendapat simbol",
+  f1_t:"1. Jenis hari", f1_d:"Satu dari 12 jenis hari (12 Day Officer). Tiap jenis cocok atau tidak untuk hal yang berbeda.",
+  f2_t:"2. Shio kamu", f2_d:"Hari yang bentrok berarti ✕. Hari yang mendukung shio kamu naik satu tingkat. Hari yang tegang turun satu tingkat.",
+  f3_t:"3. Hari pemecah tahun", f3_d:"Di 2027, setiap hari Kerbau memecah tahun Kambing. Hari itu ✕ untuk semua orang.",
+  f4_t:"Simbolnya", f4_d:"✓ baik, – biasa, ! hati-hati, ✕ hindari.",
+  s3_p2:"Jenis hari terkuat adalah Sukses 成 dan Buka 开. Yang terlemah adalah Hancur 破 dan Tutup 闭. Delapan lainnya ada di tengah dan tergantung apa yang kamu lakukan.",
+  ex_t:"Contoh nyata", ex_cap:"Lahir 1990 (Kuda), Usaha, 29 Mar sampai 4 Apr 2027.",
+  ex_d1:"Mantap 定 bagus untuk tanda tangan, dan hari Kambing cocok dengan Kuda (Harmoni Enam).",
+  ex_d2:"Pegang 执 biasa saja untuk usaha. Tidak ada hubungan khusus dengan shio kamu.",
+  ex_d3:"Hancur 破 adalah hari bentrok. Lewati peluncuran dan tanda tangan.",
+  ex_d4:"Bahaya 危 biasanya hati-hati, tapi hari Anjing mendukung Kuda dan menaikkannya jadi biasa.",
+  ex_d5:"Sukses 成 adalah salah satu hari terbaik.",
+  ex_d6:"Hari Tikus bentrok dengan Kuda. Hindari, walau Panen 收 itu biasa saja.",
+  ex_d7:"Buka 开 hari yang top, tapi hari Kerbau memecah tahun Kambing. Hindari.",
+  ex_read:"Cara bacanya: Senin dan Jumat adalah hari yang dipakai. Akhir pekan sebaiknya dilewati.",
+  s4_t:"Tambahan opsional",
+  s4_li1:"Tanggal lahir lengkap: memperbaiki hasil untuk yang lahir Januari atau awal Februari, karena tahun Tionghoa mulai di Li Chun, sekitar 4 Feb.",
+  s4_li2:"Jenis kelamin: hanya perlu untuk arah pribadi (angka Kua kamu). Rumus tradisionalnya membedakan laki-laki dan perempuan.",
+  s4_li3:"Hal yang penting buat kamu: menambah tips singkat untuk karier, uang, asmara, kesehatan, atau keluarga.",
+  s4_li4:"Peta rumah dan kantor: ketuk arah untuk melihat bintang 2027-nya. Utara ada di atas. Ukur dari titik tengah rumah dengan kompas ponsel.",
+  chk_t:"Simpan ini: sebelum memilih tanggal",
+  chk1:"Tentukan dulu urusannya: Usaha, Asmara, Bepergian & pindahan, atau Kesehatan.",
+  chk2:"Kalau bisa memilih, ambil hari ✓.",
+  chk3:"✕ berarti bentrok dengan shio kamu, atau hari pemecah tahun. Pilih tanggal lain kalau bisa.",
+  chk4:"Hari ! boleh untuk pekerjaan rutin. Simpan tanda tangan dan peluncuran besar untuk hari ✓.",
+  chk5:"Jadwal sidang, janji dokter, dan tenggat kontrak tidak bergeser karena simbol. Tetap jalankan.",
+  chk6:"Anggap ini panduan, bukan vonis.",
+  watch_t:"Yang tidak dilakukan panduan ini",
+  watch_p:"Panduan ini tidak memakai jam lahir atau bazi lengkap. Tidak memakai 28 Mansion. Guru yang berbeda menambah aturan sendiri dan bisa tidak sependapat. Untuk pernikahan atau peluncuran besar, banyak orang tetap bertanya juga ke guru.",
+  m_sum:"Cara menghitungnya",
+  m_p1:"Aturannya adalah kebiasaan standar almanak Tionghoa (Tong Shu): 12 Day Officer, hubungan antar 12 hewan (harmoni enam, harmoni tiga, merugikan, hukuman, bentrok), hari pemecah tahun, Li Chun sebagai awal tahun, rumus Kua untuk arah pribadi, dan bintang terbang tahunan 2027.",
+  m_p2:"Tanggal solar term dihitung untuk waktu Malaysia (UTC+8) dan bisa meleset satu hari. Nilai hari mengikuti tanggal kalender.",
+  m_p3:"Ini kebiasaan tradisional, bukan fakta terukur, jadi tidak ada statistik untuk dikutip. Tiap aliran berbeda, dan panduan ini mengikuti salah satu versi yang umum.",
+  priv_t:"Privasi dan penafian",
+  priv_p1:"Hanya untuk budaya dan referensi, bukan nasihat profesional. Jangan dipakai untuk keputusan medis, hukum, keuangan, atau investasi.",
+  priv_p2:"Data lahir dihitung di ponsel kamu dan tidak dikirim atau disimpan. Dirancang dengan memperhatikan UU PDP No. 27 Tahun 2022 (Indonesia) dan PDPA 2010 (Malaysia).",
+  priv_p3:"Pandangan dan isi ini milik penulis pribadi dan tidak mewakili organisasi mana pun.",
+  bio:"Reka Amorra menulis panduan sederhana tentang pemasaran afiliasi dan alat kreator untuk Malaysia dan Indonesia.",
+  foot:"© 2026 Reka Amorra"
 },
-zh:{
-  langName:"中文", locale:"zh-CN",
+zh:{ langName:"中文", locale:"zh-CN", htmlLang:"zh-CN",
   animals:["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"],
-  ds:{N:"北",NE:"东北",E:"东",SE:"东南",S:"南",SW:"西南",W:"西",NW:"西北",C:"中宫"},
-  dirs:{N:"北",NE:"东北",E:"东",SE:"东南",S:"南",SW:"西南",W:"西",NW:"西北"},
-  title:"2027年运程指南", subtitle:"火羊年 · 丁未",
-  install:"添加到主屏幕", install_title:"添加到主屏幕",
-  install_ios:"iPhone 或 iPad：点按“分享”按钮，再选“添加到主屏幕”。",
-  install_android:"安卓：打开浏览器菜单（⋮），选择“添加到主屏幕”或“安装应用”。",
-  close:"关闭",
-  intro:"选择你的出生年份，用最简单的话看你的2027年。想要更精准？可在下方补充更多资料，完全自愿。",
-  year_label:"你的出生年份", year_ph:"选择年份",
-  year_note:"农历新年份约从2月4日（立春）开始。生于1月或2月初？请在“更多资料”里填写完整生日。",
-  empty:"在上方选择出生年份，你的2027年运势会显示在这里。",
-  you_are:"你的生肖：{animal}", cn_year:"生肖年 {y}年",
-  do_label:"宜", watch_label:"忌",
-  tone_good:"顺", tone_steady:"平", tone_care:"宜小心", tone_bad:"相冲",
-  r_ben_t:"本命年", r_ben_s:"属羊的人在2027年遇上自己的生肖。传统认为这一年宜谨慎、求稳，并不是坏年份。", r_ben_d:"穿戴一点红色，按时体检，大事慎重安排。", r_ben_w:"别急着做大决定，也别揽太多事。",
-  r_clash_t:"冲太岁", r_clash_s:"属牛与羊相冲，2027年多变动，也多些摩擦；同时也是推动你更新生活的机会。", r_clash_d:"有计划地做出改变，例如搬家、转换岗位、重新出发。", r_clash_w:"避免高风险的出行、争吵和仓促的大决定。",
-  r_punish_t:"刑太岁（暗中摩擦）", r_punish_s:"属狗与羊相刑，小纠纷和压力容易在暗处积累。", r_punish_d:"协议白纸黑字，文件资料整理好。", r_punish_w:"避免法律纠纷、是非闲话，也别把压力闷在心里。",
-  r_harm_t:"害太岁（人际摩擦）", r_harm_s:"属鼠与羊相害，容易有误会，朋友关系也可能变淡。", r_harm_d:"沟通要清楚，并确认对方听懂了。", r_harm_w:"别轻信传言，也别随便借钱给人。",
-  r_six_t:"六合太岁（贵人相助）", r_six_s:"属马与羊是经典搭档。2027年有人帮、有好伙伴，合作也更顺。", r_six_d:"欣然接受合作和家庭计划。", r_six_w:"别因为一切顺利就乱许诺。",
-  r_three_t:"三合太岁（运势顺畅）", r_three_s:"兔、羊、猪同属一组，关系友好。2027年你的运势比多数人更顺。", r_three_d:"开展新项目，扩大人脉。", r_three_w:"别坐享其成，好运也要努力。",
-  r_none_t:"无特别冲合（平稳之年）", r_none_s:"你的生肖与羊没有特别关系。2027年靠自己把握，下方每月的节奏会帮上忙。", r_none_d:"围绕你最好的月份来安排事情。", r_none_w:"需要小心的月份，避免做大承诺。",
-  best_months:"你的最佳月份", care_months:"需要小心的月份",
-  ribbon_title:"你的十二个月",
-  ribbon_note:"农历月份以节气交接为界（约在4至8日），不是每月1日。点按月份查看详情。日期为约数（±1天）。",
-  month_of:"{animal}月",
-  rl_ben:"同生肖", rl_clash:"相冲", rl_punish:"相刑", rl_harm:"相害", rl_six:"六合", rl_three:"三合", rl_mixed:"合中带刑", rl_none:"平",
-  m_ben:"与你同生肖的月份，稳扎稳打。",
-  m_clash:"与你的生肖相冲。多摩擦或突变，大动作宜延后。",
-  m_punish:"压力暗中累积。文件和承诺要处理干净。",
-  m_harm:"容易有误会。说话要清楚、客气。",
-  m_six:"贵人月。适合谈合作、见伙伴、顾家庭。",
-  m_three:"顺畅月。适合开始新事、认识新朋友。",
-  m_mixed:"好坏参半：有助力也有压力。稳步前进。",
-  m_none:"平稳月。踏实做事。",
-  more_title:"更多资料（自愿）", more_sub:"想要更精准：填写完整生日、个人方位，以及你最在意的事。",
-  dob_label:"完整出生日期",
-  dob_early:"你生在立春之前，所以生肖年是{y}年（{animal}）。", dob_ok:"你的生肖年是{y}年（{animal}）。",
-  gender_label:"性别（用于个人方位）", g_male:"男", g_female:"女",
-  gender_note:"传统命卦公式分男女计算。",
-  focus_label:"你最在意什么？",
-  f_career:"事业", f_money:"财运", f_love:"感情", f_health:"健康", f_family:"家庭",
-  focus_title:"针对你在意的事",
-  need_year:"请先选择出生年份。",
-  f_career_good:"贵人运佳。好月份里多争取曝光，也勇于提出自己的诉求。",
-  f_career_steady:"稳步前进。多充实技能，细节做扎实。",
-  f_career_care:"避免大幅转职和办公室是非。资料整理好，把风头让给别人。",
-  f_money_good:"利于谈生意与合作。仍要留好应急资金。",
-  f_money_steady:"财运平稳。检视开销，别追求快钱。",
-  f_money_care:"守住已有的。避免大风险，合约多看两遍，多备现金。",
-  f_love_good:"感情运暖。适合认识新朋友或加深关系。",
-  f_love_steady:"平静的一年。日常相处的小时间，比大场面更重要。",
-  f_love_care:"说话要留意，尤其是紧张的月份。先听，后决定。",
-  f_health_good:"精力不错。维持作息，定期检查。",
-  f_health_steady:"平稳。睡眠和喝水，比任何偏方都重要。",
-  f_health_care:"放慢脚步，多休息。定期检查，避免过劳。若有担心，请看医生。",
-  f_family_good:"家里更温暖。好月份里安排家庭旅行或聚会。",
-  f_family_steady:"安稳平静。维持那些把家连在一起的简单习惯。",
-  f_family_care:"小摩擦可能变大。多一分耐心，一次平静的谈话胜过五次争吵。",
-  kua_title:"你的最佳方位", kua_sub:"你的命卦数是 {n}。",
-  d_sheng:"财运与事业", d_sheng_h:"办公时面向此方。",
-  d_tian:"健康与贵人", d_tian_h:"床头朝向此方。",
-  d_yan:"感情与长寿", d_yan_h:"适合卧室或家庭活动区。",
-  d_jue:"宜避开", d_jue_h:"书桌朝向和床头都要避开。",
-  map_title:"2027年家居与办公室方位图", map_sub:"点按方位，查看该方位的2027年飞星。",
-  map_tap:"请点按上方的方位。上方为北。请站在家或房间的中心，用手机指南针测方位。",
-  map_legend:"★ 你的吉方 · ✕ 你应避开（填写年份和性别后显示）",
-  map_water:"想放水景或鱼缸？2027年常见建议：放在东南、南或西北，北方和西方避免放水。",
-  s1_n:"一白 · 贵人星", s1_t:"适合工作区和会客处。贵人相助，进展较顺。",
-  s2_n:"二黑 · 病符星", s2_t:"保持安静平和。尽量避免大兴土木，也尽量不要在此睡觉。传统以金属物化解（如声音轻柔的铜铃）。",
-  s3_n:"三碧 · 是非星", s3_t:"留意口角与官非。保持整洁，避免在此高声争执。",
-  s4_n:"四绿 · 文昌桃花", s4_t:"利于读书、创作与人际感情。适合设书桌或学习角落。",
-  s5_n:"五黄 · 灾煞星", s5_t:"2027年最需谨慎的方位。避免动土、装修与噪音，保持安静；传统以金属物化解。",
-  s6_n:"六白 · 权威星", s6_t:"有利领导力、纪律与好决策。适合设家庭办公室。",
-  s7_n:"七赤 · 口舌盗贼", s7_t:"门窗锁好，贵重物品收妥。此处避免尖酸的话和闲言碎语。",
-  s8_n:"八白 · 财星", s8_t:"适合处理钱财事务。保持明亮、整洁、有人气（书桌或家人活动区）。",
-  s9_n:"九紫 · 喜庆星", s9_t:"带来喜讯与未来的收获。适合聚会，但气氛宜平和，不要过热。",
-  support_title:"支持这份免费指南", support_sub:"免费使用。如果对你有帮助，欢迎小额打赏，不胜感激。",
-  qr_reka:"Reka", qr_wise:"Wise（海外汇款）", qr_soon:"二维码即将上线",
-  care_title:"请留意",
-  c1:"仅供文化与反思参考，并非专业建议。请勿用于医疗、法律、财务或投资决定。",
-  c2:"本指南采用传统规则（生肖关系与2027年飞星）。不同老师的解读可能不同。",
-  c3:"隐私：所有计算都在你的设备上完成，你的出生资料不会被发送、储存或分享。设计时已参考马来西亚《2010年个人数据保护法》（PDPA）和印尼《2022年第27号个人数据保护法》（UU PDP）。",
-  c4:"内容与观点属作者个人，不代表任何机构。",
-  theme_to_dark:"切换到深色模式", theme_to_light:"切换到浅色模式",
-  nav_support:"支持这份指南", support_back:"← 返回指南",
-  support_note:"完全自愿。指南一律免费。",
-  qr_my:"马来西亚：用任何银行 App 或电子钱包扫码",
-  qr_intl:"海外：扫码或点按，通过 Wise 支持", wise_btn:"通过 Wise 支持",
-  week_title:"按周查看", week_sub:"先选你想做的事，再看哪几天合适。",
-  a_biz:"事业", a_love:"感情", a_move:"出行搬家", a_health:"健康",
-  a_biz_d:"开业、开张、签约、提案", a_love_d:"约会、求婚、订婚、结婚、和好", a_move_d:"出远门、搬家、入宅", a_health_d:"体检、治疗、开始新的养生习惯",
-  week_prev:"上一周", week_next:"下一周",
-  best_days:"本周最佳日子", no_good:"本周没有特别突出的日子，做日常事务就好。",
-  lv_good:"吉日", lv_ok:"平日", lv_avoid:"宜避开", lv_bad:"忌",
-  dn_clash:"此日与你的生肖相冲。", dn_harm:"此日对你的生肖略有压力。", dn_help:"此日对你的生肖有助力。",
-  dn_sui:"岁破日（羊年的丑日）。忌做大事开头。", dn_ben:"你自己生肖的日子，宜稳。",
-  day_of:"{animal}日", day_off:"不在2027年羊年范围内", officer_label:"日型",
-  week_note:"日子评分采用传统建除十二神、日支与你生肖的关系，以及岁破日。其他老师还会加入二十八宿、个人八字等规则，所以请当作简单参考，而非定论。",
-  o0_n:"建", o0_t:"宜开始新事、定方向。",
-  o1_n:"除", o1_t:"宜清理、除旧、养病。新开张较平淡。",
-  o2_n:"满", o2_t:"宜庆典、开张、成交。不宜服药治病。",
-  o3_n:"平", o3_t:"普通日子。宜做日常事务和小动作。",
-  o4_n:"定", o4_t:"宜签约、买入、订婚、入宅。忌出行与争讼。",
-  o5_n:"执", o5_t:"宜收尾与布局。忌出行与搬家。",
-  o6_n:"破", o6_t:"冲破之日。忌开业、婚嫁、签约。宜拆除与治病。",
-  o7_n:"危", o7_t:"宜谨慎。忌冒险、登高与远行。",
-  o8_n:"成", o8_t:"最佳日子之一。宜开业、婚嫁、签约、出行。",
-  o9_n:"收", o9_t:"宜收账、收获。忌出行与服药。",
-  o10_n:"开", o10_t:"最佳日子之一。宜开业、婚嫁、出行、入宅。",
-  o11_n:"闭", o11_t:"闭藏之日。忌开业、婚嫁、出行。宜收尾结束。",
-  footer:"2027年运程指南 · 仅供文化与反思参考"
+  pageTitle:"怎样看懂你的2027年运程指南结果 · Reka Amorra",
+  kicker:"解读 · 2027年运程指南",
+  title:"怎样看懂你的2027年运程指南结果",
+  standfirst:"四个部分，五分钟看完。颜色代表什么，每一天的评分又是怎么来的。",
+  byline:"Reka Amorra · 2026年11月 · 阅读约4分钟",
+  btn_guide:"打开指南", btn_comment:"到 LinkedIn 留言",
+  tldr_label:"简单来说",
+  tl1:"你的结果分四部分：你的生肖与羊年的关系、十二个月、按周的择日工具，以及可选的家居方位。",
+  tl2:"绿色是顺，蓝灰是平，粉色是宜小心，深红是相冲。每种颜色也配有符号：✓ – ! ✕。",
+  tl3:"每一天的评分来自三样东西：日型、这一天与你生肖的关系，以及岁破日。",
+  tl4:"这是供文化与参考的指南。真正的期限比任何符号都重要。",
+  leg_good:"顺", leg_steady:"平", leg_care:"宜小心", leg_bad:"相冲",
+  s1_t:"你的生肖与这一年",
+  s1_p:"最先看到的是一个徽章，说明你的生肖与羊年（约2027年2月4日至2028年2月3日）的关系，共有七种。",
+  rn_six:"六合", rm_six:"贵人相助。有支持，合作更顺。",
+  rn_three:"三合", rm_three:"运势顺畅。今年比多数人轻松。",
+  rn_none:"无特别冲合", rm_none:"没有特别关系。靠每月、每日的节奏来参考。",
+  rn_ben:"本命年", rm_ben:"宜谨慎、求稳。传统认为这不是坏年份。",
+  rn_harm:"相害", rm_harm:"容易有误会。说话要说清楚。",
+  rn_punish:"相刑", rm_punish:"暗中有摩擦。文件和承诺要处理干净。",
+  rn_clash:"相冲", rm_clash:"多变动，也有些摩擦。变化要有计划地做。",
+  s2_t:"你的十二个月",
+  s2_p1:"每一格是一个农历月，以动物命名。农历月以节气为界，约在4至8日，不是1日。所以虎月从2月4日开始，而不是2月1日。",
+  s2_p2:"每一格显示该月的动物与你的生肖的关系。在指南里点按格子，可看日期和一句说明。",
+  s2_cap:"例子：1990年出生（属马）。颜色和符号与指南一致。",
+  s2_note:"最佳月份和需要小心的月份，也会列在这一排的上方。",
+  s3_t:"按周查看",
+  s3_p1:"先选你要做的事：事业、感情、出行搬家或健康。每一天会显示日期、两个汉字（当天的干支）和一个符号。",
+  s3_flow_t:"一天的符号是怎么来的",
+  f1_t:"1. 日型", f1_d:"十二日型之一（建除十二神）。每一种适合和不适合的事不同。",
+  f2_t:"2. 你的生肖", f2_d:"相冲的日子是 ✕。对你生肖有助力的日子升一级。有压力的日子降一级。",
+  f3_t:"3. 岁破日", f3_d:"2027年每个丑日（牛日）都冲破羊年，对所有人都是 ✕。",
+  f4_t:"符号", f4_d:"✓ 吉，– 平，! 宜小心，✕ 忌。",
+  s3_p2:"最强的日型是成和开，最弱的是破和闭。其余八种居中，要看你做的是什么事。",
+  ex_t:"实际例子", ex_cap:"1990年出生（属马），事业，2027年3月29日至4月4日。",
+  ex_d1:"定日宜签约，而未日（羊日）与午（马）六合。",
+  ex_d2:"执日对事业是平。与你的生肖没有特别关系。",
+  ex_d3:"破日是冲破之日，避开开业和签约。",
+  ex_d4:"危日本来宜小心，但戌日（狗日）对属马有助力，升为平。",
+  ex_d5:"成日是最好的日子之一。",
+  ex_d6:"子日（鼠日）与属马相冲，宜避开，尽管收日本身是平。",
+  ex_d7:"开日是上好日子，但丑日（牛日）冲破羊年，宜避开。",
+  ex_read:"读法：星期一和星期五是可用的日子，周末则跳过。",
+  s4_t:"可选的补充资料",
+  s4_li1:"完整出生日期：能校正1月或2月初出生的人，因为农历年从立春（约2月4日）算起。",
+  s4_li2:"性别：只在算个人方位（命卦数）时才需要。传统公式分男女。",
+  s4_li3:"你在意的事：会加上事业、财运、感情、健康或家庭的简短提示。",
+  s4_li4:"家居与办公室方位图：点按方位看2027年的飞星。上方为北。请站在家的中心，用手机指南针测方位。",
+  chk_t:"收藏这份清单：选日子之前",
+  chk1:"先决定要做的事：事业、感情、出行搬家或健康。",
+  chk2:"有得选的话，选 ✓ 的日子。",
+  chk3:"✕ 表示与你的生肖相冲，或是岁破日。可以的话请改日。",
+  chk4:"! 的日子做日常事务无妨。大的签约和开业留给 ✓ 的日子。",
+  chk5:"开庭日、看医生的预约和合约期限，不会因为符号而改动，照常进行。",
+  chk6:"当作参考，不是定论。",
+  watch_t:"它做不到的事",
+  watch_p:"它没有用到你的出生时辰，也不是完整的四柱八字。没有用二十八宿。不同老师会加上自己的规则，看法也可能不同。结婚或大型开业，很多人还是会另外请教老师。",
+  m_sum:"计算方式",
+  m_p1:"规则采用通行的黄历（通书）惯例：建除十二神、十二生肖之间的关系（六合、三合、相害、相刑、相冲）、岁破日、以立春作年的开始、个人方位的命卦公式，以及2027年的流年飞星。",
+  m_p2:"节气日期按马来西亚时间（UTC+8）计算，可能相差一天。日子的评分以日历日期为准。",
+  m_p3:"这些是传统惯例，不是量度出来的事实，所以没有统计数字可引用。各派说法不同，本指南采用其中一种常见版本。",
+  priv_t:"隐私与免责声明",
+  priv_p1:"仅供文化与参考，并非专业建议。请勿用于医疗、法律、财务或投资决定。",
+  priv_p2:"出生资料在你的手机上计算，不会被发送或储存。设计时已参考马来西亚《2010年个人数据保护法》（PDPA）和印尼《2022年第27号个人数据保护法》（UU PDP）。",
+  priv_p3:"内容与观点属作者个人，不代表任何机构。",
+  bio:"Reka Amorra 为马来西亚和印尼的读者，撰写联盟营销与创作者工具的简明指南。",
+  foot:"© 2026 Reka Amorra"
 },
-ja:{
-  langName:"日本語", locale:"ja-JP",
+ja:{ langName:"日本語", locale:"ja-JP", htmlLang:"ja",
   chars:["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"],
   animals:["ネズミ","ウシ","トラ","ウサギ","タツ","ヘビ","ウマ","ヒツジ","サル","ニワトリ","イヌ","イノシシ"],
-  ds:{N:"北",NE:"北東",E:"東",SE:"南東",S:"南",SW:"南西",W:"西",NW:"北西",C:"中央"},
-  dirs:{N:"北",NE:"北東",E:"東",SE:"南東",S:"南",SW:"南西",W:"西",NW:"北西"},
-  title:"2027年 運勢ガイド", subtitle:"丁未（ひのとひつじ）· 火のヒツジ年",
-  install:"ホーム画面に追加", install_title:"ホーム画面に追加",
-  install_ios:"iPhone・iPad：共有ボタンをタップして「ホーム画面に追加」を選びます。",
-  install_android:"Android：ブラウザのメニュー（⋮）から「ホーム画面に追加」または「アプリをインストール」を選びます。",
-  close:"閉じる",
-  intro:"生まれ年を選ぶと、あなたの2027年がやさしい言葉で分かります。もっと詳しく知りたい方は、下の詳細を入力してください（任意です）。",
-  year_label:"生まれ年", year_ph:"年を選択",
-  year_note:"中国の暦では、新しい年は2月4日ごろ（立春）に始まります。1月〜2月初旬生まれの方は、「詳細入力」で生年月日を入れてください。",
-  empty:"上で生まれ年を選ぶと、2027年の運勢がここに表示されます。",
-  you_are:"あなたの干支：{animal}", cn_year:"干支の年 {y}年",
-  do_label:"おすすめ", watch_label:"注意",
-  tone_good:"追い風", tone_steady:"安定", tone_care:"慎重に", tone_bad:"衝突",
-  r_ben_t:"本命年（ほんめいねん）", r_ben_s:"ヒツジ年生まれの方は、2027年に自分の干支の年を迎えます。伝統では、悪い年ではなく、慎重に安定を保つ年とされます。", r_ben_d:"赤いものを身につけ、健康診断を欠かさず、大きな動きは慎重に計画しましょう。", r_ben_w:"大きな決断を急いだり、引き受けすぎたりしないこと。",
-  r_clash_t:"太歳と衝突", r_clash_s:"ウシ年生まれはヒツジと正反対の位置にあたり、2027年は変化と多少の摩擦があります。生活を一新するきっかけにもなります。", r_clash_d:"引っ越し、転職、再出発など、変化は自分で計画して起こしましょう。", r_clash_w:"リスクのある旅行計画、口論、急ぎすぎる大きな決断は避けましょう。",
-  r_punish_t:"刑（見えにくい摩擦）", r_punish_s:"イヌ年生まれとヒツジは「刑」の関係です。小さな揉め事やストレスが静かに積もりやすくなります。", r_punish_d:"約束事は書面に残し、書類を整えておきましょう。", r_punish_w:"法的なトラブル、噂話、ストレスをため込むことは避けましょう。",
-  r_harm_t:"害（人間関係の摩擦）", r_harm_s:"ネズミ年生まれとヒツジは「害」の関係です。誤解が生まれやすく、友人関係が冷めることもあります。", r_harm_d:"はっきり伝え、相手に伝わったか確認しましょう。", r_harm_w:"噂を鵜呑みにしたり、軽い気持ちでお金を貸したりしないこと。",
-  r_six_t:"六合（強い味方）", r_six_s:"ウマ年生まれとヒツジは定番の好相性です。2027年は支えてくれる人やよいパートナーに恵まれ、話もスムーズに進みます。", r_six_d:"提携の話や家族の計画には前向きに応じましょう。", r_six_w:"順調だからといって、安請け合いはしないこと。",
-  r_three_t:"三合（流れが良い）", r_three_s:"ウサギ・ヒツジ・イノシシは同じ仲間です。2027年は多くの人よりも流れに乗りやすい年です。", r_three_d:"新しいことを始め、人脈を広げましょう。", r_three_w:"油断は禁物。幸運にも努力は必要です。",
-  r_none_t:"特別な関係なし（安定した年）", r_none_s:"あなたの干支とヒツジには特別な関係がありません。2027年は自分次第で、下の月ごとのリズムが目安になります。", r_none_d:"いちばん良い月に合わせて計画を立てましょう。", r_none_w:"慎重にすべき月は、大きな約束を避けましょう。",
-  best_months:"あなたのおすすめの月", care_months:"慎重にしたい月",
-  ribbon_title:"あなたの12か月",
-  ribbon_note:"中国の暦の月は、1日ではなく節気（毎月4〜8日ごろ）で切り替わります。月をタップすると詳細が見られます。日付はおおよそ（±1日）です。",
-  month_of:"{animal}の月",
-  rl_ben:"同じ干支", rl_clash:"衝突", rl_punish:"刑", rl_harm:"害", rl_six:"六合", rl_three:"三合", rl_mixed:"混合", rl_none:"普通",
-  m_ben:"自分の干支の月です。落ち着いて過ごしましょう。",
-  m_clash:"あなたの干支と正反対の月です。摩擦や急な変化に備え、大きな動きは先送りに。",
-  m_punish:"プレッシャーが静かに積もります。書類と約束をきちんと整えましょう。",
-  m_harm:"誤解が生まれやすい月です。はっきり、やさしく伝えましょう。",
-  m_six:"強い味方の月です。取引、パートナー、家族のことに向いています。",
-  m_three:"流れの良い月です。新しいことを始めたり、人に会ったりするのに向いています。",
-  m_mixed:"追い風と緊張が同時にある月です。着実に進みましょう。",
-  m_none:"普通の月です。地道に取り組みましょう。",
-  more_title:"詳細入力（任意）", more_sub:"もっと詳しく知りたい方へ：生年月日、自分の方位、気になることを入力できます。",
-  dob_label:"生年月日",
-  dob_early:"立春より前の生まれなので、干支の年は{y}年（{animal}）です。", dob_ok:"あなたの干支の年は{y}年（{animal}）です。",
-  gender_label:"性別（自分の方位用）", g_male:"男性", g_female:"女性",
-  gender_note:"伝統的な本命卦の計算式は、男性と女性で分かれています。",
-  focus_label:"いちばん気になることは？",
-  f_career:"仕事", f_money:"お金", f_love:"恋愛", f_health:"健康", f_family:"家族",
-  focus_title:"2027年、気になることについて",
-  need_year:"先に生まれ年を選んでください。",
-  f_career_good:"周囲の後押しがあります。目立つ仕事を引き受け、おすすめの月に希望を伝えてみましょう。",
-  f_career_steady:"着実に進む年です。スキルを磨き、細部を丁寧に。",
-  f_career_care:"大きな転職や社内の駆け引きは避けましょう。記録を整え、注目は他の人に譲って。",
-  f_money_good:"取引や提携に追い風です。それでも生活防衛資金は確保を。",
-  f_money_steady:"お金の流れは安定。支出を見直し、手っ取り早い利益は追わないこと。",
-  f_money_care:"今あるものを守りましょう。大きなリスクは避け、契約書は二度読み、手元資金に余裕を。",
-  f_love_good:"人間関係が温かい年。新しい出会いや絆を深めるのによい時期です。",
-  f_love_steady:"穏やかな年。大きなイベントより、小さくても定期的に一緒に過ごす時間が大切です。",
-  f_love_care:"言葉に気をつけて、特に緊張しやすい月は。まず聞いて、決めるのはそのあとに。",
-  f_health_good:"体力は保てます。生活リズムと定期検診を続けましょう。",
-  f_health_steady:"安定しています。どんな対策よりも、睡眠と水分が大切です。",
-  f_health_care:"ペースを落として、しっかり休みましょう。定期検診を続け、働きすぎを避けて。気になることがあれば医師に相談してください。",
-  f_family_good:"家の中が温かくなります。よい月に家族旅行や集まりを計画しましょう。",
-  f_family_steady:"静かで安定。家庭をつなぐ、ささやかな習慣を続けましょう。",
-  f_family_care:"小さな摩擦が大きくなることも。ここは忍耐で。穏やかな話し合いひとつが、五回の口論に勝ります。",
-  kua_title:"あなたの吉方位", kua_sub:"あなたの本命卦は {n} です。",
-  d_sheng:"金運と成功", d_sheng_h:"デスクはこの方角に向けて。",
-  d_tian:"健康と助けてくれる人", d_tian_h:"枕（頭）をこの方角に。",
-  d_yan:"人間関係と長寿", d_yan_h:"寝室や家族の部屋に向いています。",
-  d_jue:"避ける方角", d_jue_h:"デスクの向きと枕の向きは避けて。",
-  map_title:"2027年 家・オフィスの方位図", map_sub:"方角をタップすると、その方位の2027年の星が分かります。",
-  map_tap:"上の方角をタップしてください。上が北です。家や部屋の中心から、スマホのコンパスで測ってください。",
-  map_legend:"★ あなたの吉方位 · ✕ あなたが避ける方位（年と性別を入れると表示）",
-  map_water:"水槽や水の置物を置くなら？2027年の一般的な目安は、南東・南・北西が向き、北と西は水を避けます。",
-  s1_n:"一白 · 貴人の星", s1_t:"仕事場や打ち合わせの場所に向きます。助けてくれる人や着実な前進に恵まれやすい方位です。",
-  s2_n:"二黒 · 病の星", s2_t:"静かに保ちましょう。大きな改装や、できればここで寝ることは避けて。金属の物（音のやわらかい真鍮の鈴など）が昔からの対処法です。",
-  s3_n:"三碧 · 争いの星", s3_t:"口論や揉め事に注意。ここは整頓し、大声での言い合いは避けましょう。",
-  s4_n:"四緑 · 学びと恋の星", s4_t:"勉強、創作、人間関係に向きます。デスクや勉強コーナーによい場所です。",
-  s5_n:"五黄 · 災いの星", s5_t:"2027年でもっとも注意したい方位。ここでの工事、改装、騒音は避け、静かに保ちましょう。金属の物が昔からの対処法です。",
-  s6_n:"六白 · 権威の星", s6_t:"リーダーシップ、規律、よい判断を後押しします。自宅の仕事部屋に向いています。",
-  s7_n:"七赤 · 口舌と盗難の星", s7_t:"戸締まりをしっかりして、貴重品は安全に。この場所ではきつい言葉や噂話を避けて。",
-  s8_n:"八白 · 財の星", s8_t:"お金のことに向く場所です。明るく清潔に、人の出入りがあるように（デスクや家族のスペース）。",
-  s9_n:"九紫 · 祝いの星", s9_t:"うれしい知らせと将来の実りを運びます。人が集まるのに向きますが、熱くなりすぎず穏やかに。",
-  support_title:"この無料ガイドを応援する", support_sub:"無料でお使いいただけます。お役に立てたら、ささやかなお気持ちをいただけるとうれしいです。",
-  qr_reka:"Reka", qr_wise:"Wise", qr_soon:"QRコードは準備中です",
-  care_title:"ご注意ください",
-  c1:"文化と内省のためのものです。専門的なアドバイスではありません。医療・法律・金融・投資の判断には使わないでください。",
-  c2:"このガイドは伝統的なルール（干支の関係と2027年の飛星）に基づいています。流派や師によって読み方が異なる場合があります。",
-  c3:"プライバシー：すべての計算はお使いの端末内で行われます。生年月日などは送信・保存・共有されません。マレーシアのPDPA 2010とインドネシアのUU PDP（2022年第27号）を意識して設計しています。",
-  c4:"内容や意見は作者個人のものであり、いかなる組織を代表するものでもありません。",
-  theme_to_dark:"ダークモードに切り替え", theme_to_light:"ライトモードに切り替え",
-  nav_support:"このガイドを応援する", support_back:"← ガイドに戻る",
-  support_note:"まったく任意です。ガイドはこれからも無料です。",
-  qr_my:"マレーシア：銀行アプリまたは電子マネーでスキャン",
-  qr_intl:"海外から：スキャンまたはタップしてWiseで送る", wise_btn:"Wiseで送る",
-  week_title:"週ごとのカレンダー", week_sub:"やりたいことを選ぶと、向いている日が分かります。",
-  a_biz:"仕事", a_love:"恋愛", a_move:"旅行・引っ越し", a_health:"健康",
-  a_biz_d:"開業、開店、契約、プレゼン", a_love_d:"デート、プロポーズ、婚約、結婚、仲直り", a_move_d:"旅の出発、引っ越し、入居", a_health_d:"健診、治療、新しい習慣のスタート",
-  week_prev:"前の週", week_next:"次の週",
-  best_days:"今週のおすすめの日", no_good:"今週は特に目立つ日はありません。いつもの仕事を。",
-  lv_good:"吉日", lv_ok:"ふつう", lv_avoid:"避けたい日", lv_bad:"避ける",
-  dn_clash:"この日はあなたの干支と衝突します。", dn_harm:"この日はあなたの干支にとって少し緊張のある日です。", dn_help:"この日はあなたの干支を後押しします。",
-  dn_sui:"歳破日（ヒツジ年のウシの日）。大きなスタートは避けて。", dn_ben:"あなた自身の干支の日。落ち着いて。",
-  day_of:"{animal}の日", day_off:"2027年ヒツジ年の範囲外", officer_label:"日の種類",
-  week_note:"日の評価は、伝統的な十二直、日とあなたの干支の関係、歳破日をもとにしています。ほかの流派では二十八宿や個人の命式も加えるため、断定ではなく簡易的な目安としてご覧ください。",
-  o0_n:"建", o0_t:"新しいことを始め、方向を決めるのによい日。",
-  o1_n:"除", o1_t:"片づけ、掃除、治療によい日。新規の開始は控えめに。",
-  o2_n:"満", o2_t:"祝い事、開店、取引の成立によい日。治療には向きません。",
-  o3_n:"平", o3_t:"ふつうの日。日々の仕事や小さな一歩に。",
-  o4_n:"定", o4_t:"契約、購入、婚約、入居によい日。旅行と争いごとは避けて。",
-  o5_n:"執", o5_t:"仕上げや計画の種まきによい日。旅行と引っ越しは避けて。",
-  o6_n:"破", o6_t:"衝突の日。開業・結婚・契約は避けて。取り壊しや治療には向きます。",
-  o7_n:"危", o7_t:"慎重に。危険、高所、遠出は避けて。",
-  o8_n:"成", o8_t:"最良の日のひとつ。開業、結婚、契約、旅行によい日。",
-  o9_n:"収", o9_t:"集金や受け取りによい日。旅行と治療は避けて。",
-  o10_n:"開", o10_t:"最良の日のひとつ。開業、結婚、旅行、入居によい日。",
-  o11_n:"閉", o11_t:"閉じる日。開業・結婚・旅行は避けて。区切りをつけるのに向きます。",
-  footer:"2027年 運勢ガイド · 文化と内省のために"
+  pageTitle:"2027年 運勢ガイドの結果の読み方 · Reka Amorra",
+  kicker:"解説 · 2027年 運勢ガイド",
+  title:"2027年 運勢ガイドの結果の読み方",
+  standfirst:"4つのパートで5分。色の意味と、1日ごとの評価がどう決まるかを説明します。",
+  byline:"Reka Amorra · 2026年11月 · 読了目安4分",
+  btn_guide:"ガイドを開く", btn_comment:"LinkedInでコメント",
+  tldr_label:"かんたんにまとめると",
+  tl1:"結果は4つのパートです：あなたの干支とヒツジ年の関係、12か月、週ごとの日取り、そして任意の家の方位。",
+  tl2:"緑は追い風、青灰色は安定、ピンクは慎重に、濃い赤は衝突。色ごとに記号もあります：✓ – ! ✕。",
+  tl3:"1日の評価は3つで決まります：日の種類、その日とあなたの干支の関係、そして歳破日。",
+  tl4:"文化と参考のためのガイドです。実際の期限は、どんな記号よりも優先してください。",
+  leg_good:"追い風", leg_steady:"安定", leg_care:"慎重に", leg_bad:"衝突",
+  s1_t:"あなたの干支と今年",
+  s1_p:"最初に出るのはバッジひとつ。あなたの干支がヒツジ年（2027年2月4日ごろ〜2028年2月3日）とどんな関係かを示します。全部で7種類です。",
+  rn_six:"六合", rm_six:"強い味方。支えがあり、話がスムーズに進みます。",
+  rn_three:"三合", rm_three:"流れがよい年。多くの人より楽です。",
+  rn_none:"特別な関係なし", rm_none:"特別な縁はありません。月と日のリズムが目安です。",
+  rn_ben:"本命年", rm_ben:"慎重に、安定を保って。伝統では悪い年ではありません。",
+  rn_harm:"害", rm_harm:"誤解が生まれやすい。はっきり伝えましょう。",
+  rn_punish:"刑", rm_punish:"見えにくい摩擦。書類と約束を整えて。",
+  rn_clash:"衝突", rm_clash:"変化と多少の摩擦。変化は自分で計画して。",
+  s2_t:"あなたの12か月",
+  s2_p1:"1つのタイルが中国暦の1か月で、動物の名前がついています。中国暦の月は1日ではなく節気（4〜8日ごろ）で始まります。だから寅の月は2月1日ではなく2月4日から。",
+  s2_p2:"タイルは、その月の動物とあなたの干支の関係を表します。ガイドでタイルをタップすると、日付と一言メモが見られます。",
+  s2_cap:"例：1990年生まれ（午）。色も記号もガイドと同じです。",
+  s2_note:"おすすめの月と慎重にしたい月は、タイルの上にも書かれます。",
+  s3_t:"週ごとのカレンダー",
+  s3_p1:"まず、やりたいことを選びます：仕事、恋愛、旅行・引っ越し、健康。すると、日ごとに日付、漢字2文字（その日の干支）、記号が表示されます。",
+  s3_flow_t:"1日の記号が決まるしくみ",
+  f1_t:"1. 日の種類", f1_d:"十二直のうちの1つ。種類ごとに、向くこと・向かないことが違います。",
+  f2_t:"2. あなたの干支", f2_d:"衝突の日は ✕。あなたの干支を後押しする日は1段上がり、緊張のある日は1段下がります。",
+  f3_t:"3. 歳破日", f3_d:"2027年は、丑の日がすべてヒツジ年の歳破日です。誰にとっても ✕ です。",
+  f4_t:"記号", f4_d:"✓ 吉、– ふつう、! 慎重に、✕ 避ける。",
+  s3_p2:"いちばん強い日の種類は成と開、いちばん弱いのは破と閉です。残りの8つはその中間で、やりたいこと次第です。",
+  ex_t:"実際の例", ex_cap:"1990年生まれ（午）、仕事、2027年3月29日〜4月4日。",
+  ex_d1:"定の日は契約によい日で、未の日は午（ウマ）と六合の相性です。",
+  ex_d2:"執の日は仕事にはふつう。あなたの干支とは特別な関係なし。",
+  ex_d3:"破の日は衝突の日。開業や契約は避けて。",
+  ex_d4:"危の日は本来は慎重に。ただ、戌の日は午を後押しするので、ふつうに上がります。",
+  ex_d5:"成の日は、いちばんよい日のひとつ。",
+  ex_d6:"子の日は午と衝突します。収の日自体はふつうでも、避けましょう。",
+  ex_d7:"開の日は上々の日ですが、丑の日はヒツジ年の歳破日。避けましょう。",
+  ex_read:"読み方：月曜日と金曜日が使える日。週末は見送りです。",
+  s4_t:"任意の追加項目",
+  s4_li1:"生年月日：1月〜2月初旬生まれの方の結果を正確にします。中国暦の年は立春（2月4日ごろ）から始まるためです。",
+  s4_li2:"性別：自分の方位（本命卦）を出すときだけ必要です。伝統の計算式は男女で分かれます。",
+  s4_li3:"気になること：仕事、お金、恋愛、健康、家族の一言アドバイスを追加します。",
+  s4_li4:"家とオフィスの方位図：方角をタップすると、その方位の2027年の星が見られます。上が北です。家の中心から、スマホのコンパスで測ってください。",
+  chk_t:"保存用：日を選ぶ前のチェック",
+  chk1:"まず、やりたいことを決める：仕事、恋愛、旅行・引っ越し、健康。",
+  chk2:"選べるなら、✓ の日を。",
+  chk3:"✕ は干支の衝突か歳破日です。できれば別の日に。",
+  chk4:"! の日は日常の仕事ならOK。大きな契約や開業は ✓ の日に。",
+  chk5:"裁判の日、通院の予約、契約の期限は、記号のために動かしません。そのまま守りましょう。",
+  chk6:"断定ではなく、目安として使いましょう。",
+  watch_t:"このガイドができないこと",
+  watch_p:"生まれた時刻や、四柱推命の完全な命式は使っていません。二十八宿も使っていません。流派や師によって加えるルールが違い、意見が分かれることもあります。結婚や大きな開業では、さらに師に相談する人も多いです。",
+  m_sum:"計算のしかた",
+  m_p1:"ルールは、通書（暦）の標準的な慣習に従っています：十二直、十二支どうしの関係（六合、三合、害、刑、衝）、歳破日、立春を年の始まりとすること、個人の方位を出す本命卦の計算式、2027年の年の飛星です。",
+  m_p2:"節気の日付はマレーシア時間（UTC+8）で計算していて、1日ずれることがあります。日の評価は暦の日付で決まります。",
+  m_p3:"これらは測定された事実ではなく伝統的な慣習なので、引用できる統計はありません。流派によって違いがあり、このガイドは一般的な版のひとつに従っています。",
+  priv_t:"プライバシーと免責",
+  priv_p1:"文化と参考のためのものです。専門的なアドバイスではありません。医療・法律・金融・投資の判断には使わないでください。",
+  priv_p2:"生年月日などは端末内で計算され、送信も保存もされません。マレーシアのPDPA 2010とインドネシアのUU PDP（2022年第27号）を意識して設計しています。",
+  priv_p3:"内容や意見は作者個人のものであり、いかなる組織も代表しません。",
+  bio:"Reka Amorraは、マレーシアとインドネシア向けに、アフィリエイトマーケティングとクリエイター向けツールのやさしいガイドを書いています。",
+  foot:"© 2026 Reka Amorra"
 }
 };
 
-/* ============================================================
-   DATA (language-independent)
-   ============================================================ */
-const CN_ANIMALS = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
-// Day of February on which Li Chun (start of the Chinese solar year) falls, 1930-2026 (Beijing/KL time)
-const LICHUN = "4554455445544554445444544454445444544454445444544444444444444444444444444444444444444443444344434";
-// Month starts of the 2027 (Ding Wei) year, on solar terms. Index 0 = Tiger month (branch 2).
-const MONTH_STARTS = [[2027,2,4],[2027,3,6],[2027,4,5],[2027,5,6],[2027,6,6],[2027,7,7],[2027,8,8],[2027,9,8],[2027,10,8],[2027,11,7],[2027,12,7],[2028,1,6]];
-const MONTH_END_LAST = [2028,2,3];
-const GOAT = 7;
+const CN = ["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"];
+const SYM = {good:"✓",steady:"–",care:"!",bad:"✕"};
+let lang = "en";
+const t = k => (I18N[lang][k] !== undefined ? I18N[lang][k] : I18N.en[k]);
+const animal = i => I18N[lang].animals[i];
+const charOf = i => (I18N[lang].chars || CN)[i];
 
-const SIX = new Set(["0-1","2-11","3-10","4-9","5-8","6-7"]);
-const HARM = new Set(["0-7","1-6","2-5","3-4","8-11","9-10"]);
-const THREE = [[8,0,4],[11,3,7],[2,6,10],[5,9,1]];
-const PUNISH = [[2,5,8],[1,10,7],[0,3]];
-const TONE_OF = {ben:"care",clash:"bad",punish:"care",harm:"care",six:"good",three:"good",mixed:"steady",none:"steady"};
-const SYMBOL = {good:"✓",steady:"–",care:"!",bad:"✕"};
-
-// 2027 annual flying stars by direction (centre = 9)
-const STAR_AT = {N:5,NE:3,E:7,SE:8,S:4,SW:6,W:2,NW:1,C:9};
-const STAR_TONE = {1:"good",2:"bad",3:"care",4:"good",5:"bad",6:"good",7:"care",8:"good",9:"good"};
-const COMPASS_ORDER = ["NW","N","NE","W","C","E","SW","S","SE"];
-
-// Kua directions: [Sheng Qi, Tian Yi, Yan Nian, Jue Ming]
-const KUA = {1:["SE","E","S","SW"],2:["NE","W","NW","N"],3:["S","N","SE","W"],4:["N","S","E","NE"],
-             6:["W","NE","SW","S"],7:["NW","SW","NE","E"],8:["SW","NW","W","SE"],9:["E","SE","N","NW"]};
-
-/* ============================================================
-   LOGIC
-   ============================================================ */
-const state = {lang:"en", year:null, dob:"", gender:null, focus:new Set(), month:0, star:null, act:"biz", week:0, day:null};
-
-function t(key, params){
-  let s = (I18N[state.lang] && I18N[state.lang][key]);
-  if (s === undefined) s = I18N.en[key];
-  if (s === undefined) return key;
-  if (params) for (const k in params) s = s.split("{"+k+"}").join(params[k]);
-  return s;
+function pickLang(){
+  const q = (new URLSearchParams(location.search).get("lang") || location.hash.replace("#","")).toLowerCase();
+  if (I18N[q]) return q;
+  const n = (navigator.language || "en").toLowerCase();
+  if (n.startsWith("id") || n.startsWith("in")) return "id";
+  if (n.startsWith("ja")) return "ja";
+  if (n.startsWith("zh")) return "zh";
+  return "en";
 }
-const animalName = i => I18N[state.lang].animals[i] || I18N.en.animals[i];
-const charOf = i => (I18N[state.lang].chars || CN_ANIMALS)[i];
-const branchOf = y => (((y-1900)%12)+12)%12;
+const fmt = (d,o) => new Intl.DateTimeFormat(I18N[lang].locale, Object.assign({timeZone:"UTC"},o)).format(d);
 
-function relation(a,b){
-  if (a===b) return "ben";
-  if (((a-b+12)%12)===6) return "clash";
-  const k = a<b ? a+"-"+b : b+"-"+a;
-  const good = SIX.has(k) ? "six" : (THREE.some(g=>g.includes(a)&&g.includes(b)) ? "three" : null);
-  const bad = PUNISH.some(g=>g.includes(a)&&g.includes(b)) ? "punish" : (HARM.has(k) ? "harm" : null);
-  if (good && bad) return "mixed";
-  return good || bad || "none";
-}
-
-function lichunDay(y){ const c = LICHUN[y-1930]; return c ? parseInt(c,10) : 4; }
-// returns {cy, early} from an ISO date string
-function chineseYearFromDob(iso){
-  const [y,m,d] = iso.split("-").map(Number);
-  const early = (m===1) || (m===2 && d<lichunDay(y));
-  return {cy: early ? y-1 : y, early};
-}
-function effectiveYear(){
-  if (!state.year) return null;
-  if (state.dob) return chineseYearFromDob(state.dob).cy;
-  return state.year;
-}
-
-function kuaNumber(cy, gender){
-  const two = String(cy).slice(-2);
-  let sum = parseInt(two[0],10) + parseInt(two[1],10);
-  while (sum > 9) sum = Math.floor(sum/10) + (sum%10);
-  let k;
-  if (cy < 2000) k = gender==="male" ? 10 - sum : sum + 5;
-  else           k = gender==="male" ? 9 - sum  : sum + 6;
-  while (k > 9) k = Math.floor(k/10) + (k%10);
-  if (k === 0) k = 9;
-  if (k === 5) k = gender==="male" ? 2 : 8;
-  return k;
-}
-
-function monthRange(i){
-  const s = MONTH_STARTS[i];
-  const next = i < 11 ? MONTH_STARTS[i+1] : null;
-  const start = new Date(Date.UTC(s[0], s[1]-1, s[2]));
-  let end;
-  if (next){ end = new Date(Date.UTC(next[0], next[1]-1, next[2]) - 86400000); }
-  else end = new Date(Date.UTC(MONTH_END_LAST[0], MONTH_END_LAST[1]-1, MONTH_END_LAST[2]));
-  return {start, end};
-}
-const fmtShort = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{day:"numeric",month:"short",timeZone:"UTC"}).format(d);
-const fmtMonth = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{month:"short",timeZone:"UTC"}).format(d);
-
-/* ============================================================
-   RENDER
-   ============================================================ */
-const $ = id => document.getElementById(id);
-
-function applyStatic(){
-  document.documentElement.lang = state.lang === "zh" ? "zh-CN" : state.lang;
+function render(){
+  const L = I18N[lang];
+  document.documentElement.lang = L.htmlLang; document.title = L.pageTitle;
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
-  // year options keep value, relabel
-  const sel = $("year"); const cur = sel.value;
-  sel.innerHTML = "";
-  const ph = document.createElement("option");
-  ph.value = ""; ph.textContent = t("year_ph"); sel.appendChild(ph);
-  for (let y = 2026; y >= 1930; y--){
-    const o = document.createElement("option");
-    o.value = y; o.textContent = y + " · " + animalName(branchOf(y));
-    sel.appendChild(o);
-  }
-  sel.value = cur;
-  $("mapLegend").textContent = t("map_legend");
-  $("wkPrev").setAttribute("aria-label", t("week_prev")); $("wkPrev").title = t("week_prev");
-  $("wkNext").setAttribute("aria-label", t("week_next")); $("wkNext").title = t("week_next");
-  document.querySelectorAll(".qr .ph").forEach(p => p.textContent = t("qr_soon"));
-}
-
-function renderResult(){
-  const cy = effectiveYear();
-  const box = $("result");
-  if (!cy){
-    box.innerHTML = '<div class="card tone-steady" style="border-style:dashed">'+t("empty")+'</div>';
-    $("ribbonSec").hidden = true;
-    $("weekSec").hidden = true;
-    return;
-  }
-  const a = branchOf(cy);
-  const rel = relation(a, GOAT);
-  const tone = TONE_OF[rel];
-  const key = (rel==="mixed") ? "none" : rel;
-  box.innerHTML =
-    '<div class="card">'+
-      '<div class="res-head"><span class="seal cjk" aria-hidden="true">'+charOf(a)+'</span>'+
-        '<div><h2>'+t("you_are",{animal:animalName(a)})+'</h2><p>'+t("cn_year",{y:cy})+'</p></div></div>'+
-      '<span class="badge tone-'+tone+'">'+SYMBOL[tone]+' '+t("r_"+key+"_t")+'</span>'+
-      '<p class="sum">'+t("r_"+key+"_s")+'</p>'+
-      '<div class="dw"><div><strong>'+t("do_label")+'</strong>'+t("r_"+key+"_d")+'</div>'+
-      '<div><strong>'+t("watch_label")+'</strong>'+t("r_"+key+"_w")+'</div></div>'+
-      '<div class="months-sum" id="monthsSum"></div>'+
-    '</div>';
-  renderRibbon(a);
-}
-
-function monthTone(a, i){
-  const b = (2+i) % 12;
-  const rel = relation(a, b);
-  return {b, rel, tone: TONE_OF[rel]};
-}
-
-function renderRibbon(a){
-  $("ribbonSec").hidden = false;
-  const rib = $("ribbon");
-  rib.innerHTML = "";
-  const best = [], careful = [];
-  for (let i=0;i<12;i++){
-    const m = monthTone(a,i);
-    const r = monthRange(i);
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "tile tone-"+m.tone;
-    btn.setAttribute("aria-pressed", i===state.month ? "true":"false");
-    btn.setAttribute("aria-label", fmtShort(r.start)+" – "+fmtShort(r.end)+", "+t("month_of",{animal:animalName(m.b)})+", "+t("tone_"+m.tone));
-    btn.innerHTML = '<span class="mo">'+fmtMonth(r.start)+'</span><span class="an cjk">'+charOf(m.b)+'</span><span class="sy">'+SYMBOL[m.tone]+'</span>';
-    btn.addEventListener("click", () => { state.month = i; jumpToMonth(i); renderRibbon(a); $("ribbon").children[i].focus(); });
-    rib.appendChild(btn);
-    if (m.tone==="good") best.push(fmtMonth(r.start));
-    if (m.tone==="care" || m.tone==="bad") careful.push({n:fmtMonth(r.start), tone:m.tone});
-  }
-  // detail
-  const m = monthTone(a, state.month), r = monthRange(state.month);
-  const d = $("monthDetail");
-  d.className = "detail tone-"+m.tone;
-  d.innerHTML = '<b>'+fmtShort(r.start)+' – '+fmtShort(r.end)+' · '+t("month_of",{animal:animalName(m.b)})+'</b>'+
-                '<small>'+SYMBOL[m.tone]+' '+t("rl_"+m.rel)+'</small>'+t("m_"+m.rel);
-  // summary lines under result
-  const ms = $("monthsSum");
-  if (ms){
-    let h = "";
-    if (best.length) h += '<div class="row"><b>'+t("best_months")+':</b>'+best.map(n=>'<span class="pill tone-good">✓ '+n+'</span>').join("")+'</div>';
-    if (careful.length) h += '<div class="row"><b>'+t("care_months")+':</b>'+careful.map(c=>'<span class="pill tone-'+c.tone+'">'+(c.tone==="bad"?"✕ ":"! ")+c.n+'</span>').join("")+'</div>';
-    ms.innerHTML = h;
-  }
-  renderWeek(a);
-}
-
-function renderDobNote(){
-  const n = $("dobNote");
-  if (!state.dob){ n.textContent = ""; return; }
-  const r = chineseYearFromDob(state.dob);
-  n.textContent = t(r.early ? "dob_early" : "dob_ok", {y:r.cy, animal:animalName(branchOf(r.cy))});
-}
-
-function personalDirs(){
-  const cy = effectiveYear();
-  if (!cy || !state.gender) return null;
-  const n = kuaNumber(cy, state.gender);
-  return {n, d:KUA[n]};
-}
-
-function renderExtras(){
-  const cy = effectiveYear();
-  const ex = $("extras");
-  const wantsKua = !!state.gender, wantsFocus = state.focus.size > 0;
-  if (!wantsKua && !wantsFocus){ ex.innerHTML = ""; ex.style.display = "none"; return; }
-  ex.style.display = "grid";
-  if (!cy){ ex.innerHTML = '<p class="note" style="margin:0">'+t("need_year")+'</p>'; return; }
-  let h = "";
-  if (wantsKua){
-    const p = personalDirs();
-    const rows = [["sheng","good"],["tian","good"],["yan","good"],["jue","bad"]];
-    h += '<div><h3>'+t("kua_title")+'</h3><p class="note" style="margin:0 0 8px">'+t("kua_sub",{n:p.n})+'</p><div class="dirs">';
-    rows.forEach((r,i) => {
-      const dn = I18N[state.lang].dirs[p.d[i]];
-      h += '<div class="dirrow tone-'+r[1]+'"><div><b>'+t("d_"+r[0])+'</b><div class="what">'+t("d_"+r[0]+"_h")+'</div></div><span class="dn">'+dn+'</span></div>';
-    });
-    h += '</div></div>';
-  }
-  if (wantsFocus){
-    const a = branchOf(cy);
-    const tone = TONE_OF[relation(a, GOAT)];
-    const tk = tone==="good" ? "good" : (tone==="steady" ? "steady" : "care");
-    h += '<div><h3>'+t("focus_title")+'</h3><div style="display:grid;gap:8px;margin-top:8px">';
-    ["career","money","love","health","family"].forEach(f => {
-      if (state.focus.has(f)) h += '<div class="tip"><strong>'+t("f_"+f)+'</strong>'+t("f_"+f+"_"+tk)+'</div>';
-    });
-    h += '</div></div>';
-  }
-  ex.innerHTML = h;
-}
-
-function renderMap(){
-  const grid = $("compass");
-  grid.innerHTML = "";
-  const p = personalDirs();
-  COMPASS_ORDER.forEach(dir => {
-    const star = STAR_AT[dir], tone = STAR_TONE[star];
-    let mark = "";
-    if (p && dir !== "C"){
-      if (p.d.slice(0,3).includes(dir)) mark = "★";
-      else if (p.d[3] === dir) mark = "✕";
-    }
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "cell tone-"+tone;
-    b.setAttribute("aria-pressed", state.star===dir ? "true":"false");
-    b.setAttribute("aria-label", (dir==="C" ? I18N[state.lang].ds.C : I18N[state.lang].dirs[dir]) + ": " + t("s"+star+"_n") + (mark ? " "+mark : ""));
-    b.innerHTML = (mark ? '<span class="mk">'+mark+'</span>' : '')+
-      '<span class="dr">'+I18N[state.lang].ds[dir]+'</span><span class="st">'+star+'</span><span class="sn">'+t("s"+star+"_n").split(" · ")[0]+'</span>';
-    b.addEventListener("click", () => { state.star = dir; renderMap(); const k = COMPASS_ORDER.indexOf(dir); $("compass").children[k].focus(); });
-    grid.appendChild(b);
-  });
-  const d = $("starDetail");
-  if (!state.star){ d.className = "detail"; d.style.borderStyle = "dashed"; d.textContent = t("map_tap"); return; }
-  const star = STAR_AT[state.star];
-  d.style.borderStyle = "solid";
-  d.className = "detail tone-"+STAR_TONE[star];
-  const dn = state.star==="C" ? I18N[state.lang].ds.C : I18N[state.lang].dirs[state.star];
-  d.innerHTML = '<b>'+dn+' · '+t("s"+star+"_n")+'</b>'+t("s"+star+"_t");
-}
-
-function renderAll(){
-  renderResult();
-  renderDobNote();
-  renderExtras();
-  renderMap();
-}
-
-/* ============================================================
-   EVENTS
-   ============================================================ */
-function init(){
-  // language menu
-  const langSel = $("lang");
+  // language buttons
+  const lb = document.getElementById("langs"); lb.innerHTML = "";
   Object.keys(I18N).forEach(k => {
-    const o = document.createElement("option");
-    o.value = k; o.textContent = I18N[k].langName; langSel.appendChild(o);
+    const b = document.createElement("button"); b.type = "button"; b.textContent = I18N[k].langName;
+    b.setAttribute("aria-pressed", k===lang ? "true":"false");
+    b.addEventListener("click", () => { lang = k; try{ history.replaceState(null,"","?lang="+k); }catch(e){} render(); });
+    lb.appendChild(b);
   });
-  let saved = null;
-  try { saved = localStorage.getItem("guide2027.lang"); } catch(e){}
-  const nav = (navigator.language || "en").toLowerCase();
-  const pick = (nav.startsWith("id")||nav.startsWith("in")) ? "id" : nav.startsWith("ja") ? "ja" : nav.startsWith("zh") ? "zh" : "en";
-  state.lang = (saved && I18N[saved]) ? saved : pick;
-  langSel.value = state.lang;
-  langSel.addEventListener("change", () => {
-    state.lang = langSel.value;
-    try { localStorage.setItem("guide2027.lang", state.lang); } catch(e){}
-    applyStatic(); paintThemeBtn(); renderAll();
-  });
-
-  $("year").addEventListener("change", e => {
-    const v = e.target.value ? parseInt(e.target.value,10) : null;
-    state.year = v;
-    if (state.dob && (!v || parseInt(state.dob.slice(0,4),10) !== v)){ state.dob = ""; $("dob").value = ""; }
-    renderAll();
-  });
-  $("dob").addEventListener("change", e => {
-    const v = e.target.value;
-    if (v && /^\d{4}-\d{2}-\d{2}$/.test(v)){
-      const y = parseInt(v.slice(0,4),10);
-      if (y >= 1930 && y <= 2026){
-        state.dob = v; state.year = y; $("year").value = String(y);
-      }
-    } else { state.dob = ""; }
-    renderAll();
-  });
-  $("genderChips").addEventListener("click", e => {
-    const b = e.target.closest("button[data-g]"); if (!b) return;
-    state.gender = (state.gender === b.dataset.g) ? null : b.dataset.g;
-    document.querySelectorAll("#genderChips .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.g===state.gender ? "true":"false"));
-    renderExtras(); renderMap();
-  });
-  $("focusChips").addEventListener("click", e => {
-    const b = e.target.closest("button[data-f]"); if (!b) return;
-    const f = b.dataset.f;
-    if (state.focus.has(f)) state.focus.delete(f); else state.focus.add(f);
-    b.setAttribute("aria-pressed", state.focus.has(f) ? "true":"false");
-    renderExtras();
-  });
-
-  // default month = current month of the 2027 year if we are inside it
-  const now = Date.now();
-  for (let i=0;i<12;i++){ const r = monthRange(i); if (now >= r.start.getTime() && now <= r.end.getTime()+86399999){ state.month = i; break; } }
-
-  // week-by-week: default to this week if we are already inside the Goat year
-  const tdy = new Date(), tdMs = Date.UTC(tdy.getFullYear(), tdy.getMonth(), tdy.getDate());
-  if (tdMs >= DAY_FIRST && tdMs <= DAY_LAST){ state.week = weekOf(tdMs); state.day = isoOf(tdMs); }
-  else { state.week = 0; state.day = isoOf(DAY_FIRST); }
-  const rerenderWeek = () => { const cy = effectiveYear(); if (cy) renderWeek(branchOf(cy)); };
-  $("actChips").addEventListener("click", e => {
-    const b = e.target.closest("button[data-a]"); if (!b) return;
-    state.act = b.dataset.a;
-    document.querySelectorAll("#actChips .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.a===state.act ? "true":"false"));
-    rerenderWeek();
-  });
-  $("wkPrev").addEventListener("click", () => { state.week = Math.max(0, state.week-1); state.day = null; rerenderWeek(); });
-  $("wkNext").addEventListener("click", () => { state.week = Math.min(NUM_WEEKS-1, state.week+1); state.day = null; rerenderWeek(); });
-
-  // QR fallbacks
-  document.querySelectorAll(".qr img").forEach(img => {
-    img.addEventListener("error", () => {
-      const ph = document.createElement("div"); ph.className = "ph"; ph.textContent = t("qr_soon");
-      img.replaceWith(ph);
-    });
-  });
-
-  // install button
-  let deferred = null;
-  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; });
-  const standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone;
-  if (standalone) $("installBtn").hidden = true;
-  $("installBtn").addEventListener("click", async () => {
-    if (deferred){ deferred.prompt(); try { await deferred.userChoice; } catch(e){} deferred = null; return; }
-    const dlg = $("installDlg");
-    if (dlg.showModal) dlg.showModal(); else alert(t("install_ios") + "\n\n" + t("install_android"));
-  });
-  $("installClose").addEventListener("click", () => $("installDlg").close());
-
-  $("themeBtn").addEventListener("click", toggleTheme);
-  window.addEventListener("hashchange", route);
-  applyStatic();
-  paintThemeBtn();
-  renderAll();
-  route();
+  // links
+  ["guideTop","guideBottom"].forEach(id => document.getElementById(id).setAttribute("href","../?lang="+lang));
+  document.querySelectorAll(".li-btn").forEach(a => { if (LINKEDIN_POST_URL){ a.href = LINKEDIN_POST_URL; a.hidden = false; } else { a.hidden = true; } });
+  // legend
+  document.getElementById("legend").innerHTML = ["good","steady","care","bad"].map(k =>
+    '<span class="pill tone-'+k+'">'+SYM[k]+' '+t("leg_"+k)+'</span>').join("");
+  // relation cards
+  const rels = [["six","good",[6]],["three","good",[3,11]],["none","steady",[2,4,5,8,9]],["ben","care",[7]],["harm","care",[0]],["punish","care",[10]],["clash","bad",[1]]];
+  document.getElementById("rels").innerHTML = rels.map(r =>
+    '<div class="rel tone-'+r[1]+'"><b>'+SYM[r[1]]+' '+t("rn_"+r[0])+'</b><div class="an">'+r[2].map(animal).join(" · ")+'</div><span class="m">'+t("rm_"+r[0])+'</span></div>').join("");
+  // 12-month strip for a Horse (born 1990): same tones the guide shows
+  const tones = ["good","steady","steady","steady","care","good","steady","steady","good","steady","bad","care"];
+  const starts = [[2027,2,4],[2027,3,6],[2027,4,5],[2027,5,6],[2027,6,6],[2027,7,7],[2027,8,8],[2027,9,8],[2027,10,8],[2027,11,7],[2027,12,7],[2028,1,6]];
+  document.getElementById("months").innerHTML = starts.map((s,i) => {
+    const d = new Date(Date.UTC(s[0],s[1]-1,s[2]));
+    return '<div class="mt tone-'+tones[i]+'"><div class="a">'+fmt(d,{month:"short"})+'</div><div class="c cjk">'+charOf((2+i)%12)+'</div><div class="s">'+SYM[tones[i]]+'</div></div>';
+  }).join("");
+  // worked example: Horse, Business, 29 Mar - 4 Apr 2027 (pillars and ratings computed with the guide's own rules)
+  const days = [["丁未","good"],["戊申","steady"],["己酉","care"],["庚戌","steady"],["辛亥","good"],["壬子","bad"],["癸丑","bad"]];
+  document.getElementById("ex").innerHTML = days.map((x,i) => {
+    const d = new Date(Date.UTC(2027,2,29+i));
+    return '<div class="exr"><div class="dt tone-'+x[1]+'"><div class="w">'+fmt(d,{weekday:"short"})+'</div><div class="n">'+d.getUTCDate()+'</div><div class="p cjk">'+x[0]+'</div><div class="s">'+SYM[x[1]]+'</div></div><div class="t">'+t("ex_d"+(i+1))+'</div></div>';
+  }).join("");
 }
-
-
-/* ============================================================
-   WEEK BY WEEK: day ratings
-   Rules used: the 12 Day Officers (建除十二神), how the day branch relates
-   to the user's sign, and the year-breaking day (an Ox day in a Goat year).
-   ============================================================ */
-const STEMS = ["甲","乙","丙","丁","戊","己","庚","辛","壬","癸"];
-const BR_CHARS = ["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"];
-const DAY_MS = 86400000;
-const WEEK0 = Date.UTC(2027,1,1);          // Monday 1 Feb 2027
-const DAY_FIRST = Date.UTC(2027,1,4);      // Li Chun 2027
-const DAY_LAST  = Date.UTC(2028,1,3);      // day before Li Chun 2028
-const NUM_WEEKS = 53;
-const MONTH_START_MS = MONTH_STARTS.map(m => Date.UTC(m[0], m[1]-1, m[2]));
-const ACT_KEYS = ["biz","love","move","health"];
-// [business, love, travel & move, health]  2 = good, 1 = fair, 0 = avoid
-const OFFICER = [
-  [2,1,2,1], // 0 Jian 建
-  [1,1,1,2], // 1 Chu 除
-  [2,2,1,0], // 2 Man 满
-  [1,1,1,1], // 3 Ping 平
-  [2,2,0,0], // 4 Ding 定
-  [1,1,0,1], // 5 Zhi 执
-  [0,0,0,1], // 6 Po 破
-  [0,1,0,1], // 7 Wei 危
-  [2,2,2,1], // 8 Cheng 成
-  [1,1,0,0], // 9 Shou 收
-  [2,2,2,2], // 10 Kai 开
-  [0,0,0,0]  // 11 Bi 闭
-];
-const LV_KEY = {"2":"lv_good","1":"lv_ok","0":"lv_avoid","-1":"lv_bad"};
-const LV_TONE = {"2":"good","1":"steady","0":"care","-1":"bad"};
-const LV_SYM = {"2":"✓","1":"–","0":"!","-1":"✕"};
-
-const isoOf = ms => new Date(ms).toISOString().slice(0,10);
-const msOfIso = iso => Date.parse(iso+"T00:00:00Z");
-const weekOf = ms => Math.floor((ms - WEEK0) / (7*DAY_MS));
-
-function dayInfo(ms){
-  if (ms < DAY_FIRST || ms > DAY_LAST) return null;
-  const n = Math.round((ms - Date.UTC(2000,0,1)) / DAY_MS);
-  const idx = (((n + 54) % 60) + 60) % 60;
-  const stem = idx % 10, branch = idx % 12;
-  let mi = 0; for (let i=0;i<12;i++){ if (MONTH_START_MS[i] <= ms) mi = i; }
-  const officer = (((branch - (2+mi)) % 12) + 12) % 12;
-  return {stem, branch, officer};
-}
-function dayScores(a, info){
-  const base = OFFICER[info.officer];
-  const rel = relation(a, info.branch);
-  const notes = [];
-  let adj = 0, force = false;
-  if (rel==="clash"){ force = true; notes.push("dn_clash"); }
-  else if (rel==="six" || rel==="three"){ adj = 1; notes.push("dn_help"); }
-  else if (rel==="punish" || rel==="harm"){ adj = -1; notes.push("dn_harm"); }
-  else if (rel==="ben"){ notes.push("dn_ben"); }
-  if (info.branch === 1){ force = true; notes.push("dn_sui"); }
-  const scores = base.map(v => force ? -1 : Math.max(0, Math.min(2, v + adj)));
-  return {scores, notes};
-}
-const fmtFull = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(d);
-const fmtWdShort = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{weekday:"short",timeZone:"UTC"}).format(d);
-const fmtWdLong = d => new Intl.DateTimeFormat(I18N[state.lang].locale,{weekday:"long",timeZone:"UTC"}).format(d);
-
-function renderWeek(a){
-  const sec = $("weekSec"); sec.hidden = false;
-  const ai = ACT_KEYS.indexOf(state.act);
-  const wStart = WEEK0 + state.week*7*DAY_MS;
-  $("wkLabel").textContent = fmtShort(new Date(wStart)) + " – " + fmtFull(new Date(wStart + 6*DAY_MS));
-  $("wkPrev").disabled = state.week <= 0;
-  $("wkNext").disabled = state.week >= NUM_WEEKS-1;
-  $("actHint").textContent = t("a_"+state.act+"_d");
-
-  // make sure the selected day sits inside this week and inside the Goat year
-  const selMs = state.day ? msOfIso(state.day) : NaN;
-  if (!(selMs >= wStart && selMs < wStart + 7*DAY_MS) || !dayInfo(selMs)){
-    let pick = null;
-    for (let i=0;i<7;i++){ if (dayInfo(wStart + i*DAY_MS)){ pick = wStart + i*DAY_MS; break; } }
-    state.day = pick ? isoOf(pick) : null;
-  }
-
-  const grid = $("days"); grid.innerHTML = "";
-  const best = [];
-  for (let i=0;i<7;i++){
-    const ms = wStart + i*DAY_MS, d = new Date(ms);
-    const info = dayInfo(ms);
-    const btn = document.createElement("button");
-    btn.type = "button";
-    if (!info){
-      btn.className = "day"; btn.disabled = true;
-      btn.setAttribute("aria-label", fmtWdLong(d)+" "+fmtShort(d)+": "+t("day_off"));
-      btn.innerHTML = '<span class="wd">'+fmtWdShort(d)+'</span><span class="dd">'+d.getUTCDate()+'</span><span class="pl">·</span><span class="sy"> </span>';
-      grid.appendChild(btn); continue;
-    }
-    const r = dayScores(a, info), sc = r.scores[ai];
-    const pillar = STEMS[info.stem] + BR_CHARS[info.branch];
-    btn.className = "day tone-"+LV_TONE[sc];
-    btn.setAttribute("aria-pressed", state.day === isoOf(ms) ? "true" : "false");
-    btn.setAttribute("aria-label", fmtWdLong(d)+" "+fmtShort(d)+", "+pillar+", "+t(LV_KEY[sc]));
-    btn.innerHTML = '<span class="wd">'+fmtWdShort(d)+'</span><span class="dd">'+d.getUTCDate()+'</span><span class="pl cjk">'+pillar+'</span><span class="sy">'+LV_SYM[sc]+'</span>';
-    btn.addEventListener("click", () => { state.day = isoOf(ms); renderWeek(a); $("days").children[i].focus(); });
-    grid.appendChild(btn);
-    if (sc === 2) best.push({txt: fmtWdShort(d)+" "+d.getUTCDate(), top: info.officer===8 || info.officer===10 || r.notes.indexOf("dn_help")>=0});
-  }
-  // if many days score well, show only the strongest (Success/Open days or days that favour your sign)
-  let shown = best; const tops = best.filter(b => b.top);
-  if (best.length > 3 && tops.length) shown = tops;
-  $("bestDays").innerHTML = shown.length
-    ? '<div class="row"><b>'+t("best_days")+':</b>'+shown.map(x=>'<span class="pill tone-good">✓ '+x.txt+'</span>').join("")+'</div>'
-    : '<div class="note" style="margin:0">'+t("no_good")+'</div>';
-
-  // detail for the selected day
-  const dd = $("dayDetail");
-  if (!state.day){ dd.innerHTML = '<span class="note">'+t("day_off")+'</span>'; return; }
-  const ms = msOfIso(state.day), d = new Date(ms), info = dayInfo(ms), r = dayScores(a, info);
-  const pillar = STEMS[info.stem] + BR_CHARS[info.branch];
-  let h = '<b>'+fmtWdLong(d)+', '+fmtFull(d)+'</b>'+
-          '<small><span class="cjk">'+pillar+'</span> · '+t("day_of",{animal:animalName(info.branch)})+'</small>'+
-          '<p><b>'+t("officer_label")+': '+t("o"+info.officer+"_n")+'</b>'+t("o"+info.officer+"_t")+'</p>';
-  if (r.notes.length) h += '<p>'+r.notes.map(n=>t(n)).join(" ")+'</p>';
-  h += '<div class="catrows">';
-  ACT_KEYS.forEach((k,idx) => {
-    const sc = r.scores[idx];
-    h += '<div class="catrow tone-'+LV_TONE[sc]+(k===state.act?' sel':'')+'"><span>'+LV_SYM[sc]+' '+t("a_"+k)+'</span><span>'+t(LV_KEY[sc])+'</span></div>';
-  });
-  h += '</div>';
-  dd.innerHTML = h;
-}
-function jumpToMonth(i){
-  const ms = MONTH_START_MS[i];
-  state.week = Math.max(0, Math.min(NUM_WEEKS-1, weekOf(ms)));
-  state.day = isoOf(ms);
-}
-
-/* ---------- theme (light by default, remembered on this device) ---------- */
-function currentTheme(){ return document.documentElement.getAttribute("data-theme")==="dark" ? "dark" : "light"; }
-function paintThemeBtn(){
-  const dark = currentTheme()==="dark";
-  $("themeIcon").textContent = dark ? "☀" : "☾";
-  $("themeBtn").setAttribute("aria-label", t(dark ? "theme_to_light" : "theme_to_dark"));
-  $("themeBtn").title = t(dark ? "theme_to_light" : "theme_to_dark");
-  let m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute("content", dark ? "#121820" : "#b8282f");
-}
-function toggleTheme(){
-  const next = currentTheme()==="dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", next);
-  try { localStorage.setItem("guide2027.theme", next); } catch(e){}
-  paintThemeBtn();
-}
-
-/* ---------- two pages: guide (#home) and support (#support) ---------- */
-function route(){
-  const sup = location.hash === "#support";
-  $("pageMain").hidden = sup;
-  $("pageSupport").hidden = !sup;
-  window.scrollTo(0,0);
-}
-
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", () => { lang = pickLang(); render(); });
 </script>
 </body>
 </html>
